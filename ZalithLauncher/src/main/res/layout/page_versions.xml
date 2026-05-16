@@ -1,0 +1,386 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Zero Launcher - Versions Page -->
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:scrollbars="none"
+    android:overScrollMode="never">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <!-- Game Path -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:background="@drawable/bg_glass_card"
+            android:padding="12dp"
+            android:layout_marginBottom="8dp">
+
+            <TextView android:layout_width="match_parent" android:layout_height="wrap_content"
+                android:text="GAME PATH" android:textColor="@color/zl_text_muted"
+                android:textSize="8sp" android:textStyle="bold" android:letterSpacing="0.12"
+                android:layout_marginBottom="8dp" />
+
+            <LinearLayout android:id="@+id/game_path_row"
+                android:layout_width="match_parent" android:layout_height="wrap_content"
+                android:orientation="horizontal" android:gravity="center_vertical"
+                android:background="@drawable/bg_menu_item"
+                android:paddingStart="10dp" android:paddingEnd="10dp"
+                android:paddingTop="8dp" android:paddingBottom="8dp"
+                android:clickable="true" android:focusable="true">
+                <FrameLayout android:layout_width="26dp" android:layout_height="26dp"
+                    android:background="@drawable/bg_icon_blue" android:layout_marginEnd="8dp">
+                    <ImageView android:layout_width="14dp" android:layout_height="14dp"
+                        android:layout_gravity="center" android:src="@drawable/ic_menu_folder"
+                        android:contentDescription="Game path" />
+                </FrameLayout>
+                <TextView android:id="@+id/txt_game_path"
+                    android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1"
+                    android:text="/storage/emulated/0/games/PojavLauncher"
+                    android:textColor="@color/zl_text_primary" android:textSize="11sp"
+                    android:singleLine="true" android:ellipsize="end" />
+                <ImageView android:layout_width="12dp" android:layout_height="12dp"
+                    android:src="@drawable/ic_arrow_right" android:alpha="0.25"
+                    android:contentDescription="arrow" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <!-- Installed Versions -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:background="@drawable/bg_glass_card"
+            android:padding="12dp"
+            android:layout_marginBottom="8dp">
+
+            <TextView android:layout_width="match_parent" android:layout_height="wrap_content"
+                android:text="INSTALLED VERSIONS" android:textColor="@color/zl_text_muted"
+                android:textSize="8sp" android:textStyle="bold" android:letterSpacing="0.12"
+                android:layout_marginBottom="8dp" />
+
+            <!-- OptiMobile (Fabric) - Active -->
+            <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+                android:orientation="horizontal" android:gravity="center_vertical"
+                android:background="@drawable/bg_version_row"
+                android:paddingStart="10dp" android:paddingEnd="10dp"
+                android:paddingTop="8dp" android:paddingBottom="8dp"
+                android:layout_marginBottom="4dp">
+
+                <FrameLayout android:layout_width="26dp" android:layout_height="26dp"
+                    android:background="@drawable/bg_icon_purple" android:layout_marginEnd="8dp">
+                    <ImageView android:layout_width="13dp" android:layout_height="13dp"
+                        android:layout_gravity="center" android:src="@drawable/ic_version_optimobile"
+                        android:contentDescription="OptiMobile" />
+                </FrameLayout>
+
+                <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content"
+                    android:layout_weight="1" android:orientation="vertical">
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                        android:text="OptiMobile (Fabric)" android:textColor="@color/zl_text_primary"
+                        android:textSize="11sp" android:textStyle="bold" />
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                        android:text="Minecraft 1.21.4 · Fabric 0.16.9"
+                        android:textColor="@color/zl_text_muted" android:textSize="8sp" />
+                </LinearLayout>
+
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                    android:text="Fabric" android:textColor="@color/zl_purple"
+                    android:textSize="7sp" android:textStyle="bold"
+                    android:background="@drawable/bg_badge_fabric"
+                    android:paddingStart="6dp" android:paddingEnd="6dp"
+                    android:paddingTop="2dp" android:paddingBottom="2dp"
+                    android:layout_marginEnd="4dp" />
+
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                    android:text="Active" android:textColor="@color/zl_green"
+                    android:textSize="7sp" android:textStyle="bold"
+                    android:background="@drawable/bg_badge_active"
+                    android:paddingStart="6dp" android:paddingEnd="6dp"
+                    android:paddingTop="2dp" android:paddingBottom="2dp"
+                    android:layout_marginEnd="4dp" />
+
+                <LinearLayout android:layout_width="wrap_content" android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+                    <Button android:id="@+id/btn_rename_optim"
+                        android:layout_width="wrap_content" android:layout_height="wrap_content"
+                        android:text="Rename" android:textSize="9sp" android:textStyle="bold"
+                        android:textColor="@color/zl_cyan" android:background="@drawable/bg_btn_cyan"
+                        android:paddingStart="10dp" android:paddingEnd="10dp"
+                        android:paddingTop="5dp" android:paddingBottom="5dp"
+                        android:stateListAnimator="@null" android:layout_marginEnd="4dp" />
+                    <Button android:id="@+id/btn_copy_optim"
+                        android:layout_width="wrap_content" android:layout_height="wrap_content"
+                        android:text="Copy" android:textSize="9sp" android:textStyle="bold"
+                        android:textColor="@color/zl_purple" android:background="@drawable/bg_btn_purple"
+                        android:paddingStart="10dp" android:paddingEnd="10dp"
+                        android:paddingTop="5dp" android:paddingBottom="5dp"
+                        android:stateListAnimator="@null" android:layout_marginEnd="4dp" />
+                    <Button android:id="@+id/btn_delete_optim"
+                        android:layout_width="wrap_content" android:layout_height="wrap_content"
+                        android:text="Delete" android:textSize="9sp" android:textStyle="bold"
+                        android:textColor="@color/zl_rose" android:background="@drawable/bg_btn_rose"
+                        android:paddingStart="10dp" android:paddingEnd="10dp"
+                        android:paddingTop="5dp" android:paddingBottom="5dp"
+                        android:stateListAnimator="@null" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <!-- Vanilla 1.21.4 -->
+            <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+                android:orientation="horizontal" android:gravity="center_vertical"
+                android:background="@drawable/bg_version_row"
+                android:paddingStart="10dp" android:paddingEnd="10dp"
+                android:paddingTop="8dp" android:paddingBottom="8dp"
+                android:layout_marginBottom="4dp">
+
+                <FrameLayout android:layout_width="26dp" android:layout_height="26dp"
+                    android:background="@drawable/bg_icon_green" android:layout_marginEnd="8dp">
+                    <ImageView android:layout_width="13dp" android:layout_height="13dp"
+                        android:layout_gravity="center" android:src="@drawable/ic_version_vanilla"
+                        android:contentDescription="Vanilla" />
+                </FrameLayout>
+
+                <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content"
+                    android:layout_weight="1" android:orientation="vertical">
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                        android:text="Vanilla 1.21.4" android:textColor="@color/zl_text_primary"
+                        android:textSize="11sp" android:textStyle="bold" />
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                        android:text="Minecraft 1.21.4 · Vanilla"
+                        android:textColor="@color/zl_text_muted" android:textSize="8sp" />
+                </LinearLayout>
+
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                    android:text="Release" android:textColor="@color/zl_green"
+                    android:textSize="7sp" android:textStyle="bold"
+                    android:background="@drawable/bg_badge_release"
+                    android:paddingStart="6dp" android:paddingEnd="6dp"
+                    android:paddingTop="2dp" android:paddingBottom="2dp"
+                    android:layout_marginEnd="4dp" />
+
+                <LinearLayout android:layout_width="wrap_content" android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+                    <Button android:layout_width="wrap_content" android:layout_height="wrap_content"
+                        android:text="Rename" android:textSize="9sp" android:textStyle="bold"
+                        android:textColor="@color/zl_cyan" android:background="@drawable/bg_btn_cyan"
+                        android:paddingStart="10dp" android:paddingEnd="10dp"
+                        android:paddingTop="5dp" android:paddingBottom="5dp"
+                        android:stateListAnimator="@null" android:layout_marginEnd="4dp" />
+                    <Button android:layout_width="wrap_content" android:layout_height="wrap_content"
+                        android:text="Copy" android:textSize="9sp" android:textStyle="bold"
+                        android:textColor="@color/zl_purple" android:background="@drawable/bg_btn_purple"
+                        android:paddingStart="10dp" android:paddingEnd="10dp"
+                        android:paddingTop="5dp" android:paddingBottom="5dp"
+                        android:stateListAnimator="@null" android:layout_marginEnd="4dp" />
+                    <Button android:layout_width="wrap_content" android:layout_height="wrap_content"
+                        android:text="Delete" android:textSize="9sp" android:textStyle="bold"
+                        android:textColor="@color/zl_rose" android:background="@drawable/bg_btn_rose"
+                        android:paddingStart="10dp" android:paddingEnd="10dp"
+                        android:paddingTop="5dp" android:paddingBottom="5dp"
+                        android:stateListAnimator="@null" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <!-- 25w14a Snapshot -->
+            <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+                android:orientation="horizontal" android:gravity="center_vertical"
+                android:background="@drawable/bg_version_row"
+                android:paddingStart="10dp" android:paddingEnd="10dp"
+                android:paddingTop="8dp" android:paddingBottom="8dp">
+
+                <FrameLayout android:layout_width="26dp" android:layout_height="26dp"
+                    android:background="@drawable/bg_icon_amber" android:layout_marginEnd="8dp">
+                    <ImageView android:layout_width="13dp" android:layout_height="13dp"
+                        android:layout_gravity="center" android:src="@drawable/ic_version_snapshot"
+                        android:contentDescription="Snapshot" />
+                </FrameLayout>
+
+                <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content"
+                    android:layout_weight="1" android:orientation="vertical">
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                        android:text="25w14a" android:textColor="@color/zl_text_primary"
+                        android:textSize="11sp" android:textStyle="bold" />
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                        android:text="Snapshot · April 2025"
+                        android:textColor="@color/zl_text_muted" android:textSize="8sp" />
+                </LinearLayout>
+
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                    android:text="Snapshot" android:textColor="@color/zl_amber"
+                    android:textSize="7sp" android:textStyle="bold"
+                    android:background="@drawable/bg_badge_snapshot"
+                    android:paddingStart="6dp" android:paddingEnd="6dp"
+                    android:paddingTop="2dp" android:paddingBottom="2dp"
+                    android:layout_marginEnd="4dp" />
+
+                <LinearLayout android:layout_width="wrap_content" android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+                    <Button android:layout_width="wrap_content" android:layout_height="wrap_content"
+                        android:text="Rename" android:textSize="9sp" android:textStyle="bold"
+                        android:textColor="@color/zl_cyan" android:background="@drawable/bg_btn_cyan"
+                        android:paddingStart="10dp" android:paddingEnd="10dp"
+                        android:paddingTop="5dp" android:paddingBottom="5dp"
+                        android:stateListAnimator="@null" android:layout_marginEnd="4dp" />
+                    <Button android:layout_width="wrap_content" android:layout_height="wrap_content"
+                        android:text="Copy" android:textSize="9sp" android:textStyle="bold"
+                        android:textColor="@color/zl_purple" android:background="@drawable/bg_btn_purple"
+                        android:paddingStart="10dp" android:paddingEnd="10dp"
+                        android:paddingTop="5dp" android:paddingBottom="5dp"
+                        android:stateListAnimator="@null" android:layout_marginEnd="4dp" />
+                    <Button android:layout_width="wrap_content" android:layout_height="wrap_content"
+                        android:text="Delete" android:textSize="9sp" android:textStyle="bold"
+                        android:textColor="@color/zl_rose" android:background="@drawable/bg_btn_rose"
+                        android:paddingStart="10dp" android:paddingEnd="10dp"
+                        android:paddingTop="5dp" android:paddingBottom="5dp"
+                        android:stateListAnimator="@null" />
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+
+        <!-- Folder Shortcuts -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:background="@drawable/bg_glass_card"
+            android:padding="12dp">
+
+            <TextView android:layout_width="match_parent" android:layout_height="wrap_content"
+                android:text="FOLDER SHORTCUTS" android:textColor="@color/zl_text_muted"
+                android:textSize="8sp" android:textStyle="bold" android:letterSpacing="0.12"
+                android:layout_marginBottom="8dp" />
+
+            <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content"
+                    android:layout_weight="1" android:orientation="vertical" android:layout_marginEnd="4dp">
+
+                    <LinearLayout android:id="@+id/folder_resource_packs"
+                        android:layout_width="match_parent" android:layout_height="wrap_content"
+                        android:orientation="horizontal" android:gravity="center_vertical"
+                        android:background="@drawable/bg_menu_item"
+                        android:paddingStart="10dp" android:paddingEnd="10dp"
+                        android:paddingTop="8dp" android:paddingBottom="8dp"
+                        android:layout_marginBottom="3dp" android:clickable="true" android:focusable="true">
+                        <FrameLayout android:layout_width="26dp" android:layout_height="26dp"
+                            android:background="@drawable/bg_icon_blue" android:layout_marginEnd="8dp">
+                            <ImageView android:layout_width="12dp" android:layout_height="12dp"
+                                android:layout_gravity="center" android:src="@drawable/ic_menu_folder"
+                                android:contentDescription="Resource Packs" />
+                        </FrameLayout>
+                        <TextView android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1"
+                            android:text="Resource Packs" android:textColor="@color/zl_text_primary" android:textSize="11sp" />
+                        <ImageView android:layout_width="12dp" android:layout_height="12dp"
+                            android:src="@drawable/ic_arrow_right" android:alpha="0.25" android:contentDescription="arrow" />
+                    </LinearLayout>
+
+                    <LinearLayout android:id="@+id/folder_world_saves"
+                        android:layout_width="match_parent" android:layout_height="wrap_content"
+                        android:orientation="horizontal" android:gravity="center_vertical"
+                        android:background="@drawable/bg_menu_item"
+                        android:paddingStart="10dp" android:paddingEnd="10dp"
+                        android:paddingTop="8dp" android:paddingBottom="8dp"
+                        android:layout_marginBottom="3dp" android:clickable="true" android:focusable="true">
+                        <FrameLayout android:layout_width="26dp" android:layout_height="26dp"
+                            android:background="@drawable/bg_icon_green" android:layout_marginEnd="8dp">
+                            <ImageView android:layout_width="12dp" android:layout_height="12dp"
+                                android:layout_gravity="center" android:src="@drawable/ic_menu_globe"
+                                android:contentDescription="World Saves" />
+                        </FrameLayout>
+                        <TextView android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1"
+                            android:text="World Saves" android:textColor="@color/zl_text_primary" android:textSize="11sp" />
+                        <ImageView android:layout_width="12dp" android:layout_height="12dp"
+                            android:src="@drawable/ic_arrow_right" android:alpha="0.25" android:contentDescription="arrow" />
+                    </LinearLayout>
+
+                    <LinearLayout android:id="@+id/folder_shaders"
+                        android:layout_width="match_parent" android:layout_height="wrap_content"
+                        android:orientation="horizontal" android:gravity="center_vertical"
+                        android:background="@drawable/bg_menu_item"
+                        android:paddingStart="10dp" android:paddingEnd="10dp"
+                        android:paddingTop="8dp" android:paddingBottom="8dp"
+                        android:clickable="true" android:focusable="true">
+                        <FrameLayout android:layout_width="26dp" android:layout_height="26dp"
+                            android:background="@drawable/bg_icon_rose" android:layout_marginEnd="8dp">
+                            <ImageView android:layout_width="12dp" android:layout_height="12dp"
+                                android:layout_gravity="center" android:src="@drawable/ic_menu_star"
+                                android:contentDescription="Shader Packs" />
+                        </FrameLayout>
+                        <TextView android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1"
+                            android:text="Shader Packs" android:textColor="@color/zl_text_primary" android:textSize="11sp" />
+                        <ImageView android:layout_width="12dp" android:layout_height="12dp"
+                            android:src="@drawable/ic_arrow_right" android:alpha="0.25" android:contentDescription="arrow" />
+                    </LinearLayout>
+                </LinearLayout>
+
+                <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content"
+                    android:layout_weight="1" android:orientation="vertical" android:layout_marginStart="4dp">
+
+                    <LinearLayout android:id="@+id/folder_crash"
+                        android:layout_width="match_parent" android:layout_height="wrap_content"
+                        android:orientation="horizontal" android:gravity="center_vertical"
+                        android:background="@drawable/bg_menu_item"
+                        android:paddingStart="10dp" android:paddingEnd="10dp"
+                        android:paddingTop="8dp" android:paddingBottom="8dp"
+                        android:layout_marginBottom="3dp" android:clickable="true" android:focusable="true">
+                        <FrameLayout android:layout_width="26dp" android:layout_height="26dp"
+                            android:background="@drawable/bg_icon_orange" android:layout_marginEnd="8dp">
+                            <ImageView android:layout_width="12dp" android:layout_height="12dp"
+                                android:layout_gravity="center" android:src="@drawable/ic_folder_crash"
+                                android:contentDescription="Crash Reports" />
+                        </FrameLayout>
+                        <TextView android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1"
+                            android:text="Crash Reports" android:textColor="@color/zl_text_primary" android:textSize="11sp" />
+                        <ImageView android:layout_width="12dp" android:layout_height="12dp"
+                            android:src="@drawable/ic_arrow_right" android:alpha="0.25" android:contentDescription="arrow" />
+                    </LinearLayout>
+
+                    <LinearLayout android:id="@+id/folder_logs"
+                        android:layout_width="match_parent" android:layout_height="wrap_content"
+                        android:orientation="horizontal" android:gravity="center_vertical"
+                        android:background="@drawable/bg_menu_item"
+                        android:paddingStart="10dp" android:paddingEnd="10dp"
+                        android:paddingTop="8dp" android:paddingBottom="8dp"
+                        android:layout_marginBottom="3dp" android:clickable="true" android:focusable="true">
+                        <FrameLayout android:layout_width="26dp" android:layout_height="26dp"
+                            android:background="@drawable/bg_icon_slate" android:layout_marginEnd="8dp">
+                            <ImageView android:layout_width="12dp" android:layout_height="12dp"
+                                android:layout_gravity="center" android:src="@drawable/ic_menu_file"
+                                android:contentDescription="Logs" />
+                        </FrameLayout>
+                        <TextView android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1"
+                            android:text="Log Files" android:textColor="@color/zl_text_primary" android:textSize="11sp" />
+                        <ImageView android:layout_width="12dp" android:layout_height="12dp"
+                            android:src="@drawable/ic_arrow_right" android:alpha="0.25" android:contentDescription="arrow" />
+                    </LinearLayout>
+
+                    <LinearLayout android:id="@+id/folder_screenshots"
+                        android:layout_width="match_parent" android:layout_height="wrap_content"
+                        android:orientation="horizontal" android:gravity="center_vertical"
+                        android:background="@drawable/bg_menu_item"
+                        android:paddingStart="10dp" android:paddingEnd="10dp"
+                        android:paddingTop="8dp" android:paddingBottom="8dp"
+                        android:clickable="true" android:focusable="true">
+                        <FrameLayout android:layout_width="26dp" android:layout_height="26dp"
+                            android:background="@drawable/bg_icon_purple" android:layout_marginEnd="8dp">
+                            <ImageView android:layout_width="12dp" android:layout_height="12dp"
+                                android:layout_gravity="center" android:src="@drawable/ic_folder_screenshot"
+                                android:contentDescription="Screenshots" />
+                        </FrameLayout>
+                        <TextView android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1"
+                            android:text="Screenshots" android:textColor="@color/zl_text_primary" android:textSize="11sp" />
+                        <ImageView android:layout_width="12dp" android:layout_height="12dp"
+                            android:src="@drawable/ic_arrow_right" android:alpha="0.25" android:contentDescription="arrow" />
+                    </LinearLayout>
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+
+    </LinearLayout>
+</ScrollView>

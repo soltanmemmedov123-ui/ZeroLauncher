@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:background="@drawable/bg_glass_card_deep"
+    android:padding="20dp">
+
+    <TextView
+        android:id="@+id/edit_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColor="@color/zl_text_primary"
+        android:textSize="15sp"
+        android:textStyle="bold"
+        android:layout_marginBottom="12dp" />
+
+    <EditText
+        android:id="@+id/edit_text"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/background_edit_box"
+        android:textColor="@color/zl_text_primary"
+        android:textColorHint="@color/zl_text_hint"
+        android:padding="10dp"
+        android:layout_marginBottom="16dp" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="end">
+
+        <Button
+            android:id="@+id/edit_cancel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="8dp"
+            android:background="@drawable/bg_btn_slate"
+            android:textColor="@color/zl_text_secondary"
+            android:textSize="12sp"
+            android:stateListAnimator="@null"
+            android:text="@string/generic_cancel" />
+
+        <Button
+            android:id="@+id/edit_confirm"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/bg_btn_cyan"
+            android:textColor="@color/white"
+            android:textSize="12sp"
+            android:stateListAnimator="@null"
+            android:text="@string/generic_ok" />
+    </LinearLayout>
+</LinearLayout>

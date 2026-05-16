@@ -1,0 +1,231 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- =============================================
+         ZeroLauncher Custom Theme Attributes
+         Fixes: attr/colorBackground not found
+                and other potential attr errors
+    ============================================= -->
+
+    <!-- Background colors -->
+    <attr name="colorBackground" format="color" />
+    <attr name="colorBackgroundSecondary" format="color" />
+    <attr name="colorBackgroundCard" format="color" />
+    <attr name="colorBackgroundDialog" format="color" />
+    <attr name="colorBackgroundOverlay" format="color" />
+
+    <!-- Surface colors (colorSurface / colorSurfaceVariant are owned by MaterialComponents — referenced only, not redeclared) -->
+
+    <!-- Text colors -->
+    <attr name="colorTextPrimary" format="color" />
+    <attr name="colorTextSecondary" format="color" />
+    <attr name="colorTextTertiary" format="color" />
+    <attr name="colorTextHint" format="color" />
+    <attr name="colorTextOnAccent" format="color" />
+
+    <!-- Accent/Brand colors (colorAccent, colorPrimary, colorPrimaryVariant, colorSecondary, colorError
+         are owned by AppCompat/MaterialComponents — referenced only, not redeclared) -->
+    <attr name="colorAccentVariant" format="color" />
+
+    <!-- ZL specific brand colors -->
+    <attr name="zlColorCyan" format="color" />
+    <attr name="zlColorPurple" format="color" />
+    <attr name="zlColorGreen" format="color" />
+    <attr name="zlColorBlue" format="color" />
+    <attr name="zlColorRed" format="color" />
+    <attr name="zlColorOrange" format="color" />
+    <attr name="zlColorPink" format="color" />
+    <attr name="zlColorTeal" format="color" />
+
+    <!-- UI element colors -->
+    <attr name="colorDivider" format="color" />
+    <attr name="colorBorder" format="color" />
+    <attr name="colorIconTint" format="color" />
+    <attr name="colorRipple" format="color" />
+    <attr name="colorScrim" format="color" />
+    <attr name="colorShadow" format="color" />
+    <attr name="colorHighlight" format="color" />
+
+    <!-- Dock attributes -->
+    <attr name="dockBackground" format="color" />
+    <attr name="dockIndicatorColor" format="color" />
+
+    <!-- Folder attributes -->
+    <attr name="folderBackground" format="color" />
+    <attr name="folderTitleColor" format="color" />
+
+    <!-- Search bar attributes -->
+    <attr name="searchBackground" format="color" />
+    <attr name="searchTextColor" format="color" />
+    <attr name="searchHintColor" format="color" />
+
+    <!-- Widget attributes -->
+    <attr name="widgetBackground" format="color" />
+    <attr name="widgetTextColor" format="color" />
+
+    <!-- Dimension attributes -->
+    <attr name="cornerRadius" format="dimension" />
+    <attr name="iconSize" format="dimension" />
+    <attr name="iconPadding" format="dimension" />
+    <attr name="dockHeight" format="dimension" />
+    <attr name="cellWidth" format="dimension" />
+    <attr name="cellHeight" format="dimension" />
+
+    <!-- Boolean attributes -->
+    <attr name="showLabels" format="boolean" />
+    <attr name="showBadges" format="boolean" />
+    <attr name="blurEnabled" format="boolean" />
+    <attr name="shadowEnabled" format="boolean" />
+
+    <!-- Integer / enum attributes -->
+    <attr name="labelLines" format="integer" />
+    <attr name="iconShape" format="enum">
+        <enum name="circle" value="0" />
+        <enum name="square" value="1" />
+        <enum name="squircle" value="2" />
+        <enum name="teardrop" value="3" />
+        <enum name="system" value="4" />
+    </attr>
+    <attr name="dockStyle" format="enum">
+        <enum name="bar" value="0" />
+        <enum name="pill" value="1" />
+        <enum name="transparent" value="2" />
+    </attr>
+
+    <!-- String attributes -->
+    <attr name="fontFamily" format="string" />
+
+    <!-- ZeroLauncher Theme Styleable -->
+    <declare-styleable name="ZLTheme">
+        <attr name="colorBackground" />
+        <attr name="colorBackgroundSecondary" />
+        <attr name="colorBackgroundCard" />
+        <attr name="colorBackgroundDialog" />
+        <attr name="colorBackgroundOverlay" />
+        <attr name="colorSurface" />
+        <attr name="colorSurfaceVariant" />
+        <attr name="colorTextPrimary" />
+        <attr name="colorTextSecondary" />
+        <attr name="colorTextTertiary" />
+        <attr name="colorTextHint" />
+        <attr name="colorTextOnAccent" />
+        <attr name="colorAccent" />
+        <attr name="colorAccentVariant" />
+        <attr name="colorPrimary" />
+        <attr name="colorPrimaryVariant" />
+        <attr name="colorSecondary" />
+        <attr name="colorError" />
+        <attr name="zlColorCyan" />
+        <attr name="zlColorPurple" />
+        <attr name="zlColorGreen" />
+        <attr name="zlColorBlue" />
+        <attr name="zlColorRed" />
+        <attr name="zlColorOrange" />
+        <attr name="zlColorPink" />
+        <attr name="zlColorTeal" />
+        <attr name="colorDivider" />
+        <attr name="colorBorder" />
+        <attr name="colorIconTint" />
+        <attr name="colorRipple" />
+        <attr name="colorScrim" />
+        <attr name="colorShadow" />
+        <attr name="colorHighlight" />
+        <attr name="dockBackground" />
+        <attr name="dockIndicatorColor" />
+        <attr name="folderBackground" />
+        <attr name="folderTitleColor" />
+        <attr name="searchBackground" />
+        <attr name="searchTextColor" />
+        <attr name="searchHintColor" />
+        <attr name="widgetBackground" />
+        <attr name="widgetTextColor" />
+        <attr name="cornerRadius" />
+        <attr name="iconSize" />
+        <attr name="iconPadding" />
+        <attr name="dockHeight" />
+        <attr name="cellWidth" />
+        <attr name="cellHeight" />
+        <attr name="showLabels" />
+        <attr name="showBadges" />
+        <attr name="blurEnabled" />
+        <attr name="shadowEnabled" />
+        <attr name="labelLines" />
+        <attr name="iconShape" />
+        <attr name="dockStyle" />
+        <attr name="fontFamily" />
+    </declare-styleable>
+
+    <!-- Styleables for individual components -->
+    <declare-styleable name="ZLIconView">
+        <attr name="iconSize" />
+        <attr name="iconShape" />
+        <attr name="iconPadding" />
+        <attr name="showLabels" />
+        <attr name="showBadges" />
+        <attr name="colorTextPrimary" />
+        <attr name="shadowEnabled" />
+    </declare-styleable>
+
+    <declare-styleable name="ZLDockView">
+        <attr name="dockBackground" />
+        <attr name="dockIndicatorColor" />
+        <attr name="dockHeight" />
+        <attr name="dockStyle" />
+        <attr name="blurEnabled" />
+    </declare-styleable>
+
+    <declare-styleable name="ZLSearchBar">
+        <attr name="searchBackground" />
+        <attr name="searchTextColor" />
+        <attr name="searchHintColor" />
+        <attr name="cornerRadius" />
+        <attr name="colorIconTint" />
+    </declare-styleable>
+
+    <declare-styleable name="ZLFolderView">
+        <attr name="folderBackground" />
+        <attr name="folderTitleColor" />
+        <attr name="cornerRadius" />
+        <attr name="blurEnabled" />
+    </declare-styleable>
+
+    <declare-styleable name="ZLWidgetView">
+        <attr name="widgetBackground" />
+        <attr name="widgetTextColor" />
+        <attr name="cornerRadius" />
+        <attr name="blurEnabled" />
+    </declare-styleable>
+
+    <!-- Extended ZL accent color attrs (TOWO Reborn palette) -->
+    <attr name="zlColorRose" format="color" />
+    <attr name="zlColorAmber" format="color" />
+    <attr name="zlColorSlate" format="color" />
+    <attr name="colorSurfaceVariant" format="color" />
+    <attr name="colorTextMuted" format="color" />
+    <attr name="colorGlassBorder" format="color" />
+    <attr name="colorGlassShine" format="color" />
+    <attr name="colorNavActiveBackground" format="color" />
+    <attr name="colorNavIndicator" format="color" />
+    <attr name="colorLaunchBtnStart" format="color" />
+    <attr name="colorLaunchBtnEnd" format="color" />
+    <attr name="colorBorderFocused" format="color" />
+
+    <!-- Ripple background helper attributes -->
+    <attr name="ripple_for_constraint" format="boolean" />
+    <attr name="ripple_for_relative" format="boolean" />
+    <attr name="ripple_for_text" format="boolean" />
+
+    <!-- Styleables for animated custom views -->
+    <declare-styleable name="AnimConstraintLayout">
+        <attr name="ripple_for_constraint" />
+    </declare-styleable>
+
+    <declare-styleable name="AnimRelativeLayout">
+        <attr name="ripple_for_relative" />
+    </declare-styleable>
+
+    <declare-styleable name="AnimTextView">
+        <attr name="ripple_for_text" />
+    </declare-styleable>
+
+</resources>

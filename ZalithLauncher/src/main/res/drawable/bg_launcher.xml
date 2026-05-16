@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- Deep space base — matches HTML bg: #060610 → #0C0C20 → #18183A -->
+    <item>
+        <shape android:shape="rectangle">
+            <gradient
+                android:type="radial"
+                android:gradientRadius="200%p"
+                android:startColor="#FF18183A"
+                android:endColor="#FF060610"
+                android:centerX="0.5"
+                android:centerY="0.5" />
+        </shape>
+    </item>
+    <!-- Top-left radial tint (orb ambience in bg) -->
+    <item android:top="-40dp" android:start="-40dp">
+        <shape android:shape="rectangle">
+            <gradient
+                android:type="radial"
+                android:gradientRadius="40%p"
+                android:startColor="#1E38BDF8"
+                android:endColor="#0038BDF8"
+                android:centerX="0"
+                android:centerY="0" />
+        </shape>
+    </item>
+    <!-- Bottom-right radial tint -->
+    <item android:bottom="-40dp" android:end="-40dp">
+        <shape android:shape="rectangle">
+            <gradient
+                android:type="radial"
+                android:gradientRadius="40%p"
+                android:startColor="#21A78BFA"
+                android:endColor="#00A78BFA"
+                android:centerX="1"
+                android:centerY="1" />
+        </shape>
+    </item>
+</layer-list>

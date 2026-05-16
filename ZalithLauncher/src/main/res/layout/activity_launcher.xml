@@ -1,0 +1,237 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- ZalithLauncher TOWO Reborn — Main Activity Shell -->
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg_launcher">
+
+    <!-- Custom wallpaper / background image layer -->
+    <ImageView
+        android:id="@+id/background_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scaleType="centerCrop" />
+
+    <!-- Ambient orb 1 — cyan, top-start -->
+    <View
+        android:layout_width="280dp"
+        android:layout_height="280dp"
+        android:layout_gravity="top|start"
+        android:layout_marginStart="-40dp"
+        android:layout_marginTop="-60dp"
+        android:alpha="0.12"
+        android:background="@drawable/orb_cyan" />
+
+    <!-- Ambient orb 2 — purple, bottom-end -->
+    <View
+        android:layout_width="240dp"
+        android:layout_height="240dp"
+        android:layout_gravity="bottom|end"
+        android:layout_marginEnd="-40dp"
+        android:layout_marginBottom="-60dp"
+        android:alpha="0.13"
+        android:background="@drawable/orb_purple" />
+
+    <!-- Ambient orb 3 — green, center -->
+    <View
+        android:layout_width="180dp"
+        android:layout_height="180dp"
+        android:layout_gravity="center"
+        android:layout_marginStart="200dp"
+        android:alpha="0.07"
+        android:background="@drawable/orb_green" />
+
+    <!-- ─── Main shell: top bar + content ─── -->
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <!-- Glass top bar -->
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/top_layout"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_40sdp"
+            android:background="@drawable/bg_glass_card_deep"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <!-- App title — clickable for easter egg -->
+            <com.movtery.zalithlauncher.ui.view.AnimTextView
+                android:id="@+id/app_title_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_12sdp"
+                android:background="?android:attr/selectableItemBackground"
+                android:textColor="@color/zl_text_primary"
+                android:textSize="@dimen/_16ssp"
+                android:textStyle="bold"
+                android:letterSpacing="-0.01"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <!-- Download button -->
+            <ImageButton
+                android:id="@+id/download_button"
+                android:layout_width="@dimen/_40sdp"
+                android:layout_height="0dp"
+                android:layout_marginEnd="@dimen/_4sdp"
+                android:layout_marginVertical="@dimen/_4sdp"
+                android:background="@drawable/bg_nav_icon"
+                android:scaleType="fitCenter"
+                android:src="@drawable/ic_download"
+                android:scaleX="0.9"
+                android:scaleY="0.9"
+                app:tint="@color/zl_text_secondary"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@id/setting_button"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <!-- Settings button -->
+            <ImageButton
+                android:id="@+id/setting_button"
+                android:layout_width="@dimen/_40sdp"
+                android:layout_height="0dp"
+                android:layout_marginEnd="@dimen/_8sdp"
+                android:layout_marginVertical="@dimen/_4sdp"
+                android:background="@drawable/bg_nav_icon"
+                android:scaleType="fitCenter"
+                android:src="@drawable/ic_menu_settings"
+                app:tint="@color/zl_text_secondary"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <!-- Fragment content area -->
+        <androidx.fragment.app.FragmentContainerView
+            android:id="@+id/container_fragment"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            app:layout_constraintBottom_toTopOf="@+id/progress_layout"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/top_layout" />
+
+        <!-- Subtle separator shadow under top bar -->
+        <View
+            android:id="@+id/shadowView"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_4sdp"
+            android:background="@drawable/shadow_gradient_down"
+            android:alpha="0.4"
+            app:layout_constraintTop_toBottomOf="@id/top_layout" />
+
+        <!-- Shadow above progress bar -->
+        <View
+            android:id="@+id/progress_shadowView"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/_4sdp"
+            android:background="@drawable/shadow_gradient_up"
+            android:alpha="0.4"
+            app:layout_constraintBottom_toTopOf="@+id/progress_layout"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <!-- Download / task progress bar -->
+        <com.kdt.mcgui.ProgressLayout
+            android:id="@+id/progress_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+        <!-- Notice / announcement card -->
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/notice_layout"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_margin="@dimen/_12sdp"
+            android:background="@drawable/bg_glass_card"
+            android:padding="@dimen/_12sdp"
+            android:visibility="gone"
+            android:elevation="8dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="@id/notice_guideline"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/top_layout"
+            app:layout_constraintVertical_bias="0.333">
+
+            <TextView
+                android:id="@+id/notice_title_view"
+                style="@style/TextAppearance.AppCompat.Title"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+                android:textColor="@color/zl_text_primary"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <ScrollView
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_marginVertical="@dimen/_8sdp"
+                app:layout_constraintBottom_toTopOf="@+id/notice_got_button"
+                app:layout_constraintTop_toBottomOf="@+id/notice_title_view">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/notice_message_view"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/zl_text_primary"
+                        android:textIsSelectable="true"
+                        android:textSize="@dimen/_14sdp" />
+
+                    <TextView
+                        android:id="@+id/notice_date_view"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_4sdp"
+                        android:gravity="end"
+                        android:textColor="@color/zl_text_muted" />
+
+                </LinearLayout>
+            </ScrollView>
+
+            <com.movtery.zalithlauncher.ui.view.AnimButton
+                android:id="@+id/notice_got_button"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="@string/generic_ok"
+                android:background="@drawable/bg_btn_cyan"
+                android:textColor="@color/white"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/notice_guideline"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.35" />
+
+        <!-- April Fools easter egg image -->
+        <ImageView
+            android:id="@+id/hair"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/ic_crack" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</FrameLayout>

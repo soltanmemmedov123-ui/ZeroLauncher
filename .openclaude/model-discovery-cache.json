@@ -1,0 +1,16 @@
+{
+  "version": 1,
+  "entries": {
+    "ollama:824f495877d76fe0": {
+      "models": [
+        {
+          "id": "qwen3.5:397b-cloud",
+          "apiName": "qwen3.5:397b-cloud",
+          "label": "qwen3.5:397b-cloud"
+        }
+      ],
+      "updatedAt": 1778615768391,
+      "error": null
+    }
+  }
+}

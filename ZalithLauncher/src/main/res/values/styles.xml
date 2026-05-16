@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- =============================================
+         APP THEME — ZalithLauncher TOWO Reborn
+         Deep Space dark · accent: cyan #38BDF8
+    ============================================= -->
+    <style name="AppTheme" parent="@style/Theme.AppCompat.DayNight.NoActionBar">
+        <item name="windowNoTitle">true</item>
+        <item name="windowActionBar">false</item>
+        <item name="android:windowFullscreen">true</item>
+        <item name="android:windowContentOverlay">@null</item>
+        <item name="android:statusBarColor">@color/background_status_bar</item>
+        <item name="android:navigationBarColor">@color/zl_bg_start</item>
+        <item name="android:scrollbarThumbHorizontal">@color/zl_cyan</item>
+        <item name="android:scrollbarThumbVertical">@color/zl_cyan</item>
+        <item name="android:textSize">@dimen/_12ssp</item>
+        <item name="android:textColor">@color/zl_text_primary</item>
+        <item name="colorAccent">@color/zl_cyan</item>
+        <item name="colorPrimary">@color/zl_primary</item>
+        <item name="colorPrimaryDark">@color/zl_bg_start</item>
+    </style>
+
+    <!-- =============================================
+         DIALOG STYLES — glass morphism matching HTML
+    ============================================= -->
+    <style name="CustomDialogStyle" parent="Theme.AppCompat.Dialog">
+        <item name="android:windowBackground">@drawable/dialog_background</item>
+        <item name="android:textColor">@color/zl_text_primary</item>
+        <item name="android:textColorPrimary">@color/zl_text_primary</item>
+        <item name="android:textColorSecondary">@color/zl_text_secondary</item>
+        <item name="android:scrollbarThumbHorizontal">@color/zl_cyan</item>
+        <item name="android:scrollbarThumbVertical">@color/zl_cyan</item>
+        <item name="colorAccent">@color/zl_cyan</item>
+    </style>
+
+    <style name="CustomAlertDialogTheme" parent="Theme.AppCompat.Dialog.Alert">
+        <item name="android:windowBackground">@drawable/dialog_background</item>
+        <item name="android:textColor">@color/zl_text_primary</item>
+        <item name="android:textColorPrimary">@color/zl_text_primary</item>
+        <item name="android:textColorSecondary">@color/zl_text_secondary</item>
+        <item name="android:scrollbarThumbHorizontal">@color/zl_cyan</item>
+        <item name="android:scrollbarThumbVertical">@color/zl_cyan</item>
+        <item name="colorAccent">@color/zl_cyan</item>
+    </style>
+
+    <!-- =============================================
+         SHAPE STYLES — rounded corners from HTML
+         CSS vars: radius-sm=10px, radius-md=16px, radius-lg=20px
+    ============================================= -->
+    <style name="RoundedCornersImageView">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSize">8dp</item>
+    </style>
+
+    <style name="RoundImageView">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSize">50%</item>
+    </style>
+
+    <!-- Card (glass-card) — radius-lg = 20dp -->
+    <style name="GlassCard">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSize">20dp</item>
+    </style>
+
+    <!-- Menu item pill — radius-sm = 10dp -->
+    <style name="MenuItemPill">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSize">10dp</item>
+    </style>
+
+    <!-- Button pill (launch-btn, action-btn) — 50dp radius = full pill -->
+    <style name="PillButton">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSize">50dp</item>
+    </style>
+
+
+
+    <!-- =============================================
+         SWITCH / TOGGLE STYLE
+         HTML: .toggle-switch — pill track, white thumb
+    ============================================= -->
+    <style name="GlassSwitch" parent="Widget.AppCompat.CompoundButton.Switch">
+        <item name="android:track">@drawable/bg_toggle</item>
+        <item name="android:thumb">@drawable/bg_toggle_thumb</item>
+        <item name="switchMinWidth">36dp</item>
+        <item name="switchPadding">2dp</item>
+        <item name="thumbTextPadding">0dp</item>
+    </style>
+
+    <!-- =============================================
+         PROGRESS BAR (memory bar)
+         HTML: .memory-bar-fill gradient #38BDF8→#A78BFA
+    ============================================= -->
+    <style name="GlassProgressBar" parent="Widget.AppCompat.ProgressBar.Horizontal">
+        <item name="android:progressDrawable">@drawable/bg_memory_bar_fill</item>
+        <item name="android:background">@drawable/bg_memory_bar_track</item>
+        <item name="android:minHeight">5dp</item>
+        <item name="android:maxHeight">5dp</item>
+    </style>
+
+</resources>

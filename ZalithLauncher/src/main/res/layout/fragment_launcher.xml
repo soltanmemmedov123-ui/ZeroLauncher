@@ -1,0 +1,485 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- ZalithLauncher TOWO Reborn — Main Menu Fragment -->
+<!-- IDs kept 100% identical to MainMenuFragment.java / FragmentLauncherBinding -->
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/fragment_menu_main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/transparent"
+    android:padding="10dp"
+    tools:ignore="ContentDescription">
+
+    <!-- ═══════════════════════════════════════════════
+         LEFT PANEL — launcher_menu
+         Glass card with SHORTCUTS menu list
+    ══════════════════════════════════════════════ -->
+    <ScrollView
+        android:id="@+id/launcher_menu"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:scrollbars="none"
+        android:overScrollMode="never"
+        android:layout_marginEnd="8dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/play_layout"
+        app:layout_constraintHorizontal_weight="6.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:background="@drawable/bg_glass_card"
+            android:padding="12dp">
+
+            <!-- Section label -->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="SHORTCUTS"
+                android:textColor="@color/zl_text_muted"
+                android:textSize="8sp"
+                android:textStyle="bold"
+                android:letterSpacing="0.12"
+                android:layout_marginBottom="8dp" />
+
+            <!-- ── About ── -->
+            <com.movtery.zalithlauncher.ui.layout.AnimRelativeLayout
+                android:id="@+id/about_button"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="3dp"
+                android:background="@drawable/bg_menu_item"
+                android:paddingStart="10dp"
+                android:paddingEnd="10dp"
+                android:paddingTop="9dp"
+                android:paddingBottom="9dp"
+                android:clickable="true"
+                android:focusable="true"
+                app:ripple_for_relative="true">
+
+                <!-- Cyan icon box -->
+                <FrameLayout
+                    android:id="@+id/about_icon_box"
+                    android:layout_width="26dp"
+                    android:layout_height="26dp"
+                    android:layout_alignParentStart="true"
+                    android:layout_centerVertical="true"
+                    android:background="@drawable/bg_icon_cyan">
+                    <ImageView
+                        android:layout_width="14dp"
+                        android:layout_height="14dp"
+                        android:layout_gravity="center"
+                        android:src="@drawable/ic_about" />
+                </FrameLayout>
+
+                <TextView
+                    android:id="@+id/about_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="38dp"
+                    android:layout_centerVertical="true"
+                    android:textColor="@color/zl_text_primary"
+                    android:textSize="11sp" />
+
+                <ImageView
+                    android:layout_width="12dp"
+                    android:layout_height="12dp"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerVertical="true"
+                    android:src="@drawable/ic_arrow_right"
+                    android:alpha="0.25" />
+            </com.movtery.zalithlauncher.ui.layout.AnimRelativeLayout>
+
+            <!-- ── Manage Control Layouts ── -->
+            <com.movtery.zalithlauncher.ui.layout.AnimRelativeLayout
+                android:id="@+id/custom_control_button"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="3dp"
+                android:background="@drawable/bg_menu_item"
+                android:paddingStart="10dp"
+                android:paddingEnd="10dp"
+                android:paddingTop="9dp"
+                android:paddingBottom="9dp"
+                android:clickable="true"
+                android:focusable="true"
+                app:ripple_for_relative="true">
+
+                <FrameLayout
+                    android:layout_width="26dp"
+                    android:layout_height="26dp"
+                    android:layout_alignParentStart="true"
+                    android:layout_centerVertical="true"
+                    android:background="@drawable/bg_icon_purple">
+                    <ImageView
+                        android:layout_width="14dp"
+                        android:layout_height="14dp"
+                        android:layout_gravity="center"
+                        android:src="@drawable/ic_menu_custom_controls" />
+                </FrameLayout>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="38dp"
+                    android:layout_centerVertical="true"
+                    android:text="@string/custom_control_title"
+                    android:textColor="@color/zl_text_primary"
+                    android:textSize="11sp" />
+
+                <ImageView
+                    android:layout_width="12dp"
+                    android:layout_height="12dp"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerVertical="true"
+                    android:src="@drawable/ic_arrow_right"
+                    android:alpha="0.25" />
+            </com.movtery.zalithlauncher.ui.layout.AnimRelativeLayout>
+
+            <!-- ── Open Main Directory ── -->
+            <com.movtery.zalithlauncher.ui.layout.AnimRelativeLayout
+                android:id="@+id/open_main_dir_button"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="3dp"
+                android:background="@drawable/bg_menu_item"
+                android:paddingStart="10dp"
+                android:paddingEnd="10dp"
+                android:paddingTop="9dp"
+                android:paddingBottom="9dp"
+                android:clickable="true"
+                android:focusable="true"
+                app:ripple_for_relative="true">
+
+                <FrameLayout
+                    android:layout_width="26dp"
+                    android:layout_height="26dp"
+                    android:layout_alignParentStart="true"
+                    android:layout_centerVertical="true"
+                    android:background="@drawable/bg_icon_amber">
+                    <ImageView
+                        android:layout_width="14dp"
+                        android:layout_height="14dp"
+                        android:layout_gravity="center"
+                        android:src="@drawable/ic_folder" />
+                </FrameLayout>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="38dp"
+                    android:layout_centerVertical="true"
+                    android:text="@string/main_open_main_dir"
+                    android:textColor="@color/zl_text_primary"
+                    android:textSize="11sp" />
+
+                <ImageView
+                    android:layout_width="12dp"
+                    android:layout_height="12dp"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerVertical="true"
+                    android:src="@drawable/ic_arrow_right"
+                    android:alpha="0.25" />
+            </com.movtery.zalithlauncher.ui.layout.AnimRelativeLayout>
+
+            <!-- ── Execute .jar file ── -->
+            <com.movtery.zalithlauncher.ui.layout.AnimRelativeLayout
+                android:id="@+id/install_jar_button"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="3dp"
+                android:background="@drawable/bg_menu_item"
+                android:paddingStart="10dp"
+                android:paddingEnd="10dp"
+                android:paddingTop="9dp"
+                android:paddingBottom="9dp"
+                android:clickable="true"
+                android:focusable="true"
+                app:ripple_for_relative="true">
+
+                <FrameLayout
+                    android:layout_width="26dp"
+                    android:layout_height="26dp"
+                    android:layout_alignParentStart="true"
+                    android:layout_centerVertical="true"
+                    android:background="@drawable/bg_icon_blue">
+                    <ImageView
+                        android:layout_width="14dp"
+                        android:layout_height="14dp"
+                        android:layout_gravity="center"
+                        android:src="@drawable/ic_java" />
+                </FrameLayout>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="38dp"
+                    android:layout_centerVertical="true"
+                    android:text="@string/main_install_jar_file"
+                    android:textColor="@color/zl_text_primary"
+                    android:textSize="11sp" />
+
+                <ImageView
+                    android:layout_width="12dp"
+                    android:layout_height="12dp"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerVertical="true"
+                    android:src="@drawable/ic_arrow_right"
+                    android:alpha="0.25" />
+            </com.movtery.zalithlauncher.ui.layout.AnimRelativeLayout>
+
+            <!-- ── Share Log Files ── -->
+            <com.movtery.zalithlauncher.ui.layout.AnimRelativeLayout
+                android:id="@+id/share_logs_button"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/bg_menu_item"
+                android:paddingStart="10dp"
+                android:paddingEnd="10dp"
+                android:paddingTop="9dp"
+                android:paddingBottom="9dp"
+                android:clickable="true"
+                android:focusable="true"
+                app:ripple_for_relative="true">
+
+                <FrameLayout
+                    android:layout_width="26dp"
+                    android:layout_height="26dp"
+                    android:layout_alignParentStart="true"
+                    android:layout_centerVertical="true"
+                    android:background="@drawable/bg_icon_slate">
+                    <ImageView
+                        android:layout_width="14dp"
+                        android:layout_height="14dp"
+                        android:layout_gravity="center"
+                        android:src="@drawable/ic_share" />
+                </FrameLayout>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="38dp"
+                    android:layout_centerVertical="true"
+                    android:text="@string/main_share_logs"
+                    android:textColor="@color/zl_text_primary"
+                    android:textSize="11sp" />
+
+                <ImageView
+                    android:layout_width="12dp"
+                    android:layout_height="12dp"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerVertical="true"
+                    android:src="@drawable/ic_arrow_right"
+                    android:alpha="0.25" />
+            </com.movtery.zalithlauncher.ui.layout.AnimRelativeLayout>
+
+        </LinearLayout>
+    </ScrollView>
+
+    <!-- ═══════════════════════════════════════════════
+         RIGHT PANEL — play_layout
+         Glass card: profile + version row + launch button
+    ══════════════════════════════════════════════ -->
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/play_layout"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_weight="3.5"
+        app:layout_constraintStart_toEndOf="@+id/launcher_menu"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <!-- Glass card background for entire right panel -->
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/play_main_layout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/bg_glass_card"
+            android:padding="12dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <!-- ── Z Logo + App name header ── -->
+            <LinearLayout
+                android:id="@+id/header_row"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                android:layout_marginBottom="8dp"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent">
+
+                <FrameLayout
+                    android:layout_width="32dp"
+                    android:layout_height="32dp"
+                    android:background="@drawable/bg_logo_icon"
+                    android:layout_marginEnd="8dp">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:text="Z"
+                        android:textColor="@color/white"
+                        android:textSize="15sp"
+                        android:textStyle="bold" />
+                </FrameLayout>
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Zero Launcher"
+                        android:textColor="@color/zl_text_primary"
+                        android:textSize="14sp"
+                        android:textStyle="bold"
+                        android:letterSpacing="-0.01" />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="MINECRAFT JAVA"
+                        android:textColor="@color/zl_text_muted"
+                        android:textSize="7sp"
+                        android:textStyle="bold"
+                        android:letterSpacing="0.12" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <!-- ── Profile / Account view ── -->
+            <include
+                android:id="@+id/view_account"
+                layout="@layout/view_account"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintBottom_toTopOf="@+id/version"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/header_row"
+                app:layout_constraintVertical_chainStyle="packed" />
+
+            <!-- ── Version pill row ── -->
+            <com.movtery.zalithlauncher.ui.layout.AnimRelativeLayout
+                android:id="@+id/version"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/_38sdp"
+                android:layout_marginBottom="8dp"
+                android:background="@drawable/bg_version_row"
+                app:layout_constraintBottom_toTopOf="@+id/play_button"
+                app:layout_constraintEnd_toStartOf="@+id/manager_profile_button"
+                app:layout_constraintStart_toStartOf="parent">
+
+                <!-- Version icon -->
+                <ImageView
+                    android:id="@+id/version_icon"
+                    android:layout_width="@dimen/_28sdp"
+                    android:layout_height="@dimen/_28sdp"
+                    android:layout_marginStart="@dimen/_8sdp"
+                    android:layout_centerVertical="true"
+                    android:scaleType="centerInside"
+                    android:src="@drawable/ic_minecraft" />
+
+                <!-- Version text block -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="@dimen/_8sdp"
+                    android:layout_centerVertical="true"
+                    android:layout_alignParentEnd="true"
+                    android:layout_toEndOf="@id/version_icon"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/version_name"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="start"
+                        android:singleLine="true"
+                        android:focusable="true"
+                        android:focusableInTouchMode="true"
+                        android:ellipsize="marquee"
+                        android:scrollHorizontally="true"
+                        android:marqueeRepeatLimit="marquee_forever"
+                        android:textColor="@color/zl_text_primary"
+                        android:textSize="11sp"
+                        android:text="@string/version_no_versions" />
+
+                    <TextView
+                        android:id="@+id/version_info"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="start"
+                        android:singleLine="true"
+                        android:focusable="true"
+                        android:focusableInTouchMode="true"
+                        android:ellipsize="marquee"
+                        android:scrollHorizontally="true"
+                        android:marqueeRepeatLimit="marquee_forever"
+                        android:textColor="@color/zl_text_muted"
+                        android:textSize="9sp"
+                        android:visibility="gone" />
+
+                </LinearLayout>
+            </com.movtery.zalithlauncher.ui.layout.AnimRelativeLayout>
+
+            <!-- ── Version manager / settings icon button ── -->
+            <ImageButton
+                android:id="@+id/manager_profile_button"
+                android:layout_width="@dimen/_38sdp"
+                android:layout_height="@dimen/_38sdp"
+                android:layout_marginStart="4dp"
+                android:layout_marginBottom="8dp"
+                android:background="@drawable/bg_icon_slate"
+                android:padding="@dimen/_6sdp"
+                android:scaleType="centerInside"
+                android:src="@drawable/ic_setting"
+                app:tint="@color/zl_text_primary"
+                app:layout_constraintBottom_toTopOf="@+id/play_button"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@id/version" />
+
+            <!-- ── PLAY button (inner container for animation) ── -->
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/play_buttons_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent">
+
+                <com.movtery.zalithlauncher.ui.view.AnimButton
+                    android:id="@+id/play_button"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/bg_launch_btn"
+                    android:text="▶  LAUNCH"
+                    android:textColor="@color/white"
+                    android:textSize="13sp"
+                    android:textStyle="bold"
+                    android:textAllCaps="true"
+                    android:letterSpacing="0.18"
+                    android:padding="14dp"
+                    android:stateListAnimator="@null"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

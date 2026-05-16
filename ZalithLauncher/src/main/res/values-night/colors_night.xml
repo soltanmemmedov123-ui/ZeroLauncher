@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="black_or_white">#FFFFFF</color>
+    <color name="background_app">#060610</color>
+    <color name="background_app_error">#100606</color>
+    <color name="background_overlay">#0A0A1A</color>
+    <color name="background_status_bar">#040408</color>
+    <color name="background_menu_top">#06060F</color>
+    <color name="background_menu_top_error">#100404</color>
+    <color name="background_menu_element">#38BDF8</color>
+    <color name="background_ripple_effect">#3338BDF8</color>
+    <color name="button_background">#0E0E1C</color>
+    <color name="button_background_selected">#18183A</color>
+    <color name="dialog_background">#060610</color>
+    <color name="menu_bar">#06060F</color>
+    <color name="menu_bar_text">#EDEDF5</color>
+    <color name="menu_overlay">#D4060610</color>
+    <color name="menu_progress">#38BDF8</color>
+    <color name="background_item">#1A0A0A1A</color>
+    <color name="background_item_selected">#4438BDF8</color>
+    <color name="background_item_disabled">#0C060610</color>
+    <color name="background_sponsor_intermediate">#404ADE80</color>
+    <color name="background_sponsor_advanced">#40FB7185</color>
+    <color name="edit_box_fill">#0E0E1C</color>
+    <color name="edit_box_fill_selected">#18183A</color>
+    <color name="mod_category_fill">#2238BDF8</color>
+    <color name="text_background_fill">#CC060610</color>
+    <color name="settings_category">#38BDF8</color>
+    <color name="favorite_color">#FB7185</color>
+    <color name="icon_color">#EDEDF5</color>
+    <color name="primary_text">#FFFFFF</color>
+    <color name="accent_cyan">#38BDF8</color>
+    <color name="accent_green">#4ADE80</color>
+    <color name="accent_purple">#A78BFA</color>
+    <color name="accent_rose">#FB7185</color>
+    <color name="accent_amber">#FBBF24</color>
+</resources>

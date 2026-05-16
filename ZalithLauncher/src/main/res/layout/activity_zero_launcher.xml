@@ -1,0 +1,515 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Zero Launcher v14 - Main Launcher Activity Layout -->
+<!-- Landscape-only horizontal split: [icon nav | profile+launch card] | [7-page content area] -->
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg_launcher">
+
+    <!-- Ambient orbs (decorative gradient blobs) -->
+    <View
+        android:id="@+id/orb1"
+        android:layout_width="280dp"
+        android:layout_height="280dp"
+        android:layout_gravity="top|start"
+        android:layout_marginStart="-40dp"
+        android:layout_marginTop="-60dp"
+        android:alpha="0.12"
+        android:background="@drawable/orb_cyan" />
+
+    <View
+        android:id="@+id/orb2"
+        android:layout_width="240dp"
+        android:layout_height="240dp"
+        android:layout_gravity="bottom|end"
+        android:layout_marginEnd="-40dp"
+        android:layout_marginBottom="-60dp"
+        android:alpha="0.13"
+        android:background="@drawable/orb_purple" />
+
+    <View
+        android:id="@+id/orb3"
+        android:layout_width="180dp"
+        android:layout_height="180dp"
+        android:layout_gravity="center"
+        android:layout_marginStart="200dp"
+        android:alpha="0.07"
+        android:background="@drawable/orb_green" />
+
+    <!-- Main app shell: 12dp padding all sides, row layout -->
+    <LinearLayout
+        android:id="@+id/app_shell"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal"
+        android:padding="12dp"
+        android:gravity="center_vertical">
+
+        <!-- ─── LEFT PANEL: icon nav + profile/launch card ─── -->
+        <LinearLayout
+            android:id="@+id/left_panel"
+            android:layout_width="280dp"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+            android:layout_marginEnd="10dp">
+
+            <!-- Icon-only nav bar (42dp wide) -->
+            <LinearLayout
+                android:id="@+id/icon_nav"
+                android:layout_width="42dp"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:gravity="center_vertical"
+                android:layout_marginEnd="8dp">
+
+                <!-- Home nav button -->
+                <FrameLayout
+                    android:id="@+id/nav_home"
+                    android:layout_width="38dp"
+                    android:layout_height="38dp"
+                    android:layout_marginBottom="4dp"
+                    android:background="@drawable/bg_nav_icon"
+                    android:clickable="true"
+                    android:focusable="true">
+                    <View
+                        android:id="@+id/nav_indicator_home"
+                        android:layout_width="2.5dp"
+                        android:layout_height="16dp"
+                        android:layout_gravity="center_vertical|start"
+                        android:layout_marginStart="-2dp"
+                        android:background="@drawable/bg_nav_indicator"
+                        android:visibility="visible" />
+                    <ImageView
+                        android:layout_width="17dp"
+                        android:layout_height="17dp"
+                        android:layout_gravity="center"
+                        android:src="@drawable/ic_nav_home"
+                        android:id="@+id/nav_icon_home"
+                        android:contentDescription="Home" />
+                </FrameLayout>
+
+                <!-- Settings nav button -->
+                <FrameLayout
+                    android:id="@+id/nav_settings"
+                    android:layout_width="38dp"
+                    android:layout_height="38dp"
+                    android:layout_marginBottom="4dp"
+                    android:background="@drawable/bg_nav_icon"
+                    android:clickable="true"
+                    android:focusable="true">
+                    <View
+                        android:id="@+id/nav_indicator_settings"
+                        android:layout_width="2.5dp"
+                        android:layout_height="16dp"
+                        android:layout_gravity="center_vertical|start"
+                        android:layout_marginStart="-2dp"
+                        android:background="@drawable/bg_nav_indicator"
+                        android:visibility="gone" />
+                    <ImageView
+                        android:layout_width="17dp"
+                        android:layout_height="17dp"
+                        android:layout_gravity="center"
+                        android:src="@drawable/ic_nav_settings"
+                        android:id="@+id/nav_icon_settings"
+                        android:contentDescription="Settings" />
+                </FrameLayout>
+
+                <!-- Downloads nav button -->
+                <FrameLayout
+                    android:id="@+id/nav_downloads"
+                    android:layout_width="38dp"
+                    android:layout_height="38dp"
+                    android:layout_marginBottom="4dp"
+                    android:background="@drawable/bg_nav_icon"
+                    android:clickable="true"
+                    android:focusable="true">
+                    <View
+                        android:id="@+id/nav_indicator_downloads"
+                        android:layout_width="2.5dp"
+                        android:layout_height="16dp"
+                        android:layout_gravity="center_vertical|start"
+                        android:layout_marginStart="-2dp"
+                        android:background="@drawable/bg_nav_indicator"
+                        android:visibility="gone" />
+                    <ImageView
+                        android:layout_width="17dp"
+                        android:layout_height="17dp"
+                        android:layout_gravity="center"
+                        android:src="@drawable/ic_nav_downloads"
+                        android:id="@+id/nav_icon_downloads"
+                        android:contentDescription="Downloads" />
+                </FrameLayout>
+
+                <!-- Versions nav button -->
+                <FrameLayout
+                    android:id="@+id/nav_versions"
+                    android:layout_width="38dp"
+                    android:layout_height="38dp"
+                    android:layout_marginBottom="4dp"
+                    android:background="@drawable/bg_nav_icon"
+                    android:clickable="true"
+                    android:focusable="true">
+                    <View
+                        android:id="@+id/nav_indicator_versions"
+                        android:layout_width="2.5dp"
+                        android:layout_height="16dp"
+                        android:layout_gravity="center_vertical|start"
+                        android:layout_marginStart="-2dp"
+                        android:background="@drawable/bg_nav_indicator"
+                        android:visibility="gone" />
+                    <ImageView
+                        android:layout_width="17dp"
+                        android:layout_height="17dp"
+                        android:layout_gravity="center"
+                        android:src="@drawable/ic_nav_versions"
+                        android:id="@+id/nav_icon_versions"
+                        android:contentDescription="Versions" />
+                </FrameLayout>
+
+                <!-- Java nav button -->
+                <FrameLayout
+                    android:id="@+id/nav_java"
+                    android:layout_width="38dp"
+                    android:layout_height="38dp"
+                    android:layout_marginBottom="4dp"
+                    android:background="@drawable/bg_nav_icon"
+                    android:clickable="true"
+                    android:focusable="true">
+                    <View
+                        android:id="@+id/nav_indicator_java"
+                        android:layout_width="2.5dp"
+                        android:layout_height="16dp"
+                        android:layout_gravity="center_vertical|start"
+                        android:layout_marginStart="-2dp"
+                        android:background="@drawable/bg_nav_indicator"
+                        android:visibility="gone" />
+                    <ImageView
+                        android:layout_width="17dp"
+                        android:layout_height="17dp"
+                        android:layout_gravity="center"
+                        android:src="@drawable/ic_nav_java"
+                        android:id="@+id/nav_icon_java"
+                        android:contentDescription="Java" />
+                </FrameLayout>
+
+                <!-- Layouts nav button -->
+                <FrameLayout
+                    android:id="@+id/nav_layouts"
+                    android:layout_width="38dp"
+                    android:layout_height="38dp"
+                    android:layout_marginBottom="4dp"
+                    android:background="@drawable/bg_nav_icon"
+                    android:clickable="true"
+                    android:focusable="true">
+                    <View
+                        android:id="@+id/nav_indicator_layouts"
+                        android:layout_width="2.5dp"
+                        android:layout_height="16dp"
+                        android:layout_gravity="center_vertical|start"
+                        android:layout_marginStart="-2dp"
+                        android:background="@drawable/bg_nav_indicator"
+                        android:visibility="gone" />
+                    <ImageView
+                        android:layout_width="17dp"
+                        android:layout_height="17dp"
+                        android:layout_gravity="center"
+                        android:src="@drawable/ic_nav_layouts"
+                        android:id="@+id/nav_icon_layouts"
+                        android:contentDescription="Layouts" />
+                </FrameLayout>
+
+                <!-- About nav button -->
+                <FrameLayout
+                    android:id="@+id/nav_about"
+                    android:layout_width="38dp"
+                    android:layout_height="38dp"
+                    android:background="@drawable/bg_nav_icon"
+                    android:clickable="true"
+                    android:focusable="true">
+                    <View
+                        android:id="@+id/nav_indicator_about"
+                        android:layout_width="2.5dp"
+                        android:layout_height="16dp"
+                        android:layout_gravity="center_vertical|start"
+                        android:layout_marginStart="-2dp"
+                        android:background="@drawable/bg_nav_indicator"
+                        android:visibility="gone" />
+                    <ImageView
+                        android:layout_width="17dp"
+                        android:layout_height="17dp"
+                        android:layout_gravity="center"
+                        android:src="@drawable/ic_nav_about"
+                        android:id="@+id/nav_icon_about"
+                        android:contentDescription="About" />
+                </FrameLayout>
+
+            </LinearLayout>
+
+            <!-- Profile + Launch glass card -->
+            <LinearLayout
+                android:id="@+id/profile_launch_card"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:orientation="vertical"
+                android:background="@drawable/bg_glass_card"
+                android:padding="12dp">
+
+                <!-- Header: Z logo + title -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical"
+                    android:layout_marginBottom="8dp">
+
+                    <FrameLayout
+                        android:layout_width="32dp"
+                        android:layout_height="32dp"
+                        android:background="@drawable/bg_logo_icon"
+                        android:layout_marginEnd="8dp">
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:text="Z"
+                            android:textColor="@color/white"
+                            android:textSize="15sp"
+                            android:textStyle="bold" />
+                    </FrameLayout>
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Zero Launcher"
+                            android:textColor="@color/white"
+                            android:textSize="14sp"
+                            android:textStyle="bold"
+                            android:letterSpacing="-0.01" />
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="MINECRAFT JAVA"
+                            android:textColor="@color/zl_text_muted"
+                            android:textSize="7sp"
+                            android:textStyle="bold"
+                            android:letterSpacing="0.12" />
+                    </LinearLayout>
+                </LinearLayout>
+
+                <!-- Profile row -->
+                <LinearLayout
+                    android:id="@+id/profile_row"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical"
+                    android:padding="4dp"
+                    android:layout_marginBottom="8dp"
+                    android:clickable="true"
+                    android:focusable="true">
+
+                    <!-- Avatar with gradient ring -->
+                    <FrameLayout
+                        android:layout_width="38dp"
+                        android:layout_height="38dp"
+                        android:layout_marginEnd="10dp"
+                        android:background="@drawable/bg_avatar_ring"
+                        android:padding="2dp">
+                        <FrameLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:background="@drawable/bg_avatar_inner">
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:text="F"
+                                android:textColor="@color/white"
+                                android:textSize="14sp"
+                                android:textStyle="bold" />
+                        </FrameLayout>
+                    </FrameLayout>
+
+                    <!-- Profile info -->
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+                        <TextView
+                            android:id="@+id/profile_username"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="FeltCart3371"
+                            android:textColor="@color/zl_text_primary"
+                            android:textSize="12sp"
+                            android:textStyle="bold"
+                            android:singleLine="true"
+                            android:ellipsize="end" />
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:gravity="center_vertical"
+                            android:background="@drawable/bg_profile_badge"
+                            android:paddingStart="6dp"
+                            android:paddingEnd="6dp"
+                            android:paddingTop="2dp"
+                            android:paddingBottom="2dp"
+                            android:layout_marginTop="2dp">
+                            <ImageView
+                                android:layout_width="6dp"
+                                android:layout_height="7dp"
+                                android:src="@drawable/ic_eleby"
+                                android:layout_marginEnd="3dp"
+                                android:contentDescription="Ely.by" />
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Ely.by"
+                                android:textColor="@color/zl_cyan"
+                                android:textSize="7sp"
+                                android:textStyle="bold" />
+                        </LinearLayout>
+                    </LinearLayout>
+                </LinearLayout>
+
+                <!-- Spacer to push version pill + button down -->
+                <View android:layout_width="0dp" android:layout_height="0dp" android:layout_weight="1" />
+
+                <!-- Version pill -->
+                <LinearLayout
+                    android:id="@+id/version_pill"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical"
+                    android:background="@drawable/bg_version_pill"
+                    android:paddingStart="12dp"
+                    android:paddingEnd="12dp"
+                    android:paddingTop="8dp"
+                    android:paddingBottom="8dp"
+                    android:layout_marginBottom="8dp">
+
+                    <View
+                        android:layout_width="5dp"
+                        android:layout_height="5dp"
+                        android:background="@drawable/dot_green"
+                        android:layout_marginEnd="6dp" />
+
+                    <TextView
+                        android:id="@+id/version_name"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="OptiMobile (Fabric)"
+                        android:textColor="@color/zl_text_primary"
+                        android:textSize="11sp"
+                        android:textStyle="normal"
+                        android:singleLine="true"
+                        android:ellipsize="end" />
+
+                    <TextView
+                        android:id="@+id/version_meta"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="1.21.4"
+                        android:textColor="@color/zl_text_muted"
+                        android:textSize="9sp" />
+                </LinearLayout>
+
+                <!-- Launch button -->
+                <Button
+                    android:id="@+id/btn_launch"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="▶  LAUNCH"
+                    android:textColor="@color/white"
+                    android:textSize="13sp"
+                    android:textStyle="bold"
+                    android:letterSpacing="0.2"
+                    android:background="@drawable/bg_launch_btn"
+                    android:padding="14dp"
+                    android:stateListAnimator="@null" />
+
+            </LinearLayout>
+        </LinearLayout>
+
+        <!-- ─── RIGHT PANEL: content area with 7 pages ─── -->
+        <FrameLayout
+            android:id="@+id/right_panel"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1">
+
+            <!-- PAGE: HOME -->
+            <include
+                android:id="@+id/page_home"
+                layout="@layout/page_home"
+                android:visibility="visible" />
+
+            <!-- PAGE: SETTINGS -->
+            <include
+                android:id="@+id/page_settings"
+                layout="@layout/page_settings"
+                android:visibility="gone" />
+
+            <!-- PAGE: DOWNLOADS -->
+            <include
+                android:id="@+id/page_downloads"
+                layout="@layout/page_downloads"
+                android:visibility="gone" />
+
+            <!-- PAGE: VERSIONS -->
+            <include
+                android:id="@+id/page_versions"
+                layout="@layout/page_versions"
+                android:visibility="gone" />
+
+            <!-- PAGE: JAVA -->
+            <include
+                android:id="@+id/page_java"
+                layout="@layout/page_java"
+                android:visibility="gone" />
+
+            <!-- PAGE: LAYOUTS -->
+            <include
+                android:id="@+id/page_layouts"
+                layout="@layout/page_layouts"
+                android:visibility="gone" />
+
+            <!-- PAGE: ABOUT -->
+            <include
+                android:id="@+id/page_about"
+                layout="@layout/page_about"
+                android:visibility="gone" />
+
+        </FrameLayout>
+
+    </LinearLayout>
+
+    <!-- Portrait mode overlay -->
+    <LinearLayout
+        android:id="@+id/portrait_overlay"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:gravity="center"
+        android:background="@drawable/bg_portrait_overlay"
+        android:visibility="gone">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="↻  Rotate your phone"
+            android:textColor="@color/zl_text_secondary"
+            android:textSize="16sp"
+            android:textStyle="bold" />
+    </LinearLayout>
+
+</FrameLayout>

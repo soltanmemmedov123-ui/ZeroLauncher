@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.movtery.zalithlauncher.ui.layout.AnimConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="8dp"
+    android:background="?android:attr/selectableItemBackgroundBorderless">
+
+    <!-- Gradient avatar ring -->
+    <FrameLayout
+        android:id="@+id/avatar_ring"
+        android:layout_width="52dp"
+        android:layout_height="52dp"
+        android:background="@drawable/bg_avatar_ring"
+        android:padding="2dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent">
+
+        <!-- Dark inner circle -->
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/bg_avatar_inner">
+
+            <!-- Avatar image / skin icon -->
+            <ImageView
+                android:id="@+id/user_icon"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:scaleType="fitCenter"
+                android:src="@drawable/ic_help"
+                tools:ignore="ContentDescription" />
+        </FrameLayout>
+    </FrameLayout>
+
+    <!-- Username + account type column -->
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginStart="10dp"
+        android:gravity="center_vertical"
+        app:layout_constraintStart_toEndOf="@id/avatar_ring"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent">
+
+        <TextView
+            android:id="@+id/user_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/_13ssp"
+            android:textStyle="bold"
+            android:textColor="@color/zl_text_primary"
+            android:letterSpacing="-0.02"
+            android:singleLine="true"
+            android:ellipsize="end"
+            tools:text="TOWOPlayer" />
+
+        <!-- Account type pill badge -->
+        <TextView
+            android:id="@+id/account_type"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="3dp"
+            android:textSize="@dimen/_9ssp"
+            android:textColor="@color/zl_cyan"
+            android:textStyle="bold"
+            android:background="@drawable/bg_profile_badge"
+            android:paddingHorizontal="6dp"
+            android:paddingVertical="2dp"
+            tools:text="Microsoft" />
+
+    </LinearLayout>
+
+</com.movtery.zalithlauncher.ui.layout.AnimConstraintLayout>

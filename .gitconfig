@@ -1,0 +1,15 @@
+[user]
+	name = dffdfddd
+	email = soltanmemmedov47@gmail.com
+[credential "https://github.com"]
+	helper = 
+	helper = !/data/data/com.termux/files/usr/bin/gh auth git-credential
+[credential "https://gist.github.com"]
+	helper = 
+	helper = !/data/data/com.termux/files/usr/bin/gh auth git-credential
+[safe]
+	directory = /storage/emulated/0/Download/ZeroLauncherFinal/ZalithLauncherTOWOReborn-1.4.4.5-TOWO
+[http]
+	postBuffer = 524288000
+	lowSpeedLimit = 0
+	lowSpeedTime = 999999

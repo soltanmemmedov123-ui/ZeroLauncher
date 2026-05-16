@@ -1,0 +1,279 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Zero Launcher - Java Page -->
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:scrollbars="none"
+    android:overScrollMode="never">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="top">
+
+        <!-- LEFT COLUMN -->
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_marginEnd="4dp"
+            android:orientation="vertical">
+
+            <!-- Runtime -->
+            <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+                android:orientation="vertical" android:background="@drawable/bg_glass_card"
+                android:padding="12dp" android:layout_marginBottom="8dp">
+
+                <TextView android:layout_width="match_parent" android:layout_height="wrap_content"
+                    android:text="RUNTIME" android:textColor="@color/zl_text_muted"
+                    android:textSize="8sp" android:textStyle="bold" android:letterSpacing="0.12"
+                    android:layout_marginBottom="8dp" />
+
+                <!-- JRE 21 Active -->
+                <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+                    android:orientation="horizontal" android:gravity="center_vertical"
+                    android:background="@drawable/bg_version_row_cyan"
+                    android:paddingStart="10dp" android:paddingEnd="10dp"
+                    android:paddingTop="8dp" android:paddingBottom="8dp"
+                    android:layout_marginBottom="4dp">
+                    <FrameLayout android:layout_width="26dp" android:layout_height="26dp"
+                        android:background="@drawable/bg_icon_cyan" android:layout_marginEnd="8dp">
+                        <ImageView android:layout_width="13dp" android:layout_height="13dp"
+                            android:layout_gravity="center" android:src="@drawable/ic_code"
+                            android:contentDescription="JRE 21" />
+                    </FrameLayout>
+                    <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content"
+                        android:layout_weight="1" android:orientation="vertical">
+                        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                            android:text="JRE 21 (Android)" android:textColor="@color/zl_text_primary"
+                            android:textSize="11sp" android:textStyle="bold" />
+                        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                            android:text="Temurin 21.0.5+11" android:textColor="@color/zl_text_muted" android:textSize="8sp" />
+                    </LinearLayout>
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                        android:text="Active" android:textColor="@color/zl_green"
+                        android:textSize="7sp" android:textStyle="bold"
+                        android:background="@drawable/bg_badge_active"
+                        android:paddingStart="6dp" android:paddingEnd="6dp"
+                        android:paddingTop="2dp" android:paddingBottom="2dp" />
+                </LinearLayout>
+
+                <!-- JRE 17 -->
+                <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+                    android:orientation="horizontal" android:gravity="center_vertical"
+                    android:background="@drawable/bg_version_row"
+                    android:paddingStart="10dp" android:paddingEnd="10dp"
+                    android:paddingTop="8dp" android:paddingBottom="8dp"
+                    android:layout_marginBottom="8dp">
+                    <FrameLayout android:layout_width="26dp" android:layout_height="26dp"
+                        android:background="@drawable/bg_icon_purple" android:layout_marginEnd="8dp">
+                        <ImageView android:layout_width="13dp" android:layout_height="13dp"
+                            android:layout_gravity="center" android:src="@drawable/ic_code_purple"
+                            android:contentDescription="JRE 17" />
+                    </FrameLayout>
+                    <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content"
+                        android:layout_weight="1" android:orientation="vertical">
+                        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                            android:text="JRE 17 (Android)" android:textColor="@color/zl_text_primary"
+                            android:textSize="11sp" android:textStyle="bold" />
+                        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                            android:text="Temurin 17.0.11+9" android:textColor="@color/zl_text_muted" android:textSize="8sp" />
+                    </LinearLayout>
+                    <Button android:id="@+id/btn_set_jre17"
+                        android:layout_width="wrap_content" android:layout_height="wrap_content"
+                        android:text="Set" android:textSize="9sp" android:textStyle="bold"
+                        android:textColor="@color/zl_purple" android:background="@drawable/bg_btn_purple"
+                        android:paddingStart="10dp" android:paddingEnd="10dp"
+                        android:paddingTop="5dp" android:paddingBottom="5dp"
+                        android:stateListAnimator="@null" />
+                </LinearLayout>
+
+                <!-- Add / Remove buttons -->
+                <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+                    <Button android:id="@+id/btn_add_jre"
+                        android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1"
+                        android:layout_marginEnd="6dp"
+                        android:text="Add" android:textSize="9sp" android:textStyle="bold"
+                        android:textColor="@color/zl_cyan" android:background="@drawable/bg_btn_cyan"
+                        android:paddingTop="5dp" android:paddingBottom="5dp"
+                        android:stateListAnimator="@null" />
+                    <Button android:id="@+id/btn_remove_jre"
+                        android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1"
+                        android:text="Remove" android:textSize="9sp" android:textStyle="bold"
+                        android:textColor="@color/zl_rose" android:background="@drawable/bg_btn_rose"
+                        android:paddingTop="5dp" android:paddingBottom="5dp"
+                        android:stateListAnimator="@null" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <!-- Memory -->
+            <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+                android:orientation="vertical" android:background="@drawable/bg_glass_card"
+                android:padding="12dp">
+
+                <TextView android:layout_width="match_parent" android:layout_height="wrap_content"
+                    android:text="MEMORY" android:textColor="@color/zl_text_muted"
+                    android:textSize="8sp" android:textStyle="bold" android:letterSpacing="0.12"
+                    android:layout_marginBottom="8dp" />
+
+                <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+                    android:orientation="horizontal" android:gravity="center_vertical"
+                    android:layout_marginBottom="4dp">
+                    <TextView android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1"
+                        android:text="Allocated" android:textColor="@color/zl_text_secondary" android:textSize="9sp" />
+                    <TextView android:id="@+id/val_memory"
+                        android:layout_width="wrap_content" android:layout_height="wrap_content"
+                        android:text="2048 MB" android:textColor="@color/zl_cyan"
+                        android:textSize="12sp" android:textStyle="bold" />
+                </LinearLayout>
+
+                <!-- Memory bar -->
+                <FrameLayout android:layout_width="match_parent" android:layout_height="5dp"
+                    android:background="@drawable/bg_memory_bar_track" android:layout_marginBottom="4dp">
+                    <View android:id="@+id/memory_bar_fill"
+                        android:layout_width="0dp" android:layout_height="match_parent"
+                        android:background="@drawable/bg_memory_bar_fill"
+                        android:layout_gravity="start" />
+                </FrameLayout>
+
+                <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+                    android:orientation="horizontal" android:gravity="center_vertical">
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                        android:text="512" android:textColor="@color/zl_text_muted" android:textSize="8sp"
+                        android:layout_marginEnd="8dp" />
+                    <SeekBar android:id="@+id/slider_memory"
+                        android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1"
+                        android:max="14" android:progress="6"
+                        android:progressTint="@color/zl_cyan" android:thumbTint="@color/white"
+                        android:splitTrack="false" />
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                        android:text="4096" android:textColor="@color/zl_text_muted" android:textSize="8sp"
+                        android:layout_marginStart="8dp" />
+                </LinearLayout>
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <!-- RIGHT COLUMN -->
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_marginStart="4dp"
+            android:orientation="vertical">
+
+            <!-- JVM Arguments -->
+            <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+                android:orientation="vertical" android:background="@drawable/bg_glass_card"
+                android:padding="12dp" android:layout_marginBottom="8dp">
+
+                <TextView android:layout_width="match_parent" android:layout_height="wrap_content"
+                    android:text="JVM ARGUMENTS" android:textColor="@color/zl_text_muted"
+                    android:textSize="8sp" android:textStyle="bold" android:letterSpacing="0.12"
+                    android:layout_marginBottom="8dp" />
+
+                <EditText android:id="@+id/jvm_args_input"
+                    android:layout_width="match_parent" android:layout_height="wrap_content"
+                    android:text="-XX:+UseG1GC -XX:MaxGCPauseMillis=50"
+                    android:textColor="@color/zl_text_primary" android:textSize="9sp"
+                    android:background="@drawable/bg_jvm_input"
+                    android:paddingStart="10dp" android:paddingEnd="10dp"
+                    android:paddingTop="6dp" android:paddingBottom="6dp"
+                    android:inputType="textMultiLine" android:minLines="3"
+                    android:gravity="top|start" android:fontFamily="monospace" />
+
+                <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+                    android:orientation="horizontal" android:layout_marginTop="6dp">
+                    <Button android:id="@+id/btn_apply_jvm"
+                        android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1"
+                        android:layout_marginEnd="6dp"
+                        android:text="Apply" android:textSize="9sp" android:textStyle="bold"
+                        android:textColor="@color/zl_green" android:background="@drawable/bg_btn_green"
+                        android:paddingTop="5dp" android:paddingBottom="5dp"
+                        android:stateListAnimator="@null" />
+                    <Button android:id="@+id/btn_reset_jvm"
+                        android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1"
+                        android:text="Reset" android:textSize="9sp" android:textStyle="bold"
+                        android:textColor="@color/zl_amber" android:background="@drawable/bg_btn_amber"
+                        android:paddingTop="5dp" android:paddingBottom="5dp"
+                        android:stateListAnimator="@null" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <!-- Security -->
+            <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+                android:orientation="vertical" android:background="@drawable/bg_glass_card"
+                android:padding="12dp" android:layout_marginBottom="8dp">
+
+                <TextView android:layout_width="match_parent" android:layout_height="wrap_content"
+                    android:text="SECURITY" android:textColor="@color/zl_text_muted"
+                    android:textSize="8sp" android:textStyle="bold" android:letterSpacing="0.12"
+                    android:layout_marginBottom="8dp" />
+
+                <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+                    android:orientation="horizontal" android:gravity="center_vertical"
+                    android:paddingTop="8dp">
+                    <View android:layout_width="5dp" android:layout_height="5dp"
+                        android:background="@drawable/dot_green" android:layout_marginEnd="7dp" />
+                    <TextView android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1"
+                        android:text="Java Security Manager" android:textColor="@color/zl_text_primary" android:textSize="11sp" />
+                    <com.movtery.zalithlauncher.ui.view.ZLToggle
+                        android:id="@+id/toggle_java_security"
+                        android:layout_width="36dp" android:layout_height="20dp" android:checked="false" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <!-- Overlay -->
+            <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+                android:orientation="vertical" android:background="@drawable/bg_glass_card"
+                android:padding="12dp">
+
+                <TextView android:layout_width="match_parent" android:layout_height="wrap_content"
+                    android:text="OVERLAY" android:textColor="@color/zl_text_muted"
+                    android:textSize="8sp" android:textStyle="bold" android:letterSpacing="0.12"
+                    android:layout_marginBottom="8dp" />
+
+                <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+                    android:orientation="horizontal" android:gravity="center_vertical"
+                    android:paddingTop="8dp" android:paddingBottom="8dp"
+                    android:background="@drawable/divider_settings">
+                    <View android:layout_width="5dp" android:layout_height="5dp"
+                        android:background="@drawable/dot_purple" android:layout_marginEnd="7dp" />
+                    <TextView android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1"
+                        android:text="Show Overlay" android:textColor="@color/zl_text_primary" android:textSize="11sp" />
+                    <com.movtery.zalithlauncher.ui.view.ZLToggle
+                        android:id="@+id/toggle_overlay"
+                        android:layout_width="36dp" android:layout_height="20dp" android:checked="true" />
+                </LinearLayout>
+
+                <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+                    android:orientation="vertical" android:paddingTop="8dp">
+                    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+                        android:orientation="horizontal" android:gravity="center_vertical">
+                        <View android:layout_width="5dp" android:layout_height="5dp"
+                            android:background="@drawable/dot_amber" android:layout_marginEnd="7dp" />
+                        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                            android:text="Opacity" android:textColor="@color/zl_text_primary" android:textSize="11sp" />
+                    </LinearLayout>
+                    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+                        android:orientation="horizontal" android:gravity="center_vertical" android:layout_marginTop="4dp">
+                        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                            android:text="0%" android:textColor="@color/zl_text_muted" android:textSize="8sp" android:layout_marginEnd="8dp" />
+                        <SeekBar android:id="@+id/slider_overlay_opacity"
+                            android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1"
+                            android:max="100" android:progress="80"
+                            android:progressTint="@color/zl_cyan" android:thumbTint="@color/white"
+                            android:splitTrack="false" />
+                        <TextView android:id="@+id/val_overlay_opacity"
+                            android:layout_width="28dp" android:layout_height="wrap_content"
+                            android:text="80%" android:textColor="@color/zl_cyan" android:textSize="9sp"
+                            android:textStyle="bold" android:gravity="end" android:layout_marginStart="8dp" />
+                    </LinearLayout>
+                </LinearLayout>
+            </LinearLayout>
+
+        </LinearLayout>
+    </LinearLayout>
+</ScrollView>

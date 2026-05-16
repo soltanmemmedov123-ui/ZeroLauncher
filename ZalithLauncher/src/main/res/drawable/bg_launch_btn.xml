@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:state_pressed="true">
+        <layer-list>
+            <item>
+                <shape android:shape="rectangle">
+                    <gradient
+                        android:type="linear"
+                        android:angle="135"
+                        android:startColor="#264ADE80"
+                        android:endColor="#1F38BDF8" />
+                    <corners android:radius="50dp" />
+                    <stroke android:width="1.5dp" android:color="#4D4ADE80" />
+                </shape>
+            </item>
+        </layer-list>
+    </item>
+    <item>
+        <layer-list>
+            <!-- Main gradient: rgba(74,222,128,0.3) → rgba(56,189,248,0.22) -->
+            <item>
+                <shape android:shape="rectangle">
+                    <gradient
+                        android:type="linear"
+                        android:angle="135"
+                        android:startColor="#4D4ADE80"
+                        android:endColor="#3838BDF8" />
+                    <corners android:radius="50dp" />
+                    <stroke android:width="1.5dp" android:color="#4D4ADE80" />
+                </shape>
+            </item>
+            <!-- Inner top shine: inset 0 1px 0 rgba(255,255,255,0.1) -->
+            <item android:top="0dp" android:bottom="0dp" android:left="0dp" android:right="0dp">
+                <shape android:shape="rectangle">
+                    <gradient
+                        android:type="linear"
+                        android:angle="270"
+                        android:startColor="#1AFFFFFF"
+                        android:endColor="#00000000" />
+                    <corners android:radius="50dp" />
+                    <size android:height="6dp" />
+                </shape>
+            </item>
+        </layer-list>
+    </item>
+</selector>

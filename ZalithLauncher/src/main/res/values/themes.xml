@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- =============================================
+         BASE ZEROLAUNCHER THEME
+         Design: ZalithLauncher TOWO Reborn
+         Palette: Deep Space Dark · Cyan/Purple/Green accents
+    ============================================= -->
+    <style name="Theme.ZeroLauncher" parent="Theme.MaterialComponents.DayNight.NoActionBar">
+
+        <!-- Android/Material system attributes -->
+        <item name="colorPrimary">@color/zl_primary</item>
+        <item name="colorPrimaryVariant">@color/zl_primary_dark</item>
+        <item name="colorOnPrimary">@color/zl_on_primary</item>
+        <item name="colorSecondary">@color/zl_secondary</item>
+        <item name="colorSecondaryVariant">@color/zl_secondary_variant</item>
+        <item name="colorOnSecondary">@color/zl_on_secondary</item>
+        <item name="colorError">@color/zl_error</item>
+        <item name="colorOnError">@color/zl_on_error</item>
+        <item name="colorSurface">@color/zl_surface</item>
+        <item name="colorOnSurface">@color/zl_on_surface</item>
+        <item name="android:colorBackground">@color/zl_bg_start</item>
+        <item name="android:windowBackground">@color/zl_bg_start</item>
+        <item name="android:textColorPrimary">@color/zl_text_primary</item>
+        <item name="android:textColorSecondary">@color/zl_text_secondary</item>
+        <item name="android:textColorHint">@color/zl_text_hint</item>
+        <item name="android:statusBarColor">@color/transparent</item>
+        <item name="android:navigationBarColor">@color/transparent</item>
+        <item name="android:windowTranslucentStatus">false</item>
+        <item name="android:windowTranslucentNavigation">false</item>
+        <item name="android:windowDrawsSystemBarBackgrounds">true</item>
+
+        <!-- ZL custom attributes -->
+        <item name="colorBackground">@color/zl_bg_start</item>
+        <item name="colorBackgroundSecondary">@color/zl_bg_mid</item>
+        <item name="colorBackgroundCard">@color/zl_bg_card</item>
+        <item name="colorBackgroundDialog">@color/zl_bg_dialog</item>
+        <item name="colorBackgroundOverlay">@color/zl_bg_overlay</item>
+        <item name="colorSurfaceVariant">@color/zl_bg_surface</item>
+        <item name="colorTextPrimary">@color/zl_text_primary</item>
+        <item name="colorTextSecondary">@color/zl_text_secondary</item>
+        <item name="colorTextTertiary">@color/zl_text_tertiary</item>
+        <item name="colorTextHint">@color/zl_text_hint</item>
+        <item name="colorTextOnAccent">@color/zl_text_on_accent</item>
+
+        <!-- Accent tokens matching HTML design -->
+        <item name="colorAccent">@color/zl_cyan</item>
+        <item name="colorAccentVariant">@color/zl_cyan_dark</item>
+        <item name="zlColorCyan">@color/zl_cyan</item>
+        <item name="zlColorPurple">@color/zl_purple</item>
+        <item name="zlColorGreen">@color/zl_green</item>
+        <item name="zlColorBlue">@color/zl_blue</item>
+        <item name="zlColorRed">@color/zl_red</item>
+        <item name="zlColorOrange">@color/zl_orange</item>
+        <item name="zlColorPink">@color/zl_pink</item>
+        <item name="zlColorTeal">@color/zl_teal</item>
+        <item name="zlColorRose">@color/zl_rose</item>
+        <item name="zlColorAmber">@color/zl_amber</item>
+        <item name="zlColorSlate">@color/zl_slate</item>
+
+        <!-- UI Structure -->
+        <item name="colorDivider">@color/zl_divider</item>
+        <item name="colorBorder">@color/zl_border</item>
+        <item name="colorIconTint">@color/zl_icon_tint</item>
+        <item name="colorRipple">@color/zl_bg_ripple</item>
+        <item name="colorScrim">@color/zl_scrim</item>
+        <item name="colorShadow">@color/zl_shadow</item>
+        <item name="colorHighlight">@color/zl_highlight</item>
+
+        <!-- Dock -->
+        <item name="dockBackground">@color/zl_dock_bg</item>
+        <item name="dockIndicatorColor">@color/zl_dock_indicator</item>
+
+        <!-- Folder -->
+        <item name="folderBackground">@color/zl_folder_bg</item>
+        <item name="folderTitleColor">@color/zl_folder_title</item>
+
+        <!-- Search -->
+        <item name="searchBackground">@color/zl_search_bg</item>
+        <item name="searchTextColor">@color/zl_search_text</item>
+        <item name="searchHintColor">@color/zl_search_hint</item>
+
+        <!-- Widget -->
+        <item name="widgetBackground">@color/zl_widget_bg</item>
+        <item name="widgetTextColor">@color/zl_widget_text</item>
+
+        <!-- Extended TOWO Reborn palette attrs -->
+        <item name="zlColorRose">@color/zl_rose</item>
+        <item name="zlColorAmber">@color/zl_amber</item>
+        <item name="zlColorSlate">@color/zl_slate</item>
+        <item name="colorSurfaceVariant">@color/zl_bg_surface</item>
+        <item name="colorAccentVariant">@color/zl_cyan_dark</item>
+        <item name="colorTextMuted">@color/zl_text_muted</item>
+        <item name="colorGlassBorder">@color/zl_glass_border</item>
+        <item name="colorGlassShine">@color/zl_glass_shine</item>
+        <item name="colorNavActiveBackground">@color/zl_nav_active_bg</item>
+        <item name="colorNavIndicator">@color/zl_nav_indicator</item>
+        <item name="colorLaunchBtnStart">@color/zl_launch_btn_start</item>
+        <item name="colorLaunchBtnEnd">@color/zl_launch_btn_end</item>
+        <item name="colorBorderFocused">@color/zl_border_focused</item>
+    </style>
+
+    <!-- Launcher-specific (no action bar, transparent chrome) -->
+    <style name="Theme.ZeroLauncher.Launcher" parent="Theme.ZeroLauncher">
+        <item name="android:windowIsTranslucent">false</item>
+        <item name="android:windowShowWallpaper">true</item>
+        <item name="android:windowFullscreen">false</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:backgroundDimEnabled">false</item>
+    </style>
+
+    <!-- Settings Activity -->
+    <style name="Theme.ZeroLauncher.Settings" parent="Theme.ZeroLauncher">
+        <item name="android:windowBackground">@color/zl_bg_start</item>
+    </style>
+
+    <!-- Dialog — glass card style matching HTML dialog_background -->
+    <style name="Theme.ZeroLauncher.Dialog" parent="Theme.MaterialComponents.DayNight.Dialog">
+        <item name="android:colorBackground">@color/zl_bg_dialog</item>
+        <item name="colorPrimary">@color/zl_primary</item>
+        <item name="colorAccent">@color/zl_cyan</item>
+        <item name="android:textColorPrimary">@color/zl_text_primary</item>
+        <item name="android:textColorSecondary">@color/zl_text_secondary</item>
+        <item name="android:windowBackground">@drawable/dialog_background</item>
+    </style>
+
+    <!-- Splash / transparent -->
+    <style name="Theme.ZeroLauncher.Splash" parent="Theme.ZeroLauncher">
+        <item name="android:windowIsTranslucent">true</item>
+        <item name="android:windowBackground">@color/transparent</item>
+        <item name="android:windowContentOverlay">@null</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowFullscreen">true</item>
+        <item name="android:backgroundDimEnabled">false</item>
+    </style>
+
+</resources>
