@@ -14,9 +14,15 @@
     "install-github-app": 3,
     "install-slack-app": 3,
     "drag-and-drop-images": 3,
-    "double-esc-code-restore": 3
+    "double-esc-code-restore": 3,
+    "continue": 3,
+    "shift-tab": 3,
+    "image-paste": 3,
+    "desktop-app": 3,
+    "web-app": 3,
+    "frontend-design-plugin": 3
   },
-  "promptQueueUseCount": 1,
+  "promptQueueUseCount": 2,
   "btwUseCount": 1,
   "providerProfiles": [
     {

@@ -1,3 +1,10 @@
+## 0.12.0
+- __section__:Features
+- opengateway: add Gemini 3.1 Flash Lite + GLM 5.1 FP8 to catalog
+- __section__:Bug Fixes
+- openai-shim: surface in-stream errors and truncation hints
+- Reduce stable stringify heap usage
+
 ## 0.11.0
 - __section__:Features
 - add sponsored tips with frequency-gated display
@@ -139,9 +146,3 @@
 ## 0.5.2
 - __section__:Bug Fixes
 - api: replace phrase-based reasoning sanitizer with tag-based filter
-
-## 0.5.1
-- __section__:Bug Fixes
-- enforce Bash path constraints after sandbox allow
-- enforce MCP OAuth callback state before errors
-- require trusted approval for sandbox override
