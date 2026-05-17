@@ -15,6 +15,7 @@
     <string name="generic_more">المزيد</string>
     <string name="generic_search">بحث</string>
     <string name="generic_tip">تلميح</string>
+    <string name="generic_cancel">إلغاء</string>
     <string name="generic_confirm">تأكيد</string>
     <string name="generic_unknown">غير معروف</string>
     <string name="generic_warning">تحذير</string>
