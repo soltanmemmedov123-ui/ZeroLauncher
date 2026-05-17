@@ -13,23 +13,59 @@
         android:textColor="@color/zl_text_primary"
         android:textSize="15sp"
         android:textStyle="bold"
-        android:layout_marginBottom="12dp" />
+        android:layout_marginBottom="8dp" />
 
-    <EditText
-        android:id="@+id/text_edit"
+    <TextView
+        android:id="@+id/message_view"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="@drawable/background_edit_box"
-        android:textColor="@color/zl_text_primary"
-        android:textColorHint="@color/zl_text_hint"
-        android:padding="10dp"
-        android:layout_marginBottom="16dp" />
+        android:visibility="gone"
+        android:textColor="@color/zl_text_secondary"
+        android:textSize="13sp"
+        android:layout_marginBottom="8dp" />
+
+    <LinearLayout
+        android:id="@+id/content_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <ScrollView
+            android:id="@+id/scroll_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <EditText
+                    android:id="@+id/text_edit"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/background_edit_box"
+                    android:textColor="@color/zl_text_primary"
+                    android:textColorHint="@color/zl_text_hint"
+                    android:padding="10dp"
+                    android:layout_marginBottom="8dp" />
+
+                <CheckBox
+                    android:id="@+id/check_box"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:visibility="gone" />
+
+            </LinearLayout>
+        </ScrollView>
+    </LinearLayout>
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        android:gravity="end">
+        android:gravity="end"
+        android:layout_marginTop="16dp">
 
         <Button
             android:id="@+id/cancel_button"
