@@ -7,7 +7,7 @@
     android:padding="20dp">
 
     <TextView
-        android:id="@+id/progress_text"
+        android:id="@+id/text_view"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:textColor="@color/zl_text_primary"
@@ -23,7 +23,7 @@
         android:layout_marginBottom="8dp" />
 
     <TextView
-        android:id="@+id/progress_note"
+        android:id="@+id/upload_rate"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:textColor="@color/zl_text_muted"

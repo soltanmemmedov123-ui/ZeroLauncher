@@ -8,7 +8,7 @@
     android:padding="20dp">
 
     <TextView
-        android:id="@+id/tip_title"
+        android:id="@+id/title_view"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:textColor="@color/zl_text_primary"
@@ -21,7 +21,7 @@
         android:layout_height="wrap_content"
         android:layout_marginBottom="16dp">
         <TextView
-            android:id="@+id/tip_message"
+            android:id="@+id/message_view"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:textColor="@color/zl_text_secondary"
@@ -36,7 +36,7 @@
         android:gravity="end">
 
         <Button
-            android:id="@+id/tip_cancel"
+            android:id="@+id/cancel_button"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginEnd="8dp"
@@ -47,7 +47,7 @@
             android:text="@string/generic_cancel" />
 
         <Button
-            android:id="@+id/tip_confirm"
+            android:id="@+id/confirm_button"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:background="@drawable/bg_btn_cyan"
