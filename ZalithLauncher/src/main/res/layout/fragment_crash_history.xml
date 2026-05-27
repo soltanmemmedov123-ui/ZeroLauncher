@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+    fragment_crash_history.xml
+    List + search + inline detail panel for crash history.
+-->
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#12131F">
+
+    <!-- ── List pane ──────────────────────────────────────────────────────── -->
+    <ScrollView
+        android:id="@+id/crash_scroll"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="12dp">
+
+            <!-- Search bar -->
+            <EditText
+                android:id="@+id/et_crash_search"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:hint="Search crashes…"
+                android:textColorHint="#6B7280"
+                android:textColor="#D1D5DB"
+                android:textSize="12sp"
+                android:background="#22243A"
+                android:padding="10dp"
+                android:imeOptions="actionSearch"
+                android:inputType="text"
+                android:layout_marginBottom="10dp" />
+
+            <TextView
+                android:id="@+id/tv_crash_empty"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="No crashes recorded yet.\nCrash logs will appear here automatically."
+                android:textColor="#6B7280"
+                android:textSize="12sp"
+                android:gravity="center"
+                android:padding="40dp"
+                android:visibility="gone" />
+
+            <LinearLayout
+                android:id="@+id/crash_list_container"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical" />
+
+        </LinearLayout>
+    </ScrollView>
+
+    <!-- ── Detail pane (hidden until a row is tapped) ─────────────────────── -->
+    <LinearLayout
+        android:id="@+id/crash_detail_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:background="#12131F"
+        android:visibility="gone">
+
+        <!-- Detail toolbar -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="44dp"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:padding="8dp"
+            android:background="#1A1C2E">
+
+            <View
+                android:id="@+id/btn_detail_back"
+                android:layout_width="32dp"
+                android:layout_height="32dp"
+                android:background="#2D2F4A"
+                android:clickable="true"
+                android:focusable="true" />
+
+            <!-- Chevron drawn programmatically or use a drawable; simple placeholder -->
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="← Crash Detail"
+                android:textColor="#FFFFFF"
+                android:textSize="13sp"
+                android:textStyle="bold"
+                android:layout_marginStart="8dp" />
+        </LinearLayout>
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:padding="12dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/tv_detail_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="#F87171"
+                    android:textSize="14sp"
+                    android:textStyle="bold"
+                    android:layout_marginBottom="10dp" />
+
+                <TextView
+                    android:id="@+id/tv_detail_meta"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColor="#D1D5DB"
+                    android:textSize="11sp"
+                    android:fontFamily="monospace"
+                    android:background="#1E2030"
+                    android:padding="10dp"
+                    android:layout_marginBottom="12dp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="LOG TAIL"
+                    android:textColor="#6B7280"
+                    android:textSize="9sp"
+                    android:textStyle="bold"
+                    android:letterSpacing="0.10"
+                    android:layout_marginBottom="4dp" />
+
+                <TextView
+                    android:id="@+id/tv_detail_log"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColor="#9CA3AF"
+                    android:textSize="10sp"
+                    android:fontFamily="monospace"
+                    android:background="#0D0E1C"
+                    android:padding="10dp" />
+
+            </LinearLayout>
+        </ScrollView>
+    </LinearLayout>
+
+</FrameLayout>

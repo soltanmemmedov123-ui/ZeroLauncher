@@ -1,0 +1,219 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Zero Launcher - About Page -->
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:scrollbars="none"
+    android:overScrollMode="never">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <!-- Main about card -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:background="@drawable/bg_glass_card"
+            android:padding="12dp"
+            android:layout_marginBottom="8dp"
+            android:gravity="center_horizontal">
+
+            <!-- Big Z logo -->
+            <FrameLayout
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:background="@drawable/bg_big_logo"
+                android:layout_marginBottom="8dp">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:text="Z"
+                    android:textColor="@color/white"
+                    android:textSize="30sp"
+                    android:textStyle="bold" />
+            </FrameLayout>
+
+            <!-- Launcher name -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Zero Launcher"
+                android:textColor="@color/zl_text_primary"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:letterSpacing="-0.01" />
+
+            <!-- Subtitle -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Minecraft Java Edition for Android"
+                android:textColor="@color/zl_text_secondary"
+                android:textSize="10sp"
+                android:layout_marginTop="2dp" />
+
+            <!-- Version -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Version 2.0.0 (build 204) · GPL-3.0"
+                android:textColor="@color/zl_text_muted"
+                android:textSize="9sp"
+                android:layout_marginTop="2dp" />
+
+            <!-- Badges row -->
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="8dp">
+
+                <!-- Discord badge -->
+                <LinearLayout android:id="@+id/badge_discord"
+                    android:layout_width="wrap_content" android:layout_height="wrap_content"
+                    android:orientation="horizontal" android:gravity="center_vertical"
+                    android:background="@drawable/bg_badge_discord"
+                    android:paddingStart="10dp" android:paddingEnd="10dp"
+                    android:paddingTop="5dp" android:paddingBottom="5dp"
+                    android:layout_marginEnd="6dp"
+                    android:clickable="true" android:focusable="true">
+                    <ImageView android:layout_width="11dp" android:layout_height="11dp"
+                        android:src="@drawable/ic_discord" android:layout_marginEnd="5dp"
+                        android:contentDescription="Discord" />
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                        android:text="Discord" android:textColor="#818CF8"
+                        android:textSize="9sp" android:textStyle="bold" />
+                </LinearLayout>
+
+                <!-- GitHub badge -->
+                <LinearLayout android:id="@+id/badge_github"
+                    android:layout_width="wrap_content" android:layout_height="wrap_content"
+                    android:orientation="horizontal" android:gravity="center_vertical"
+                    android:background="@drawable/bg_badge_github"
+                    android:paddingStart="10dp" android:paddingEnd="10dp"
+                    android:paddingTop="5dp" android:paddingBottom="5dp"
+                    android:layout_marginEnd="6dp"
+                    android:clickable="true" android:focusable="true">
+                    <ImageView android:layout_width="11dp" android:layout_height="11dp"
+                        android:src="@drawable/ic_github" android:layout_marginEnd="5dp"
+                        android:contentDescription="GitHub" />
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                        android:text="GitHub" android:textColor="@color/zl_text_secondary"
+                        android:textSize="9sp" android:textStyle="bold" />
+                </LinearLayout>
+
+                <!-- GPL badge -->
+                <LinearLayout android:id="@+id/badge_gpl"
+                    android:layout_width="wrap_content" android:layout_height="wrap_content"
+                    android:orientation="horizontal" android:gravity="center_vertical"
+                    android:background="@drawable/bg_badge_gpl"
+                    android:paddingStart="10dp" android:paddingEnd="10dp"
+                    android:paddingTop="5dp" android:paddingBottom="5dp"
+                    android:clickable="true" android:focusable="true">
+                    <ImageView android:layout_width="11dp" android:layout_height="11dp"
+                        android:src="@drawable/ic_shield" android:layout_marginEnd="5dp"
+                        android:contentDescription="GPL" />
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                        android:text="GPL-3.0" android:textColor="@color/zl_green"
+                        android:textSize="9sp" android:textStyle="bold" />
+                </LinearLayout>
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <!-- Contributors card -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:background="@drawable/bg_glass_card"
+            android:padding="12dp">
+
+            <TextView android:layout_width="match_parent" android:layout_height="wrap_content"
+                android:text="CONTRIBUTORS" android:textColor="@color/zl_text_muted"
+                android:textSize="8sp" android:textStyle="bold" android:letterSpacing="0.12"
+                android:layout_marginBottom="8dp" />
+
+            <!-- ZeroLauncher Team -->
+            <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+                android:orientation="horizontal" android:gravity="center_vertical"
+                android:background="@drawable/bg_contributor_card"
+                android:paddingStart="10dp" android:paddingEnd="10dp"
+                android:paddingTop="8dp" android:paddingBottom="8dp"
+                android:layout_marginBottom="3dp">
+                <FrameLayout android:layout_width="28dp" android:layout_height="28dp"
+                    android:background="@drawable/bg_contrib_zero" android:layout_marginEnd="8dp">
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                        android:layout_gravity="center" android:text="Z"
+                        android:textColor="@color/white" android:textSize="11sp" android:textStyle="bold" />
+                </FrameLayout>
+                <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content"
+                    android:layout_weight="1" android:orientation="vertical">
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                        android:text="ZeroLauncher Team" android:textColor="@color/zl_text_primary"
+                        android:textSize="10sp" android:textStyle="bold" />
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                        android:text="Core Developers" android:textColor="@color/zl_text_muted" android:textSize="8sp" />
+                </LinearLayout>
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                    android:text="Lead" android:textColor="@color/zl_green"
+                    android:textSize="7sp" android:textStyle="bold"
+                    android:background="@drawable/bg_badge_active"
+                    android:paddingStart="6dp" android:paddingEnd="6dp"
+                    android:paddingTop="2dp" android:paddingBottom="2dp" />
+            </LinearLayout>
+
+            <!-- PojavLauncher -->
+            <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+                android:orientation="horizontal" android:gravity="center_vertical"
+                android:background="@drawable/bg_contributor_card"
+                android:paddingStart="10dp" android:paddingEnd="10dp"
+                android:paddingTop="8dp" android:paddingBottom="8dp"
+                android:layout_marginBottom="3dp">
+                <FrameLayout android:layout_width="28dp" android:layout_height="28dp"
+                    android:background="@drawable/bg_contrib_pojav" android:layout_marginEnd="8dp">
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                        android:layout_gravity="center" android:text="P"
+                        android:textColor="@color/white" android:textSize="11sp" android:textStyle="bold" />
+                </FrameLayout>
+                <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content"
+                    android:layout_weight="1" android:orientation="vertical">
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                        android:text="PojavLauncher" android:textColor="@color/zl_text_primary"
+                        android:textSize="10sp" android:textStyle="bold" />
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                        android:text="Upstream project base" android:textColor="@color/zl_text_muted" android:textSize="8sp" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <!-- Community -->
+            <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+                android:orientation="horizontal" android:gravity="center_vertical"
+                android:background="@drawable/bg_contributor_card"
+                android:paddingStart="10dp" android:paddingEnd="10dp"
+                android:paddingTop="8dp" android:paddingBottom="8dp">
+                <FrameLayout android:layout_width="28dp" android:layout_height="28dp"
+                    android:background="@drawable/bg_contrib_community" android:layout_marginEnd="8dp">
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                        android:layout_gravity="center" android:text="C"
+                        android:textColor="@color/white" android:textSize="11sp" android:textStyle="bold" />
+                </FrameLayout>
+                <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content"
+                    android:layout_weight="1" android:orientation="vertical">
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                        android:text="Community" android:textColor="@color/zl_text_primary"
+                        android:textSize="10sp" android:textStyle="bold" />
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                        android:text="Bug reports &amp; translations" android:textColor="@color/zl_text_muted" android:textSize="8sp" />
+                </LinearLayout>
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </LinearLayout>
+</ScrollView>

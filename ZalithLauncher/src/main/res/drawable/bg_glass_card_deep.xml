@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- Deep glass base -->
+    <item>
+        <shape android:shape="rectangle">
+            <solid android:color="#C70A0A1A" />
+            <corners android:radius="20dp" />
+            <stroke android:width="1dp" android:color="#17FFFFFF" />
+        </shape>
+    </item>
+    <!-- Top shine stripe — HTML ::before: 8%–92% horizontal gradient -->
+    <item
+        android:top="0dp"
+        android:left="20dp"
+        android:right="20dp"
+        android:bottom="0dp">
+        <shape android:shape="rectangle">
+            <gradient
+                android:type="linear"
+                android:angle="0"
+                android:startColor="#00FFFFFF"
+                android:centerColor="#38FFFFFF"
+                android:endColor="#00FFFFFF" />
+            <size android:height="1dp" />
+        </shape>
+    </item>
+</layer-list>

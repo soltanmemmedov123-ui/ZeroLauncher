@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="horizontal">
+
+    <!-- Left panel: search + list -->
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:orientation="vertical"
+        android:background="@color/zl_bg_surface"
+        android:padding="10dp">
+
+        <!-- Load button + search row -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:layout_marginBottom="8dp">
+
+            <Button
+                android:id="@+id/btn_load_classes"
+                android:layout_width="wrap_content"
+                android:layout_height="36dp"
+                android:text="LOAD"
+                android:textColor="@color/white"
+                android:textSize="10sp"
+                android:textStyle="bold"
+                android:letterSpacing="0.08"
+                android:background="@drawable/bg_launch_btn"
+                android:paddingHorizontal="14dp"
+                android:stateListAnimator="@null"
+                android:layout_marginEnd="8dp" />
+
+            <EditText
+                android:id="@+id/et_class_search"
+                android:layout_width="0dp"
+                android:layout_height="36dp"
+                android:layout_weight="1"
+                android:hint="Filter classes…"
+                android:textColor="@color/zl_text_primary"
+                android:textColorHint="@color/zl_text_muted"
+                android:textSize="12sp"
+                android:background="@drawable/background_edit_box"
+                android:paddingHorizontal="10dp"
+                android:singleLine="true"
+                android:inputType="text" />
+        </LinearLayout>
+
+        <!-- Status text -->
+        <TextView
+            android:id="@+id/tv_class_status"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@color/zl_text_muted"
+            android:textSize="10sp"
+            android:layout_marginBottom="6dp"
+            android:visibility="gone" />
+
+        <!-- Class list -->
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rv_classes"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:overScrollMode="never"
+            android:clipToPadding="false" />
+    </LinearLayout>
+
+    <!-- Right panel: class detail (hidden until a class is tapped) -->
+    <LinearLayout
+        android:id="@+id/detail_panel"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1.2"
+        android:orientation="vertical"
+        android:background="@color/zl_bg_card"
+        android:padding="12dp"
+        android:visibility="gone">
+
+        <!-- Detail header row -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:layout_marginBottom="8dp">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="CLASS DETAIL"
+                android:textColor="@color/zl_text_muted"
+                android:textSize="8sp"
+                android:textStyle="bold"
+                android:letterSpacing="0.12" />
+
+            <TextView
+                android:id="@+id/btn_detail_close"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="✕"
+                android:textColor="@color/zl_text_secondary"
+                android:textSize="14sp"
+                android:padding="4dp"
+                android:clickable="true"
+                android:focusable="true" />
+        </LinearLayout>
+
+        <!-- Scrollable detail content -->
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:overScrollMode="never">
+
+            <TextView
+                android:id="@+id/tv_detail_content"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/zl_text_primary"
+                android:textSize="11sp"
+                android:fontFamily="monospace"
+                android:lineSpacingMultiplier="1.4" />
+        </ScrollView>
+    </LinearLayout>
+
+</LinearLayout>

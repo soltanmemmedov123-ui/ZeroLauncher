@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Night mode inherits the same dark theme (ZeroLauncher is already dark-first) -->
+    <style name="Theme.ZeroLauncher" parent="Theme.MaterialComponents.DayNight.NoActionBar">
+        <item name="colorPrimary">@color/zl_primary</item>
+        <item name="colorPrimaryVariant">@color/zl_primary_dark</item>
+        <item name="colorOnPrimary">@color/zl_on_primary</item>
+        <item name="colorSecondary">@color/zl_secondary</item>
+        <item name="colorSecondaryVariant">@color/zl_secondary_variant</item>
+        <item name="colorOnSecondary">@color/zl_on_secondary</item>
+        <item name="colorError">@color/zl_error</item>
+        <item name="colorOnError">@color/zl_on_error</item>
+        <item name="colorSurface">@color/zl_surface</item>
+        <item name="colorOnSurface">@color/zl_on_surface</item>
+        <item name="android:colorBackground">@color/zl_bg_start</item>
+        <item name="android:windowBackground">@color/zl_bg_start</item>
+        <item name="android:textColorPrimary">@color/zl_text_primary</item>
+        <item name="android:textColorSecondary">@color/zl_text_secondary</item>
+        <item name="colorBackground">@color/zl_bg_start</item>
+        <item name="colorBackgroundSecondary">@color/zl_bg_mid</item>
+        <item name="colorAccent">@color/zl_cyan</item>
+        <item name="colorTextPrimary">@color/zl_text_primary</item>
+        <item name="colorTextSecondary">@color/zl_text_secondary</item>
+        <item name="zlColorCyan">@color/zl_cyan</item>
+        <item name="zlColorPurple">@color/zl_purple</item>
+        <item name="zlColorGreen">@color/zl_green</item>
+        <item name="zlColorBlue">@color/zl_blue</item>
+        <item name="zlColorRed">@color/zl_red</item>
+        <item name="zlColorOrange">@color/zl_orange</item>
+        <item name="zlColorPink">@color/zl_pink</item>
+        <item name="zlColorTeal">@color/zl_teal</item>
+    </style>
+</resources>

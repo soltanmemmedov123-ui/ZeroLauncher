@@ -1,0 +1,306 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Zero Launcher - Home Page: Shortcuts + Version Management in 2-column grid -->
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:scrollbars="none"
+    android:overScrollMode="never">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="top">
+
+            <!-- LEFT COLUMN: Shortcuts -->
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_marginEnd="4dp"
+                android:orientation="vertical"
+                android:background="@drawable/bg_glass_card"
+                android:padding="12dp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="SHORTCUTS"
+                    android:textColor="@color/zl_text_muted"
+                    android:textSize="8sp"
+                    android:textStyle="bold"
+                    android:letterSpacing="0.12"
+                    android:layout_marginBottom="8dp" />
+
+                <!-- Mod Management -->
+                <LinearLayout android:id="@+id/shortcut_mods"
+                    android:layout_width="match_parent" android:layout_height="wrap_content"
+                    android:orientation="horizontal" android:gravity="center_vertical"
+                    android:background="@drawable/bg_menu_item"
+                    android:paddingStart="10dp" android:paddingEnd="10dp"
+                    android:paddingTop="8dp" android:paddingBottom="8dp"
+                    android:layout_marginBottom="3dp" android:clickable="true" android:focusable="true">
+                    <FrameLayout android:layout_width="26dp" android:layout_height="26dp"
+                        android:background="@drawable/bg_icon_amber" android:layout_marginEnd="8dp">
+                        <ImageView android:layout_width="14dp" android:layout_height="14dp"
+                            android:layout_gravity="center" android:src="@drawable/ic_menu_mod" android:contentDescription="Mod Management" />
+                    </FrameLayout>
+                    <TextView android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1"
+                        android:text="Mod Management" android:textColor="@color/zl_text_primary"
+                        android:textSize="11sp" />
+                    <ImageView android:layout_width="12dp" android:layout_height="12dp"
+                        android:src="@drawable/ic_arrow_right" android:alpha="0.25" android:contentDescription="arrow" />
+                </LinearLayout>
+
+                <!-- Game Path Folder -->
+                <LinearLayout android:id="@+id/shortcut_game_path"
+                    android:layout_width="match_parent" android:layout_height="wrap_content"
+                    android:orientation="horizontal" android:gravity="center_vertical"
+                    android:background="@drawable/bg_menu_item"
+                    android:paddingStart="10dp" android:paddingEnd="10dp"
+                    android:paddingTop="8dp" android:paddingBottom="8dp"
+                    android:layout_marginBottom="3dp" android:clickable="true" android:focusable="true">
+                    <FrameLayout android:layout_width="26dp" android:layout_height="26dp"
+                        android:background="@drawable/bg_icon_blue" android:layout_marginEnd="8dp">
+                        <ImageView android:layout_width="14dp" android:layout_height="14dp"
+                            android:layout_gravity="center" android:src="@drawable/ic_menu_folder" android:contentDescription="Game Path" />
+                    </FrameLayout>
+                    <TextView android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1"
+                        android:text="Game Path Folder" android:textColor="@color/zl_text_primary"
+                        android:textSize="11sp" />
+                    <ImageView android:layout_width="12dp" android:layout_height="12dp"
+                        android:src="@drawable/ic_arrow_right" android:alpha="0.25" android:contentDescription="arrow" />
+                </LinearLayout>
+
+                <!-- Resource Packs -->
+                <LinearLayout android:id="@+id/shortcut_resource_packs"
+                    android:layout_width="match_parent" android:layout_height="wrap_content"
+                    android:orientation="horizontal" android:gravity="center_vertical"
+                    android:background="@drawable/bg_menu_item"
+                    android:paddingStart="10dp" android:paddingEnd="10dp"
+                    android:paddingTop="8dp" android:paddingBottom="8dp"
+                    android:layout_marginBottom="3dp" android:clickable="true" android:focusable="true">
+                    <FrameLayout android:layout_width="26dp" android:layout_height="26dp"
+                        android:background="@drawable/bg_icon_purple" android:layout_marginEnd="8dp">
+                        <ImageView android:layout_width="14dp" android:layout_height="14dp"
+                            android:layout_gravity="center" android:src="@drawable/ic_menu_image" android:contentDescription="Resource Packs" />
+                    </FrameLayout>
+                    <TextView android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1"
+                        android:text="Resource Packs" android:textColor="@color/zl_text_primary"
+                        android:textSize="11sp" />
+                    <ImageView android:layout_width="12dp" android:layout_height="12dp"
+                        android:src="@drawable/ic_arrow_right" android:alpha="0.25" android:contentDescription="arrow" />
+                </LinearLayout>
+
+                <!-- World Saves -->
+                <LinearLayout android:id="@+id/shortcut_world_saves"
+                    android:layout_width="match_parent" android:layout_height="wrap_content"
+                    android:orientation="horizontal" android:gravity="center_vertical"
+                    android:background="@drawable/bg_menu_item"
+                    android:paddingStart="10dp" android:paddingEnd="10dp"
+                    android:paddingTop="8dp" android:paddingBottom="8dp"
+                    android:layout_marginBottom="3dp" android:clickable="true" android:focusable="true">
+                    <FrameLayout android:layout_width="26dp" android:layout_height="26dp"
+                        android:background="@drawable/bg_icon_green" android:layout_marginEnd="8dp">
+                        <ImageView android:layout_width="14dp" android:layout_height="14dp"
+                            android:layout_gravity="center" android:src="@drawable/ic_menu_globe" android:contentDescription="World Saves" />
+                    </FrameLayout>
+                    <TextView android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1"
+                        android:text="World Save Folder" android:textColor="@color/zl_text_primary"
+                        android:textSize="11sp" />
+                    <ImageView android:layout_width="12dp" android:layout_height="12dp"
+                        android:src="@drawable/ic_arrow_right" android:alpha="0.25" android:contentDescription="arrow" />
+                </LinearLayout>
+
+                <!-- Shader Packs -->
+                <LinearLayout android:id="@+id/shortcut_shaders"
+                    android:layout_width="match_parent" android:layout_height="wrap_content"
+                    android:orientation="horizontal" android:gravity="center_vertical"
+                    android:background="@drawable/bg_menu_item"
+                    android:paddingStart="10dp" android:paddingEnd="10dp"
+                    android:paddingTop="8dp" android:paddingBottom="8dp"
+                    android:layout_marginBottom="3dp" android:clickable="true" android:focusable="true">
+                    <FrameLayout android:layout_width="26dp" android:layout_height="26dp"
+                        android:background="@drawable/bg_icon_rose" android:layout_marginEnd="8dp">
+                        <ImageView android:layout_width="14dp" android:layout_height="14dp"
+                            android:layout_gravity="center" android:src="@drawable/ic_menu_star" android:contentDescription="Shader Packs" />
+                    </FrameLayout>
+                    <TextView android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1"
+                        android:text="Shader Pack Folder" android:textColor="@color/zl_text_primary"
+                        android:textSize="11sp" />
+                    <ImageView android:layout_width="12dp" android:layout_height="12dp"
+                        android:src="@drawable/ic_arrow_right" android:alpha="0.25" android:contentDescription="arrow" />
+                </LinearLayout>
+
+                <!-- Log Folder -->
+                <LinearLayout android:id="@+id/shortcut_logs"
+                    android:layout_width="match_parent" android:layout_height="wrap_content"
+                    android:orientation="horizontal" android:gravity="center_vertical"
+                    android:background="@drawable/bg_menu_item"
+                    android:paddingStart="10dp" android:paddingEnd="10dp"
+                    android:paddingTop="8dp" android:paddingBottom="8dp"
+                    android:clickable="true" android:focusable="true">
+                    <FrameLayout android:layout_width="26dp" android:layout_height="26dp"
+                        android:background="@drawable/bg_icon_slate" android:layout_marginEnd="8dp">
+                        <ImageView android:layout_width="14dp" android:layout_height="14dp"
+                            android:layout_gravity="center" android:src="@drawable/ic_menu_file" android:contentDescription="Logs" />
+                    </FrameLayout>
+                    <TextView android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1"
+                        android:text="Log Folder" android:textColor="@color/zl_text_primary"
+                        android:textSize="11sp" />
+                    <ImageView android:layout_width="12dp" android:layout_height="12dp"
+                        android:src="@drawable/ic_arrow_right" android:alpha="0.25" android:contentDescription="arrow" />
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <!-- RIGHT COLUMN: Version Management -->
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_marginStart="4dp"
+                android:orientation="vertical"
+                android:background="@drawable/bg_glass_card"
+                android:padding="12dp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="VERSION MANAGEMENT"
+                    android:textColor="@color/zl_text_muted"
+                    android:textSize="8sp"
+                    android:textStyle="bold"
+                    android:letterSpacing="0.12"
+                    android:layout_marginBottom="8dp" />
+
+                <!-- Version Settings -->
+                <LinearLayout android:id="@+id/vm_settings"
+                    android:layout_width="match_parent" android:layout_height="wrap_content"
+                    android:orientation="horizontal" android:gravity="center_vertical"
+                    android:background="@drawable/bg_menu_item"
+                    android:paddingStart="10dp" android:paddingEnd="10dp"
+                    android:paddingTop="8dp" android:paddingBottom="8dp"
+                    android:layout_marginBottom="3dp" android:clickable="true" android:focusable="true">
+                    <FrameLayout android:layout_width="26dp" android:layout_height="26dp"
+                        android:background="@drawable/bg_icon_cyan" android:layout_marginEnd="8dp">
+                        <ImageView android:layout_width="14dp" android:layout_height="14dp"
+                            android:layout_gravity="center" android:src="@drawable/ic_menu_settings" android:contentDescription="Settings" />
+                    </FrameLayout>
+                    <TextView android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1"
+                        android:text="Version Settings" android:textColor="@color/zl_text_primary"
+                        android:textSize="11sp" />
+                    <ImageView android:layout_width="12dp" android:layout_height="12dp"
+                        android:src="@drawable/ic_arrow_right" android:alpha="0.25" android:contentDescription="arrow" />
+                </LinearLayout>
+
+                <!-- Rename Version -->
+                <LinearLayout android:id="@+id/vm_rename"
+                    android:layout_width="match_parent" android:layout_height="wrap_content"
+                    android:orientation="horizontal" android:gravity="center_vertical"
+                    android:background="@drawable/bg_menu_item"
+                    android:paddingStart="10dp" android:paddingEnd="10dp"
+                    android:paddingTop="8dp" android:paddingBottom="8dp"
+                    android:layout_marginBottom="3dp" android:clickable="true" android:focusable="true">
+                    <FrameLayout android:layout_width="26dp" android:layout_height="26dp"
+                        android:background="@drawable/bg_icon_orange" android:layout_marginEnd="8dp">
+                        <ImageView android:layout_width="14dp" android:layout_height="14dp"
+                            android:layout_gravity="center" android:src="@drawable/ic_menu_rename" android:contentDescription="Rename" />
+                    </FrameLayout>
+                    <TextView android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1"
+                        android:text="Rename Version" android:textColor="@color/zl_text_primary"
+                        android:textSize="11sp" />
+                    <ImageView android:layout_width="12dp" android:layout_height="12dp"
+                        android:src="@drawable/ic_arrow_right" android:alpha="0.25" android:contentDescription="arrow" />
+                </LinearLayout>
+
+                <!-- Copy Version -->
+                <LinearLayout android:id="@+id/vm_copy"
+                    android:layout_width="match_parent" android:layout_height="wrap_content"
+                    android:orientation="horizontal" android:gravity="center_vertical"
+                    android:background="@drawable/bg_menu_item"
+                    android:paddingStart="10dp" android:paddingEnd="10dp"
+                    android:paddingTop="8dp" android:paddingBottom="8dp"
+                    android:layout_marginBottom="3dp" android:clickable="true" android:focusable="true">
+                    <FrameLayout android:layout_width="26dp" android:layout_height="26dp"
+                        android:background="@drawable/bg_icon_purple" android:layout_marginEnd="8dp">
+                        <ImageView android:layout_width="14dp" android:layout_height="14dp"
+                            android:layout_gravity="center" android:src="@drawable/ic_menu_copy" android:contentDescription="Copy" />
+                    </FrameLayout>
+                    <TextView android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1"
+                        android:text="Copy Version" android:textColor="@color/zl_text_primary"
+                        android:textSize="11sp" />
+                    <ImageView android:layout_width="12dp" android:layout_height="12dp"
+                        android:src="@drawable/ic_arrow_right" android:alpha="0.25" android:contentDescription="arrow" />
+                </LinearLayout>
+
+                <!-- Delete Version -->
+                <LinearLayout android:id="@+id/vm_delete"
+                    android:layout_width="match_parent" android:layout_height="wrap_content"
+                    android:orientation="horizontal" android:gravity="center_vertical"
+                    android:background="@drawable/bg_menu_item"
+                    android:paddingStart="10dp" android:paddingEnd="10dp"
+                    android:paddingTop="8dp" android:paddingBottom="8dp"
+                    android:layout_marginBottom="3dp" android:clickable="true" android:focusable="true">
+                    <FrameLayout android:layout_width="26dp" android:layout_height="26dp"
+                        android:background="@drawable/bg_icon_rose" android:layout_marginEnd="8dp">
+                        <ImageView android:layout_width="14dp" android:layout_height="14dp"
+                            android:layout_gravity="center" android:src="@drawable/ic_menu_delete" android:contentDescription="Delete" />
+                    </FrameLayout>
+                    <TextView android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1"
+                        android:text="Delete Version" android:textColor="@color/zl_text_primary"
+                        android:textSize="11sp" />
+                    <ImageView android:layout_width="12dp" android:layout_height="12dp"
+                        android:src="@drawable/ic_arrow_right" android:alpha="0.25" android:contentDescription="arrow" />
+                </LinearLayout>
+
+                <!-- Execute .jar -->
+                <LinearLayout android:id="@+id/vm_execute_jar"
+                    android:layout_width="match_parent" android:layout_height="wrap_content"
+                    android:orientation="horizontal" android:gravity="center_vertical"
+                    android:background="@drawable/bg_menu_item"
+                    android:paddingStart="10dp" android:paddingEnd="10dp"
+                    android:paddingTop="8dp" android:paddingBottom="8dp"
+                    android:layout_marginBottom="3dp" android:clickable="true" android:focusable="true">
+                    <FrameLayout android:layout_width="26dp" android:layout_height="26dp"
+                        android:background="@drawable/bg_icon_blue" android:layout_marginEnd="8dp">
+                        <ImageView android:layout_width="14dp" android:layout_height="14dp"
+                            android:layout_gravity="center" android:src="@drawable/ic_menu_upload" android:contentDescription="Execute jar" />
+                    </FrameLayout>
+                    <TextView android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1"
+                        android:text="Execute .jar File" android:textColor="@color/zl_text_primary"
+                        android:textSize="11sp" />
+                    <ImageView android:layout_width="12dp" android:layout_height="12dp"
+                        android:src="@drawable/ic_arrow_right" android:alpha="0.25" android:contentDescription="arrow" />
+                </LinearLayout>
+
+                <!-- Share Logs -->
+                <LinearLayout android:id="@+id/vm_share_logs"
+                    android:layout_width="match_parent" android:layout_height="wrap_content"
+                    android:orientation="horizontal" android:gravity="center_vertical"
+                    android:background="@drawable/bg_menu_item"
+                    android:paddingStart="10dp" android:paddingEnd="10dp"
+                    android:paddingTop="8dp" android:paddingBottom="8dp"
+                    android:clickable="true" android:focusable="true">
+                    <FrameLayout android:layout_width="26dp" android:layout_height="26dp"
+                        android:background="@drawable/bg_icon_slate" android:layout_marginEnd="8dp">
+                        <ImageView android:layout_width="14dp" android:layout_height="14dp"
+                            android:layout_gravity="center" android:src="@drawable/ic_menu_sharefile" android:contentDescription="Share Logs" />
+                    </FrameLayout>
+                    <TextView android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1"
+                        android:text="Share Log Files" android:textColor="@color/zl_text_primary"
+                        android:textSize="11sp" />
+                    <ImageView android:layout_width="12dp" android:layout_height="12dp"
+                        android:src="@drawable/ic_arrow_right" android:alpha="0.25" android:contentDescription="arrow" />
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </LinearLayout>
+    </LinearLayout>
+</ScrollView>

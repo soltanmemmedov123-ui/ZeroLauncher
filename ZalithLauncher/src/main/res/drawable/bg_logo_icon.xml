@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- Glow shadow layer: 0 3px 14px rgba(56,189,248,0.16) -->
+    <item android:top="3dp" android:left="3dp" android:right="3dp" android:bottom="-3dp">
+        <shape android:shape="rectangle">
+            <gradient
+                android:type="radial"
+                android:gradientRadius="100%p"
+                android:startColor="#2938BDF8"
+                android:endColor="#0038BDF8" />
+            <corners android:radius="12dp" />
+        </shape>
+    </item>
+    <!-- Main gradient: rgba(56,189,248,0.55) → rgba(167,139,250,0.45), border rgba(255,255,255,0.18) -->
+    <item>
+        <shape android:shape="rectangle">
+            <gradient
+                android:type="linear"
+                android:angle="135"
+                android:startColor="#8C38BDF8"
+                android:endColor="#73A78BFA" />
+            <corners android:radius="9dp" />
+            <stroke android:width="1.5dp" android:color="#2EFFFFFF" />
+        </shape>
+    </item>
+    <!-- Inner top shine -->
+    <item android:top="0dp" android:bottom="0dp" android:left="0dp" android:right="0dp">
+        <shape android:shape="rectangle">
+            <gradient
+                android:type="linear"
+                android:angle="270"
+                android:startColor="#1AFFFFFF"
+                android:endColor="#00000000" />
+            <corners android:radius="9dp" />
+            <size android:height="4dp" />
+        </shape>
+    </item>
+</layer-list>

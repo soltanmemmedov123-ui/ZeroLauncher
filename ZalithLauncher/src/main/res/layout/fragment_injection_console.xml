@@ -1,0 +1,227 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+    fragment_injection_console.xml
+    Live Bytecode Injection Console for ZeroLauncher DevTools.
+
+    Layout: top toolbar row → code editor → output panel
+    Design: Deep Space dark theme, matching the rest of DevToolsActivity.
+-->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <!-- ── Status bar ────────────────────────────────────────────────────── -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:background="@color/zl_bg_surface"
+        android:paddingHorizontal="12dp"
+        android:paddingVertical="7dp">
+
+        <View
+            android:id="@+id/inject_status_dot"
+            android:layout_width="7dp"
+            android:layout_height="7dp"
+            android:background="@drawable/dot_amber"
+            android:layout_marginEnd="6dp" />
+
+        <TextView
+            android:id="@+id/tv_inject_status"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Launch a game instance first."
+            android:textColor="@color/zl_text_muted"
+            android:textSize="10sp" />
+
+        <!-- Template picker -->
+        <Button
+            android:id="@+id/btn_inject_templates"
+            android:layout_width="wrap_content"
+            android:layout_height="28dp"
+            android:text="TEMPLATES"
+            android:textColor="@color/zl_text_secondary"
+            android:textSize="9sp"
+            android:textStyle="bold"
+            android:letterSpacing="0.06"
+            android:background="@drawable/bg_stat_item"
+            android:paddingHorizontal="10dp"
+            android:stateListAnimator="@null"
+            android:layout_marginEnd="6dp" />
+
+        <!-- History picker -->
+        <Button
+            android:id="@+id/btn_inject_history"
+            android:layout_width="wrap_content"
+            android:layout_height="28dp"
+            android:text="HISTORY"
+            android:textColor="@color/zl_text_secondary"
+            android:textSize="9sp"
+            android:textStyle="bold"
+            android:letterSpacing="0.06"
+            android:background="@drawable/bg_stat_item"
+            android:paddingHorizontal="10dp"
+            android:stateListAnimator="@null" />
+
+    </LinearLayout>
+
+    <!-- ── Code editor panel ─────────────────────────────────────────────── -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="2"
+        android:orientation="vertical"
+        android:background="@color/zl_bg_card"
+        android:paddingHorizontal="2dp"
+        android:paddingTop="6dp"
+        android:paddingBottom="2dp">
+
+        <!-- Editor label -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:paddingHorizontal="10dp"
+            android:paddingBottom="4dp">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="CODE EDITOR  ·  BeanShell / Java"
+                android:textColor="@color/zl_text_muted"
+                android:textSize="8sp"
+                android:textStyle="bold"
+                android:letterSpacing="0.12"
+                android:fontFamily="monospace" />
+
+            <!-- Clear output button (top-right of editor area) -->
+            <Button
+                android:id="@+id/btn_inject_clear"
+                android:layout_width="wrap_content"
+                android:layout_height="24dp"
+                android:text="CLEAR"
+                android:textColor="@color/zl_text_muted"
+                android:textSize="8sp"
+                android:textStyle="bold"
+                android:letterSpacing="0.06"
+                android:background="@null"
+                android:paddingHorizontal="6dp"
+                android:stateListAnimator="@null" />
+
+        </LinearLayout>
+
+        <!-- Multiline code input, horizontally scrollable for long lines -->
+        <HorizontalScrollView
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:fillViewport="true"
+            android:overScrollMode="never">
+
+            <EditText
+                android:id="@+id/et_injection_code"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:minWidth="300dp"
+                android:hint="// Write BeanShell / Java code here…&#10;// Variables pre-loaded: mc, player, world&#10;&#10;print(mc.getVersion());&#10;return &quot;done&quot;;"
+                android:textColor="@color/zl_text_primary"
+                android:textColorHint="@color/zl_text_disabled"
+                android:textSize="12sp"
+                android:fontFamily="monospace"
+                android:background="@drawable/background_edit_box"
+                android:paddingHorizontal="12dp"
+                android:paddingVertical="10dp"
+                android:inputType="textMultiLine|textNoSuggestions"
+                android:gravity="top|start"
+                android:scrollbars="none"
+                android:imeOptions="flagNoEnterAction"
+                android:minLines="5" />
+
+        </HorizontalScrollView>
+
+        <!-- Execute button row -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="end|center_vertical"
+            android:paddingHorizontal="8dp"
+            android:paddingTop="6dp"
+            android:paddingBottom="4dp">
+
+            <Button
+                android:id="@+id/btn_inject_execute"
+                android:layout_width="wrap_content"
+                android:layout_height="34dp"
+                android:text="▶  Execute"
+                android:textColor="@color/white"
+                android:textSize="11sp"
+                android:textStyle="bold"
+                android:background="@drawable/bg_launch_btn"
+                android:paddingHorizontal="20dp"
+                android:stateListAnimator="@null"
+                android:enabled="false" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <!-- ── Divider ────────────────────────────────────────────────────────── -->
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/zl_bg_surface" />
+
+    <!-- ── Output panel ──────────────────────────────────────────────────── -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="3"
+        android:orientation="vertical"
+        android:background="@color/zl_bg_surface">
+
+        <!-- Output label -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="OUTPUT"
+            android:textColor="@color/zl_text_muted"
+            android:textSize="8sp"
+            android:textStyle="bold"
+            android:letterSpacing="0.12"
+            android:paddingHorizontal="12dp"
+            android:paddingTop="8dp"
+            android:paddingBottom="4dp" />
+
+        <!-- Scrollable output text -->
+        <ScrollView
+            android:id="@+id/scroll_injection_output"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:overScrollMode="never"
+            android:padding="2dp">
+
+            <TextView
+                android:id="@+id/tv_injection_output"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text=""
+                android:textColor="@color/zl_text_primary"
+                android:textSize="11sp"
+                android:fontFamily="monospace"
+                android:lineSpacingMultiplier="1.5"
+                android:paddingHorizontal="10dp"
+                android:paddingBottom="12dp"
+                android:textIsSelectable="true" />
+
+        </ScrollView>
+
+    </LinearLayout>
+
+</LinearLayout>

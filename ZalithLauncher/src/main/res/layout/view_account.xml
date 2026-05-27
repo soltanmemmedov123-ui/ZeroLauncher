@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.movtery.zalithlauncher.ui.layout.AnimConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:padding="@dimen/_8sdp"
+    android:background="?android:attr/selectableItemBackgroundBorderless">
+
+    <!-- Avatar ring -->
+    <ImageView
+        android:id="@+id/user_icon"
+        android:layout_width="@dimen/_52sdp"
+        android:layout_height="@dimen/_52sdp"
+        android:scaleType="fitCenter"
+        android:src="@drawable/ic_help"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="ContentDescription"/>
+
+    <!-- Username -->
+    <TextView
+        android:id="@+id/user_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_6sdp"
+        android:textSize="@dimen/_13ssp"
+        android:textStyle="bold"
+        android:textColor="@color/primary_text"
+        android:letterSpacing="-0.02"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/user_icon"
+        tools:text="FeltCart3371"/>
+
+    <!-- Account type badge -->
+    <TextView
+        android:id="@+id/account_type"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_3sdp"
+        android:textSize="@dimen/_9ssp"
+        android:textColor="@color/settings_category"
+        android:background="@drawable/background_mod_category"
+        android:paddingHorizontal="@dimen/_8sdp"
+        android:paddingVertical="@dimen/_2sdp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/user_name"
+        tools:text="Ely.by"/>
+
+</com.movtery.zalithlauncher.ui.layout.AnimConstraintLayout>

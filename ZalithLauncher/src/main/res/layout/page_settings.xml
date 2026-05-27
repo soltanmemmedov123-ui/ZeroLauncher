@@ -1,0 +1,441 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Zero Launcher - Settings Page -->
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:scrollbars="none"
+    android:overScrollMode="never">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="top">
+
+        <!-- LEFT COLUMN -->
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_marginEnd="4dp"
+            android:orientation="vertical">
+
+            <!-- Video Settings -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:background="@drawable/bg_glass_card"
+                android:padding="12dp"
+                android:layout_marginBottom="8dp">
+
+                <TextView android:layout_width="match_parent" android:layout_height="wrap_content"
+                    android:text="VIDEO SETTINGS" android:textColor="@color/zl_text_muted"
+                    android:textSize="8sp" android:textStyle="bold" android:letterSpacing="0.12"
+                    android:layout_marginBottom="8dp" />
+
+                <!-- Resolution Scaling -->
+                <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+                    android:orientation="vertical" android:paddingTop="8dp" android:paddingBottom="8dp"
+                    android:background="@drawable/divider_settings">
+                    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+                        android:orientation="horizontal" android:gravity="center_vertical">
+                        <View android:layout_width="5dp" android:layout_height="5dp"
+                            android:background="@drawable/dot_blue" android:layout_marginEnd="7dp" />
+                        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                            android:text="Resolution Scaling" android:textColor="@color/zl_text_primary"
+                            android:textSize="11sp" />
+                    </LinearLayout>
+                    <TextView android:layout_width="match_parent" android:layout_height="wrap_content"
+                        android:text="Adjust game resolution. Native = 100%"
+                        android:textColor="@color/zl_text_muted" android:textSize="8sp"
+                        android:layout_marginTop="2dp" android:layout_marginStart="12dp" />
+                    <TextView android:id="@+id/txt_resolution"
+                        android:layout_width="wrap_content" android:layout_height="wrap_content"
+                        android:text="1440 × 648" android:textColor="@color/zl_text_primary"
+                        android:textSize="10sp" android:textStyle="bold"
+                        android:background="@drawable/bg_resolution_box"
+                        android:paddingStart="8dp" android:paddingEnd="8dp"
+                        android:paddingTop="5dp" android:paddingBottom="5dp"
+                        android:layout_marginTop="4dp" android:layout_gravity="center_horizontal" />
+                    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+                        android:orientation="horizontal" android:gravity="center_vertical" android:layout_marginTop="4dp">
+                        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                            android:text="0%" android:textColor="@color/zl_text_muted" android:textSize="8sp" android:layout_marginEnd="8dp" />
+                        <SeekBar android:id="@+id/slider_resolution"
+                            android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1"
+                            android:max="100" android:progress="60" android:progressTint="@color/zl_cyan"
+                            android:thumbTint="@color/white" android:splitTrack="false" />
+                        <TextView android:id="@+id/val_resolution"
+                            android:layout_width="28dp" android:layout_height="wrap_content"
+                            android:text="60%" android:textColor="@color/zl_cyan" android:textSize="9sp"
+                            android:textStyle="bold" android:gravity="end" android:layout_marginStart="8dp" />
+                    </LinearLayout>
+                </LinearLayout>
+
+                <!-- Frame Rate -->
+                <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+                    android:orientation="vertical" android:paddingTop="8dp" android:paddingBottom="8dp"
+                    android:background="@drawable/divider_settings">
+                    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+                        android:orientation="horizontal" android:gravity="center_vertical">
+                        <View android:layout_width="5dp" android:layout_height="5dp"
+                            android:background="@drawable/dot_amber" android:layout_marginEnd="7dp" />
+                        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                            android:text="Frame Rate Limit" android:textColor="@color/zl_text_primary" android:textSize="11sp" />
+                    </LinearLayout>
+                    <TextView android:layout_width="match_parent" android:layout_height="wrap_content"
+                        android:text="Limit FPS to reduce battery usage"
+                        android:textColor="@color/zl_text_muted" android:textSize="8sp"
+                        android:layout_marginTop="2dp" android:layout_marginStart="12dp" />
+                    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+                        android:orientation="horizontal" android:gravity="center_vertical" android:layout_marginTop="4dp">
+                        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                            android:text="30" android:textColor="@color/zl_text_muted" android:textSize="8sp" android:layout_marginEnd="8dp" />
+                        <SeekBar android:id="@+id/slider_fps"
+                            android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1"
+                            android:max="90" android:progress="30" android:progressTint="@color/zl_cyan"
+                            android:thumbTint="@color/white" android:splitTrack="false" />
+                        <TextView android:id="@+id/val_fps"
+                            android:layout_width="28dp" android:layout_height="wrap_content"
+                            android:text="60" android:textColor="@color/zl_cyan" android:textSize="9sp"
+                            android:textStyle="bold" android:gravity="end" android:layout_marginStart="8dp" />
+                    </LinearLayout>
+                </LinearLayout>
+
+                <!-- MSAA -->
+                <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+                    android:orientation="vertical" android:paddingTop="8dp">
+                    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+                        android:orientation="horizontal" android:gravity="center_vertical">
+                        <View android:layout_width="5dp" android:layout_height="5dp"
+                            android:background="@drawable/dot_purple" android:layout_marginEnd="7dp" />
+                        <TextView android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1"
+                            android:text="Enable MSAA" android:textColor="@color/zl_text_primary" android:textSize="11sp" />
+                        <com.movtery.zalithlauncher.ui.view.ZLToggle
+                            android:id="@+id/toggle_msaa"
+                            android:layout_width="36dp"
+                            android:layout_height="20dp"
+                            android:checked="true" />
+                    </LinearLayout>
+                    <TextView android:layout_width="match_parent" android:layout_height="wrap_content"
+                        android:text="Multisample anti-aliasing"
+                        android:textColor="@color/zl_text_muted" android:textSize="8sp"
+                        android:layout_marginTop="2dp" android:layout_marginStart="12dp" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <!-- Control Settings -->
+            <LinearLayout
+                android:layout_width="match_parent" android:layout_height="wrap_content"
+                android:orientation="vertical" android:background="@drawable/bg_glass_card"
+                android:padding="12dp" android:layout_marginBottom="8dp">
+
+                <TextView android:layout_width="match_parent" android:layout_height="wrap_content"
+                    android:text="CONTROL SETTINGS" android:textColor="@color/zl_text_muted"
+                    android:textSize="8sp" android:textStyle="bold" android:letterSpacing="0.12"
+                    android:layout_marginBottom="8dp" />
+
+                <!-- Haptic Feedback -->
+                <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+                    android:orientation="horizontal" android:gravity="center_vertical"
+                    android:paddingTop="8dp" android:paddingBottom="8dp"
+                    android:background="@drawable/divider_settings">
+                    <View android:layout_width="5dp" android:layout_height="5dp"
+                        android:background="@drawable/dot_green" android:layout_marginEnd="7dp" />
+                    <TextView android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1"
+                        android:text="Haptic Feedback" android:textColor="@color/zl_text_primary" android:textSize="11sp" />
+                    <com.movtery.zalithlauncher.ui.view.ZLToggle
+                        android:id="@+id/toggle_haptic"
+                        android:layout_width="36dp" android:layout_height="20dp" android:checked="true" />
+                </LinearLayout>
+
+                <!-- Touch Sensitivity -->
+                <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+                    android:orientation="vertical" android:paddingTop="8dp">
+                    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+                        android:orientation="horizontal" android:gravity="center_vertical">
+                        <View android:layout_width="5dp" android:layout_height="5dp"
+                            android:background="@drawable/dot_amber" android:layout_marginEnd="7dp" />
+                        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                            android:text="Touch Sensitivity" android:textColor="@color/zl_text_primary" android:textSize="11sp" />
+                    </LinearLayout>
+                    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+                        android:orientation="horizontal" android:gravity="center_vertical" android:layout_marginTop="4dp">
+                        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                            android:text="Low" android:textColor="@color/zl_text_muted" android:textSize="8sp" android:layout_marginEnd="8dp" />
+                        <SeekBar android:id="@+id/slider_touch_sens"
+                            android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1"
+                            android:max="10" android:progress="7" android:progressTint="@color/zl_cyan"
+                            android:thumbTint="@color/white" android:splitTrack="false" />
+                        <TextView android:id="@+id/val_touch_sens"
+                            android:layout_width="28dp" android:layout_height="wrap_content"
+                            android:text="7" android:textColor="@color/zl_cyan" android:textSize="9sp"
+                            android:textStyle="bold" android:gravity="end" android:layout_marginStart="8dp" />
+                    </LinearLayout>
+                </LinearLayout>
+            </LinearLayout>
+
+            <!-- Gyroscope -->
+            <LinearLayout
+                android:layout_width="match_parent" android:layout_height="wrap_content"
+                android:orientation="vertical" android:background="@drawable/bg_glass_card"
+                android:padding="12dp">
+
+                <TextView android:layout_width="match_parent" android:layout_height="wrap_content"
+                    android:text="GYROSCOPE" android:textColor="@color/zl_text_muted"
+                    android:textSize="8sp" android:textStyle="bold" android:letterSpacing="0.12"
+                    android:layout_marginBottom="8dp" />
+
+                <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+                    android:orientation="horizontal" android:gravity="center_vertical"
+                    android:paddingTop="8dp" android:paddingBottom="8dp"
+                    android:background="@drawable/divider_settings">
+                    <View android:layout_width="5dp" android:layout_height="5dp"
+                        android:background="@drawable/dot_cyan" android:layout_marginEnd="7dp" />
+                    <TextView android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1"
+                        android:text="Gyro Camera Control" android:textColor="@color/zl_text_primary" android:textSize="11sp" />
+                    <com.movtery.zalithlauncher.ui.view.ZLToggle
+                        android:id="@+id/toggle_gyro"
+                        android:layout_width="36dp" android:layout_height="20dp" android:checked="false" />
+                </LinearLayout>
+
+                <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+                    android:orientation="vertical" android:paddingTop="8dp">
+                    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+                        android:orientation="horizontal" android:gravity="center_vertical">
+                        <View android:layout_width="5dp" android:layout_height="5dp"
+                            android:background="@drawable/dot_purple" android:layout_marginEnd="7dp" />
+                        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                            android:text="Gyro Sensitivity" android:textColor="@color/zl_text_primary" android:textSize="11sp" />
+                    </LinearLayout>
+                    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+                        android:orientation="horizontal" android:gravity="center_vertical" android:layout_marginTop="4dp">
+                        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                            android:text="0" android:textColor="@color/zl_text_muted" android:textSize="8sp" android:layout_marginEnd="8dp" />
+                        <SeekBar android:id="@+id/slider_gyro_sens"
+                            android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1"
+                            android:max="10" android:progress="5" android:progressTint="@color/zl_cyan"
+                            android:thumbTint="@color/white" android:splitTrack="false" />
+                        <TextView android:id="@+id/val_gyro_sens"
+                            android:layout_width="28dp" android:layout_height="wrap_content"
+                            android:text="5" android:textColor="@color/zl_cyan" android:textSize="9sp"
+                            android:textStyle="bold" android:gravity="end" android:layout_marginStart="8dp" />
+                    </LinearLayout>
+                </LinearLayout>
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <!-- RIGHT COLUMN -->
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_marginStart="4dp"
+            android:orientation="vertical">
+
+            <!-- Controller -->
+            <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+                android:orientation="vertical" android:background="@drawable/bg_glass_card"
+                android:padding="12dp" android:layout_marginBottom="8dp">
+
+                <TextView android:layout_width="match_parent" android:layout_height="wrap_content"
+                    android:text="CONTROLLER" android:textColor="@color/zl_text_muted"
+                    android:textSize="8sp" android:textStyle="bold" android:letterSpacing="0.12"
+                    android:layout_marginBottom="8dp" />
+
+                <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+                    android:orientation="horizontal" android:gravity="center_vertical"
+                    android:paddingTop="8dp" android:paddingBottom="8dp"
+                    android:background="@drawable/divider_settings">
+                    <View android:layout_width="5dp" android:layout_height="5dp"
+                        android:background="@drawable/dot_blue" android:layout_marginEnd="7dp" />
+                    <TextView android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1"
+                        android:text="External Controller" android:textColor="@color/zl_text_primary" android:textSize="11sp" />
+                    <com.movtery.zalithlauncher.ui.view.ZLToggle
+                        android:id="@+id/toggle_controller"
+                        android:layout_width="36dp" android:layout_height="20dp" android:checked="true" />
+                </LinearLayout>
+
+                <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+                    android:orientation="vertical" android:paddingTop="8dp">
+                    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+                        android:orientation="horizontal" android:gravity="center_vertical">
+                        <View android:layout_width="5dp" android:layout_height="5dp"
+                            android:background="@drawable/dot_amber" android:layout_marginEnd="7dp" />
+                        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                            android:text="Deadzone" android:textColor="@color/zl_text_primary" android:textSize="11sp" />
+                    </LinearLayout>
+                    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+                        android:orientation="horizontal" android:gravity="center_vertical" android:layout_marginTop="4dp">
+                        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                            android:text="0%" android:textColor="@color/zl_text_muted" android:textSize="8sp" android:layout_marginEnd="8dp" />
+                        <SeekBar android:id="@+id/slider_deadzone"
+                            android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1"
+                            android:max="30" android:progress="10" android:progressTint="@color/zl_cyan"
+                            android:thumbTint="@color/white" android:splitTrack="false" />
+                        <TextView android:id="@+id/val_deadzone"
+                            android:layout_width="28dp" android:layout_height="wrap_content"
+                            android:text="10%" android:textColor="@color/zl_cyan" android:textSize="9sp"
+                            android:textStyle="bold" android:gravity="end" android:layout_marginStart="8dp" />
+                    </LinearLayout>
+                </LinearLayout>
+            </LinearLayout>
+
+            <!-- Game Settings -->
+            <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+                android:orientation="vertical" android:background="@drawable/bg_glass_card"
+                android:padding="12dp" android:layout_marginBottom="8dp">
+
+                <TextView android:layout_width="match_parent" android:layout_height="wrap_content"
+                    android:text="GAME SETTINGS" android:textColor="@color/zl_text_muted"
+                    android:textSize="8sp" android:textStyle="bold" android:letterSpacing="0.12"
+                    android:layout_marginBottom="8dp" />
+
+                <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+                    android:orientation="horizontal" android:gravity="center_vertical"
+                    android:paddingTop="8dp" android:paddingBottom="8dp"
+                    android:background="@drawable/divider_settings">
+                    <View android:layout_width="5dp" android:layout_height="5dp"
+                        android:background="@drawable/dot_green" android:layout_marginEnd="7dp" />
+                    <TextView android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1"
+                        android:text="Sustained Performance" android:textColor="@color/zl_text_primary" android:textSize="11sp" />
+                    <com.movtery.zalithlauncher.ui.view.ZLToggle
+                        android:id="@+id/toggle_sustained_perf"
+                        android:layout_width="36dp" android:layout_height="20dp" android:checked="false" />
+                </LinearLayout>
+
+                <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+                    android:orientation="horizontal" android:gravity="center_vertical"
+                    android:paddingTop="8dp" android:paddingBottom="8dp"
+                    android:background="@drawable/divider_settings">
+                    <View android:layout_width="5dp" android:layout_height="5dp"
+                        android:background="@drawable/dot_amber" android:layout_marginEnd="7dp" />
+                    <TextView android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1"
+                        android:text="OpenGL for MC 26.2+" android:textColor="@color/zl_text_primary" android:textSize="11sp" />
+                    <com.movtery.zalithlauncher.ui.view.ZLToggle
+                        android:id="@+id/toggle_opengl"
+                        android:layout_width="36dp" android:layout_height="20dp" android:checked="true" />
+                </LinearLayout>
+
+                <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+                    android:orientation="horizontal" android:gravity="center_vertical"
+                    android:paddingTop="8dp">
+                    <View android:layout_width="5dp" android:layout_height="5dp"
+                        android:background="@drawable/dot_purple" android:layout_marginEnd="7dp" />
+                    <TextView android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1"
+                        android:text="Show FPS Counter" android:textColor="@color/zl_text_primary" android:textSize="11sp" />
+                    <com.movtery.zalithlauncher.ui.view.ZLToggle
+                        android:id="@+id/toggle_fps_counter"
+                        android:layout_width="36dp" android:layout_height="20dp" android:checked="false" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <!-- Launcher -->
+            <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+                android:orientation="vertical" android:background="@drawable/bg_glass_card"
+                android:padding="12dp" android:layout_marginBottom="8dp">
+
+                <TextView android:layout_width="match_parent" android:layout_height="wrap_content"
+                    android:text="LAUNCHER" android:textColor="@color/zl_text_muted"
+                    android:textSize="8sp" android:textStyle="bold" android:letterSpacing="0.12"
+                    android:layout_marginBottom="8dp" />
+
+                <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+                    android:orientation="horizontal" android:gravity="center_vertical"
+                    android:paddingTop="8dp" android:paddingBottom="8dp"
+                    android:background="@drawable/divider_settings">
+                    <View android:layout_width="5dp" android:layout_height="5dp"
+                        android:background="@drawable/dot_purple" android:layout_marginEnd="7dp" />
+                    <TextView android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1"
+                        android:text="Alternative Rendering" android:textColor="@color/zl_text_primary" android:textSize="11sp" />
+                    <com.movtery.zalithlauncher.ui.view.ZLToggle
+                        android:id="@+id/toggle_alt_rendering"
+                        android:layout_width="36dp" android:layout_height="20dp" android:checked="false" />
+                </LinearLayout>
+
+                <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+                    android:orientation="horizontal" android:gravity="center_vertical"
+                    android:paddingTop="8dp">
+                    <View android:layout_width="5dp" android:layout_height="5dp"
+                        android:background="@drawable/dot_cyan" android:layout_marginEnd="7dp" />
+                    <TextView android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1"
+                        android:text="Auto-update" android:textColor="@color/zl_text_primary" android:textSize="11sp" />
+                    <com.movtery.zalithlauncher.ui.view.ZLToggle
+                        android:id="@+id/toggle_auto_update"
+                        android:layout_width="36dp" android:layout_height="20dp" android:checked="true" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <!-- Experimental -->
+            <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+                android:orientation="vertical" android:background="@drawable/bg_glass_card"
+                android:padding="12dp">
+
+                <TextView android:layout_width="match_parent" android:layout_height="wrap_content"
+                    android:text="EXPERIMENTAL" android:textColor="@color/zl_text_muted"
+                    android:textSize="8sp" android:textStyle="bold" android:letterSpacing="0.12"
+                    android:layout_marginBottom="8dp" />
+
+                <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+                    android:orientation="horizontal" android:gravity="center_vertical"
+                    android:paddingTop="8dp" android:paddingBottom="8dp"
+                    android:background="@drawable/divider_settings">
+                    <View android:layout_width="5dp" android:layout_height="5dp"
+                        android:background="@drawable/dot_amber" android:layout_marginEnd="7dp" />
+                    <TextView android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1"
+                        android:text="V-Sync with Zink" android:textColor="@color/zl_text_primary" android:textSize="11sp" />
+                    <com.movtery.zalithlauncher.ui.view.ZLToggle
+                        android:id="@+id/toggle_vsync_zink"
+                        android:layout_width="36dp" android:layout_height="20dp" android:checked="true" />
+                </LinearLayout>
+
+                <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+                    android:orientation="horizontal" android:gravity="center_vertical"
+                    android:paddingTop="8dp">
+                    <View android:layout_width="5dp" android:layout_height="5dp"
+                        android:background="@drawable/dot_blue" android:layout_marginEnd="7dp" />
+                    <TextView android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1"
+                        android:text="System Vulkan Driver" android:textColor="@color/zl_text_primary" android:textSize="11sp" />
+                    <com.movtery.zalithlauncher.ui.view.ZLToggle
+                        android:id="@+id/toggle_system_vulkan"
+                        android:layout_width="36dp" android:layout_height="20dp" android:checked="false" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <!-- Developer -->
+            <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+                android:orientation="vertical" android:background="@drawable/bg_glass_card"
+                android:padding="12dp">
+
+                <TextView android:layout_width="match_parent" android:layout_height="wrap_content"
+                    android:text="DEVELOPER" android:textColor="@color/zl_text_muted"
+                    android:textSize="8sp" android:textStyle="bold" android:letterSpacing="0.12"
+                    android:layout_marginBottom="8dp" />
+
+                <!-- Enable Developer Tools toggle -->
+                <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+                    android:orientation="horizontal" android:gravity="center_vertical"
+                    android:paddingTop="8dp">
+                    <View android:layout_width="5dp" android:layout_height="5dp"
+                        android:background="@drawable/dot_cyan" android:layout_marginEnd="7dp" />
+                    <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content"
+                        android:layout_weight="1" android:orientation="vertical">
+                        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                            android:text="Enable Developer Tools"
+                            android:textColor="@color/zl_text_primary" android:textSize="11sp" />
+                        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                            android:text="Show the developer tools button on the main screen"
+                            android:textColor="@color/zl_text_muted" android:textSize="9sp"
+                            android:layout_marginTop="1dp" />
+                    </LinearLayout>
+                    <com.movtery.zalithlauncher.ui.view.ZLToggle
+                        android:id="@+id/toggle_dev_tools"
+                        android:layout_width="36dp" android:layout_height="20dp" android:checked="false" />
+                </LinearLayout>
+            </LinearLayout>
+
+        </LinearLayout>
+    </LinearLayout>
+</ScrollView>

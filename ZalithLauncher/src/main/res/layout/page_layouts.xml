@@ -1,0 +1,228 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Zero Launcher - Layouts Page -->
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:scrollbars="none"
+    android:overScrollMode="never">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="top">
+
+        <!-- LEFT: Control Layouts -->
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_marginEnd="4dp"
+            android:orientation="vertical"
+            android:background="@drawable/bg_glass_card"
+            android:padding="12dp">
+
+            <TextView android:layout_width="match_parent" android:layout_height="wrap_content"
+                android:text="CONTROL LAYOUTS" android:textColor="@color/zl_text_muted"
+                android:textSize="8sp" android:textStyle="bold" android:letterSpacing="0.12"
+                android:layout_marginBottom="8dp" />
+
+            <!-- Default layout card -->
+            <LinearLayout android:id="@+id/layout_card_default"
+                android:layout_width="match_parent" android:layout_height="wrap_content"
+                android:orientation="horizontal" android:gravity="center_vertical"
+                android:background="@drawable/bg_layout_card"
+                android:padding="10dp" android:layout_marginBottom="5dp"
+                android:clickable="true" android:focusable="true">
+                <View android:layout_width="56dp" android:layout_height="34dp"
+                    android:background="@drawable/bg_layout_thumb" android:layout_marginEnd="10dp" />
+                <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content"
+                    android:layout_weight="1" android:orientation="vertical">
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                        android:text="Default" android:textColor="@color/zl_text_primary"
+                        android:textSize="11sp" android:textStyle="bold" />
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                        android:text="Standard mobile layout" android:textColor="@color/zl_text_secondary"
+                        android:textSize="9sp" />
+                </LinearLayout>
+                <Button android:id="@+id/btn_select_default"
+                    android:layout_width="wrap_content" android:layout_height="wrap_content"
+                    android:text="Active" android:textSize="9sp" android:textStyle="bold"
+                    android:textColor="@color/zl_green" android:background="@drawable/bg_layout_select_active"
+                    android:paddingStart="10dp" android:paddingEnd="10dp"
+                    android:paddingTop="5dp" android:paddingBottom="5dp"
+                    android:stateListAnimator="@null" />
+            </LinearLayout>
+
+            <!-- Gamepad layout card -->
+            <LinearLayout android:id="@+id/layout_card_gamepad"
+                android:layout_width="match_parent" android:layout_height="wrap_content"
+                android:orientation="horizontal" android:gravity="center_vertical"
+                android:background="@drawable/bg_layout_card"
+                android:padding="10dp" android:layout_marginBottom="5dp"
+                android:clickable="true" android:focusable="true">
+                <View android:layout_width="56dp" android:layout_height="34dp"
+                    android:background="@drawable/bg_layout_thumb" android:layout_marginEnd="10dp" />
+                <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content"
+                    android:layout_weight="1" android:orientation="vertical">
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                        android:text="Gamepad" android:textColor="@color/zl_text_primary"
+                        android:textSize="11sp" android:textStyle="bold" />
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                        android:text="Dual joystick layout" android:textColor="@color/zl_text_secondary"
+                        android:textSize="9sp" />
+                </LinearLayout>
+                <Button android:id="@+id/btn_select_gamepad"
+                    android:layout_width="wrap_content" android:layout_height="wrap_content"
+                    android:text="Select" android:textSize="9sp" android:textStyle="bold"
+                    android:textColor="@color/zl_green" android:background="@drawable/bg_layout_select_btn"
+                    android:paddingStart="10dp" android:paddingEnd="10dp"
+                    android:paddingTop="5dp" android:paddingBottom="5dp"
+                    android:stateListAnimator="@null" />
+            </LinearLayout>
+
+            <!-- Minimal layout card -->
+            <LinearLayout android:id="@+id/layout_card_minimal"
+                android:layout_width="match_parent" android:layout_height="wrap_content"
+                android:orientation="horizontal" android:gravity="center_vertical"
+                android:background="@drawable/bg_layout_card"
+                android:padding="10dp" android:layout_marginBottom="8dp"
+                android:clickable="true" android:focusable="true">
+                <View android:layout_width="56dp" android:layout_height="34dp"
+                    android:background="@drawable/bg_layout_thumb" android:layout_marginEnd="10dp" />
+                <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content"
+                    android:layout_weight="1" android:orientation="vertical">
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                        android:text="Minimal" android:textColor="@color/zl_text_primary"
+                        android:textSize="11sp" android:textStyle="bold" />
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                        android:text="Fewer buttons" android:textColor="@color/zl_text_secondary"
+                        android:textSize="9sp" />
+                </LinearLayout>
+                <Button android:id="@+id/btn_select_minimal"
+                    android:layout_width="wrap_content" android:layout_height="wrap_content"
+                    android:text="Select" android:textSize="9sp" android:textStyle="bold"
+                    android:textColor="@color/zl_green" android:background="@drawable/bg_layout_select_btn"
+                    android:paddingStart="10dp" android:paddingEnd="10dp"
+                    android:paddingTop="5dp" android:paddingBottom="5dp"
+                    android:stateListAnimator="@null" />
+            </LinearLayout>
+
+            <!-- New / Import buttons -->
+            <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+                android:orientation="horizontal">
+                <Button android:id="@+id/btn_new_layout"
+                    android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1"
+                    android:layout_marginEnd="6dp"
+                    android:text="New" android:textSize="9sp" android:textStyle="bold"
+                    android:textColor="@color/zl_cyan" android:background="@drawable/bg_btn_cyan"
+                    android:paddingTop="5dp" android:paddingBottom="5dp"
+                    android:stateListAnimator="@null" />
+                <Button android:id="@+id/btn_import_layout"
+                    android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1"
+                    android:text="Import" android:textSize="9sp" android:textStyle="bold"
+                    android:textColor="@color/zl_purple" android:background="@drawable/bg_btn_purple"
+                    android:paddingTop="5dp" android:paddingBottom="5dp"
+                    android:stateListAnimator="@null" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <!-- RIGHT: Virtual Mouse -->
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_marginStart="4dp"
+            android:orientation="vertical"
+            android:background="@drawable/bg_glass_card"
+            android:padding="12dp">
+
+            <TextView android:layout_width="match_parent" android:layout_height="wrap_content"
+                android:text="VIRTUAL MOUSE" android:textColor="@color/zl_text_muted"
+                android:textSize="8sp" android:textStyle="bold" android:letterSpacing="0.12"
+                android:layout_marginBottom="8dp" />
+
+            <!-- Enable Virtual Mouse -->
+            <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+                android:orientation="horizontal" android:gravity="center_vertical"
+                android:paddingTop="8dp" android:paddingBottom="8dp"
+                android:background="@drawable/divider_settings">
+                <View android:layout_width="5dp" android:layout_height="5dp"
+                    android:background="@drawable/dot_cyan" android:layout_marginEnd="7dp" />
+                <TextView android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1"
+                    android:text="Enable Virtual Mouse" android:textColor="@color/zl_text_primary" android:textSize="11sp" />
+                <com.movtery.zalithlauncher.ui.view.ZLToggle
+                    android:id="@+id/toggle_virtual_mouse"
+                    android:layout_width="36dp" android:layout_height="20dp" android:checked="true" />
+            </LinearLayout>
+
+            <!-- Mouse Speed -->
+            <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+                android:orientation="vertical" android:paddingTop="8dp" android:paddingBottom="8dp"
+                android:background="@drawable/divider_settings">
+                <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+                    android:orientation="horizontal" android:gravity="center_vertical">
+                    <View android:layout_width="5dp" android:layout_height="5dp"
+                        android:background="@drawable/dot_purple" android:layout_marginEnd="7dp" />
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                        android:text="Mouse Speed" android:textColor="@color/zl_text_primary" android:textSize="11sp" />
+                </LinearLayout>
+                <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+                    android:orientation="horizontal" android:gravity="center_vertical" android:layout_marginTop="4dp">
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                        android:text="Slow" android:textColor="@color/zl_text_muted" android:textSize="8sp" android:layout_marginEnd="8dp" />
+                    <SeekBar android:id="@+id/slider_mouse_speed"
+                        android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1"
+                        android:max="10" android:progress="5"
+                        android:progressTint="@color/zl_cyan" android:thumbTint="@color/white"
+                        android:splitTrack="false" />
+                    <TextView android:id="@+id/val_mouse_speed"
+                        android:layout_width="28dp" android:layout_height="wrap_content"
+                        android:text="5" android:textColor="@color/zl_cyan" android:textSize="9sp"
+                        android:textStyle="bold" android:gravity="end" android:layout_marginStart="8dp" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <!-- Cursor Size -->
+            <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+                android:orientation="vertical" android:paddingTop="8dp" android:paddingBottom="8dp"
+                android:background="@drawable/divider_settings">
+                <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+                    android:orientation="horizontal" android:gravity="center_vertical">
+                    <View android:layout_width="5dp" android:layout_height="5dp"
+                        android:background="@drawable/dot_amber" android:layout_marginEnd="7dp" />
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                        android:text="Cursor Size" android:textColor="@color/zl_text_primary" android:textSize="11sp" />
+                </LinearLayout>
+                <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+                    android:orientation="horizontal" android:gravity="center_vertical" android:layout_marginTop="4dp">
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                        android:text="XS" android:textColor="@color/zl_text_muted" android:textSize="8sp" android:layout_marginEnd="8dp" />
+                    <SeekBar android:id="@+id/slider_cursor_size"
+                        android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1"
+                        android:max="4" android:progress="1"
+                        android:progressTint="@color/zl_cyan" android:thumbTint="@color/white"
+                        android:splitTrack="false" />
+                    <TextView android:id="@+id/val_cursor_size"
+                        android:layout_width="28dp" android:layout_height="wrap_content"
+                        android:text="S" android:textColor="@color/zl_cyan" android:textSize="9sp"
+                        android:textStyle="bold" android:gravity="end" android:layout_marginStart="8dp" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <!-- Auto-hide -->
+            <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+                android:orientation="horizontal" android:gravity="center_vertical"
+                android:paddingTop="8dp">
+                <View android:layout_width="5dp" android:layout_height="5dp"
+                    android:background="@drawable/dot_green" android:layout_marginEnd="7dp" />
+                <TextView android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1"
+                    android:text="Auto-hide" android:textColor="@color/zl_text_primary" android:textSize="11sp" />
+                <com.movtery.zalithlauncher.ui.view.ZLToggle
+                    android:id="@+id/toggle_cursor_autohide"
+                    android:layout_width="36dp" android:layout_height="20dp" android:checked="true" />
+            </LinearLayout>
+
+        </LinearLayout>
+    </LinearLayout>
+</ScrollView>

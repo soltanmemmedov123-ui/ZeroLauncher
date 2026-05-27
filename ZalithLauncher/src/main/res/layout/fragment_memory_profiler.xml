@@ -1,0 +1,211 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="12dp"
+    android:background="@drawable/bg_launcher">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Memory Profiler"
+        android:textColor="@color/white"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        android:paddingBottom="10dp" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:weightSum="3"
+        android:paddingBottom="10dp">
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:background="@drawable/bg_card"
+            android:padding="10dp"
+            android:layout_marginEnd="4dp">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Used"
+                android:textColor="@color/zl_text_secondary"
+                android:textSize="10sp" />
+            <TextView
+                android:id="@+id/tv_heap_used"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="0 B"
+                android:textColor="@color/white"
+                android:textSize="14sp"
+                android:textStyle="bold"
+                android:paddingTop="4dp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:background="@drawable/bg_card"
+            android:padding="10dp"
+            android:layout_marginEnd="4dp">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Committed"
+                android:textColor="@color/zl_text_secondary"
+                android:textSize="10sp" />
+            <TextView
+                android:id="@+id/tv_heap_committed"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="0 B"
+                android:textColor="@color/white"
+                android:textSize="14sp"
+                android:textStyle="bold"
+                android:paddingTop="4dp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:background="@drawable/bg_card"
+            android:padding="10dp">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Max"
+                android:textColor="@color/zl_text_secondary"
+                android:textSize="10sp" />
+            <TextView
+                android:id="@+id/tv_heap_max"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="0 B"
+                android:textColor="@color/white"
+                android:textSize="14sp"
+                android:textStyle="bold"
+                android:paddingTop="4dp" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/tv_gc_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="GC: unknown"
+        android:textColor="@color/zl_text_secondary"
+        android:textSize="10sp"
+        android:paddingBottom="10dp" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:paddingBottom="10dp">
+        <Button
+            android:id="@+id/btn_refresh_allocations"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="36dp"
+            android:text="Refresh"
+            android:textColor="@color/white"
+            android:textSize="12sp"
+            android:background="@drawable/bg_launch_btn"
+            android:stateListAnimator="@null" />
+        <Button
+            android:id="@+id/btn_force_gc"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="36dp"
+            android:text="Force GC"
+            android:textColor="@color/white"
+            android:textSize="12sp"
+            android:layout_marginStart="8dp"
+            android:background="@drawable/bg_launch_btn"
+            android:stateListAnimator="@null" />
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Top allocations"
+        android:textColor="@color/white"
+        android:textSize="13sp"
+        android:textStyle="bold"
+        android:paddingBottom="6dp" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rv_top_allocations"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:clipToPadding="false"
+        android:paddingBottom="10dp" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Leak detector"
+        android:textColor="@color/white"
+        android:textSize="13sp"
+        android:textStyle="bold"
+        android:paddingTop="10dp"
+        android:paddingBottom="4dp" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:paddingBottom="8dp">
+        <EditText
+            android:id="@+id/et_track_class"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="40dp"
+            android:hint="Class name"
+            android:textColor="@color/white"
+            android:textColorHint="@color/zl_text_secondary"
+            android:background="@drawable/bg_text_field"
+            android:padding="10dp"
+            android:maxLines="1"
+            android:inputType="text" />
+        <Button
+            android:id="@+id/btn_track_class"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:text="Track"
+            android:textColor="@color/white"
+            android:textSize="12sp"
+            android:layout_marginStart="8dp"
+            android:background="@drawable/bg_launch_btn"
+            android:stateListAnimator="@null" />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/tv_memory_status"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColor="@color/zl_text_secondary"
+        android:textSize="10sp"
+        android:paddingBottom="6dp"
+        android:visibility="gone" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rv_event_feed"
+        android:layout_width="match_parent"
+        android:layout_height="150dp"
+        android:background="@drawable/bg_card"
+        android:padding="8dp" />
+
+</LinearLayout>

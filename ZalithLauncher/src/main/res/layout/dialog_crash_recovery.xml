@@ -1,0 +1,217 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+    dialog_crash_recovery.xml
+    Full-screen-ish dialog that replaces the generic crash notification.
+    Dark theme, Material-style, large buttons for stressed developers.
+-->
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="#1A1C2E"
+    android:padding="0dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="20dp">
+
+        <!-- ── Header ─────────────────────────────────────────────────────── -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:layout_marginBottom="16dp">
+
+            <TextView
+                android:layout_width="36dp"
+                android:layout_height="36dp"
+                android:text="💥"
+                android:textSize="26sp"
+                android:gravity="center"
+                android:layout_marginEnd="10dp" />
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Game Crashed"
+                    android:textColor="#FFFFFF"
+                    android:textSize="18sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="CRASH RECOVERY"
+                    android:textColor="#6B7280"
+                    android:textSize="7sp"
+                    android:textStyle="bold"
+                    android:letterSpacing="0.12" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <!-- ── Divider ────────────────────────────────────────────────────── -->
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="#2D2F4A"
+            android:layout_marginBottom="14dp" />
+
+        <!-- ── Exception summary ──────────────────────────────────────────── -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="EXCEPTION"
+            android:textColor="#6B7280"
+            android:textSize="9sp"
+            android:textStyle="bold"
+            android:letterSpacing="0.10"
+            android:layout_marginBottom="4dp" />
+
+        <TextView
+            android:id="@+id/tv_crash_ex_summary"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="java.lang.NullPointerException"
+            android:textColor="#F87171"
+            android:textSize="12sp"
+            android:fontFamily="monospace"
+            android:maxLines="3"
+            android:ellipsize="end"
+            android:background="#2A1A1A"
+            android:padding="10dp"
+            android:layout_marginBottom="4dp" />
+
+        <Button
+            android:id="@+id/btn_show_log"
+            android:layout_width="wrap_content"
+            android:layout_height="28dp"
+            android:text="Show full log ↗"
+            android:textColor="#64B5F6"
+            android:textSize="10sp"
+            android:background="@android:color/transparent"
+            android:paddingHorizontal="0dp"
+            android:layout_marginBottom="14dp"
+            android:stateListAnimator="@null" />
+
+        <!-- ── Culprit ────────────────────────────────────────────────────── -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="SUSPECTED CAUSE"
+            android:textColor="#6B7280"
+            android:textSize="9sp"
+            android:textStyle="bold"
+            android:letterSpacing="0.10"
+            android:layout_marginBottom="4dp" />
+
+        <TextView
+            android:id="@+id/tv_crash_culprit"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="No specific mod identified."
+            android:textColor="#D1D5DB"
+            android:textSize="12sp"
+            android:background="#22243A"
+            android:padding="10dp"
+            android:layout_marginBottom="14dp" />
+
+        <!-- ── Crash-loop warning ─────────────────────────────────────────── -->
+        <TextView
+            android:id="@+id/tv_crash_warning"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text=""
+            android:textColor="#FBBF24"
+            android:textSize="11sp"
+            android:background="#2A2200"
+            android:padding="10dp"
+            android:visibility="gone"
+            android:layout_marginBottom="14dp" />
+
+        <!-- ── Fix options ────────────────────────────────────────────────── -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="SUGGESTED FIX"
+            android:textColor="#6B7280"
+            android:textSize="9sp"
+            android:textStyle="bold"
+            android:letterSpacing="0.10"
+            android:layout_marginBottom="6dp" />
+
+        <RadioGroup
+            android:id="@+id/rg_crash_fix"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:background="#22243A"
+            android:padding="10dp"
+            android:layout_marginBottom="20dp">
+
+            <RadioButton
+                android:id="@+id/rb_disable_mod"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Disable mod and relaunch"
+                android:textColor="#D1D5DB"
+                android:textSize="13sp"
+                android:buttonTint="#06B6D4"
+                android:layout_marginBottom="6dp"
+                android:visibility="gone" />
+
+            <RadioButton
+                android:id="@+id/rb_revert_inject"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Revert last injection and relaunch"
+                android:textColor="#D1D5DB"
+                android:textSize="13sp"
+                android:buttonTint="#06B6D4"
+                android:layout_marginBottom="6dp"
+                android:visibility="gone" />
+
+            <RadioButton
+                android:id="@+id/rb_retry"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Relaunch without changes (retry)"
+                android:textColor="#D1D5DB"
+                android:textSize="13sp"
+                android:buttonTint="#06B6D4"
+                android:checked="true" />
+
+        </RadioGroup>
+
+        <!-- ── Action buttons ─────────────────────────────────────────────── -->
+        <Button
+            android:id="@+id/btn_fix_relaunch"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:text="⚡  Fix &amp; Relaunch"
+            android:textColor="#FFFFFF"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            android:background="#0E7490"
+            android:layout_marginBottom="10dp"
+            android:stateListAnimator="@null" />
+
+        <Button
+            android:id="@+id/btn_ignore"
+            android:layout_width="match_parent"
+            android:layout_height="42dp"
+            android:text="Ignore – Stay in Launcher"
+            android:textColor="#9CA3AF"
+            android:textSize="13sp"
+            android:background="#2D2F4A"
+            android:stateListAnimator="@null" />
+
+    </LinearLayout>
+</ScrollView>

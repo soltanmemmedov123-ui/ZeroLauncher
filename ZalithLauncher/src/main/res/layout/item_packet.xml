@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+    item_packet.xml  – single row in the Network Monitor packet list.
+
+    Compact two-line design optimised for dense information display:
+
+      [←/→]  [Packet Name ...]       [0xNN]  [9999 B]
+
+    •  Direction arrow  – green for C→S (#4ADE80), blue for S→C (#38BDF8)
+    •  Packet name      – truncates with ellipsis
+    •  Packet ID        – monospace hex, right-aligned secondary info
+    •  Length           – byte count, dimmed
+
+    Tapping the row opens the detail panel in the fragment.
+-->
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:gravity="center_vertical"
+    android:paddingHorizontal="12dp"
+    android:paddingVertical="7dp"
+    android:background="@drawable/bg_menu_item"
+    android:clickable="true"
+    android:focusable="true">
+
+    <!-- Direction arrow: → or ← -->
+    <TextView
+        android:id="@+id/tv_packet_arrow"
+        android:layout_width="18dp"
+        android:layout_height="wrap_content"
+        android:text="→"
+        android:textSize="14sp"
+        android:textStyle="bold"
+        android:gravity="center"
+        android:layout_marginEnd="10dp" />
+
+    <!-- Packet name (takes remaining space) -->
+    <TextView
+        android:id="@+id/tv_packet_name"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:text="Keep Alive (serverbound)"
+        android:textColor="@color/zl_text_primary"
+        android:textSize="11sp"
+        android:ellipsize="end"
+        android:maxLines="1" />
+
+    <!-- Packet ID in hex (monospace, dimmed) -->
+    <TextView
+        android:id="@+id/tv_packet_id"
+        android:layout_width="36dp"
+        android:layout_height="wrap_content"
+        android:text="0x26"
+        android:textColor="@color/zl_text_muted"
+        android:textSize="9sp"
+        android:fontFamily="monospace"
+        android:gravity="end"
+        android:layout_marginEnd="8dp" />
+
+    <!-- Byte length -->
+    <TextView
+        android:id="@+id/tv_packet_length"
+        android:layout_width="50dp"
+        android:layout_height="wrap_content"
+        android:text="1 234 B"
+        android:textColor="@color/zl_text_secondary"
+        android:textSize="9sp"
+        android:gravity="end" />
+
+</LinearLayout>
