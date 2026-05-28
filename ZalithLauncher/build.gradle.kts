@@ -263,6 +263,7 @@ dependencies {
     implementation(fileTree(mapOf("dir" to "libs", "include" to listOf("*.jar"))))
 
     implementation("com.squareup.okhttp3:okhttp:4.12.0")
+    implementation("org.beanshell:bsh:2.0b6")
     implementation("org.commonmark:commonmark:0.19.0")
     implementation("com.google.android.material:material:1.12.0")
     implementation("com.google.android.flexbox:flexbox:3.0.0")
