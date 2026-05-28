@@ -1,0 +1,433 @@
+0 verbose cli /data/data/com.termux/files/usr/bin/node /data/data/com.termux/files/usr/bin/npm
+1 info using npm@11.12.1
+2 info using node@v25.8.2
+3 silly config load:file:/data/data/com.termux/files/usr/lib/node_modules/npm/npmrc
+4 silly config load:file:/data/data/com.termux/files/home/LiquidBounce-0.37.0/src-theme/.npmrc
+5 silly config load:file:/data/data/com.termux/files/home/.npmrc
+6 silly config load:file:/data/data/com.termux/files/usr/etc/npmrc
+7 verbose title npm install
+8 verbose argv "install"
+9 verbose logfile logs-max:10 dir:/data/data/com.termux/files/home/.npm/_logs/2026-05-10T21_26_44_738Z-
+10 verbose logfile /data/data/com.termux/files/home/.npm/_logs/2026-05-10T21_26_44_738Z-debug-0.log
+11 silly logfile done cleaning log files
+12 silly packumentCache heap:1056178176 maxSize:264044544 maxEntrySize:132022272
+13 silly idealTree buildDeps
+14 silly fetch manifest picomatch@^3 || ^4
+15 silly packumentCache full:https://registry.npmjs.org/picomatch cache-miss
+16 verbose shrinkwrap failed to load node_modules/.package-lock.json out of date, updated: node_modules
+17 http fetch GET 200 https://registry.npmjs.org/picomatch 688ms (cache revalidated)
+18 silly packumentCache full:https://registry.npmjs.org/picomatch set size:126376 disposed:false
+19 silly placeDep node_modules/svelte-check picomatch@4.0.4 OK for: fdir@6.4.2 want: ^3 || ^4
+20 silly reify moves {}
+21 silly audit bulk request {
+21 silly audit   '@ampproject/remapping': [ '2.3.0' ],
+21 silly audit   '@esbuild/aix-ppc64': [ '0.25.1' ],
+21 silly audit   '@esbuild/android-arm': [ '0.25.1' ],
+21 silly audit   '@esbuild/android-arm64': [ '0.25.1' ],
+21 silly audit   '@esbuild/android-x64': [ '0.25.1' ],
+21 silly audit   '@esbuild/darwin-arm64': [ '0.25.1' ],
+21 silly audit   '@esbuild/darwin-x64': [ '0.25.1' ],
+21 silly audit   '@esbuild/freebsd-arm64': [ '0.25.1' ],
+21 silly audit   '@esbuild/freebsd-x64': [ '0.25.1' ],
+21 silly audit   '@esbuild/linux-arm': [ '0.25.1' ],
+21 silly audit   '@esbuild/linux-arm64': [ '0.25.1' ],
+21 silly audit   '@esbuild/linux-ia32': [ '0.25.1' ],
+21 silly audit   '@esbuild/linux-loong64': [ '0.25.1' ],
+21 silly audit   '@esbuild/linux-mips64el': [ '0.25.1' ],
+21 silly audit   '@esbuild/linux-ppc64': [ '0.25.1' ],
+21 silly audit   '@esbuild/linux-riscv64': [ '0.25.1' ],
+21 silly audit   '@esbuild/linux-s390x': [ '0.25.1' ],
+21 silly audit   '@esbuild/linux-x64': [ '0.25.1' ],
+21 silly audit   '@esbuild/netbsd-arm64': [ '0.25.1' ],
+21 silly audit   '@esbuild/netbsd-x64': [ '0.25.1' ],
+21 silly audit   '@esbuild/openbsd-arm64': [ '0.25.1' ],
+21 silly audit   '@esbuild/openbsd-x64': [ '0.25.1' ],
+21 silly audit   '@esbuild/sunos-x64': [ '0.25.1' ],
+21 silly audit   '@esbuild/win32-arm64': [ '0.25.1' ],
+21 silly audit   '@esbuild/win32-ia32': [ '0.25.1' ],
+21 silly audit   '@esbuild/win32-x64': [ '0.25.1' ],
+21 silly audit   '@jhubbardsf/svelte-sortablejs': [ '1.1.0' ],
+21 silly audit   '@jridgewell/gen-mapping': [ '0.3.8' ],
+21 silly audit   '@jridgewell/resolve-uri': [ '3.1.2' ],
+21 silly audit   '@jridgewell/set-array': [ '1.2.1' ],
+21 silly audit   '@jridgewell/sourcemap-codec': [ '1.5.0' ],
+21 silly audit   '@jridgewell/trace-mapping': [ '0.3.25' ],
+21 silly audit   '@kurkle/color': [ '0.3.4' ],
+21 silly audit   '@parcel/watcher': [ '2.5.0' ],
+21 silly audit   '@parcel/watcher-android-arm64': [ '2.5.0' ],
+21 silly audit   '@parcel/watcher-darwin-arm64': [ '2.5.0' ],
+21 silly audit   '@parcel/watcher-darwin-x64': [ '2.5.0' ],
+21 silly audit   '@parcel/watcher-freebsd-x64': [ '2.5.0' ],
+21 silly audit   '@parcel/watcher-linux-arm-glibc': [ '2.5.0' ],
+21 silly audit   '@parcel/watcher-linux-arm-musl': [ '2.5.0' ],
+21 silly audit   '@parcel/watcher-linux-arm64-glibc': [ '2.5.0' ],
+21 silly audit   '@parcel/watcher-linux-arm64-musl': [ '2.5.0' ],
+21 silly audit   '@parcel/watcher-linux-x64-glibc': [ '2.5.0' ],
+21 silly audit   '@parcel/watcher-linux-x64-musl': [ '2.5.0' ],
+21 silly audit   '@parcel/watcher-win32-arm64': [ '2.5.0' ],
+21 silly audit   '@parcel/watcher-win32-ia32': [ '2.5.0' ],
+21 silly audit   '@parcel/watcher-win32-x64': [ '2.5.0' ],
+21 silly audit   '@rollup/rollup-android-arm-eabi': [ '4.37.0' ],
+21 silly audit   '@rollup/rollup-android-arm64': [ '4.37.0' ],
+21 silly audit   '@rollup/rollup-darwin-arm64': [ '4.37.0' ],
+21 silly audit   '@rollup/rollup-darwin-x64': [ '4.37.0' ],
+21 silly audit   '@rollup/rollup-freebsd-arm64': [ '4.37.0' ],
+21 silly audit   '@rollup/rollup-freebsd-x64': [ '4.37.0' ],
+21 silly audit   '@rollup/rollup-linux-arm-gnueabihf': [ '4.37.0' ],
+21 silly audit   '@rollup/rollup-linux-arm-musleabihf': [ '4.37.0' ],
+21 silly audit   '@rollup/rollup-linux-arm64-gnu': [ '4.37.0' ],
+21 silly audit   '@rollup/rollup-linux-arm64-musl': [ '4.37.0' ],
+21 silly audit   '@rollup/rollup-linux-loongarch64-gnu': [ '4.37.0' ],
+21 silly audit   '@rollup/rollup-linux-powerpc64le-gnu': [ '4.37.0' ],
+21 silly audit   '@rollup/rollup-linux-riscv64-gnu': [ '4.37.0' ],
+21 silly audit   '@rollup/rollup-linux-riscv64-musl': [ '4.37.0' ],
+21 silly audit   '@rollup/rollup-linux-s390x-gnu': [ '4.37.0' ],
+21 silly audit   '@rollup/rollup-linux-x64-gnu': [ '4.37.0' ],
+21 silly audit   '@rollup/rollup-linux-x64-musl': [ '4.37.0' ],
+21 silly audit   '@rollup/rollup-win32-arm64-msvc': [ '4.37.0' ],
+21 silly audit   '@rollup/rollup-win32-ia32-msvc': [ '4.37.0' ],
+21 silly audit   '@rollup/rollup-win32-x64-msvc': [ '4.37.0' ],
+21 silly audit   '@simonwep/pickr': [ '1.9.1' ],
+21 silly audit   '@sveltejs/vite-plugin-svelte': [ '5.0.2' ],
+21 silly audit   '@sveltejs/vite-plugin-svelte-inspector': [ '4.0.1' ],
+21 silly audit   '@tsconfig/svelte': [ '5.0.4' ],
+21 silly audit   '@types/estree': [ '1.0.6' ],
+21 silly audit   acorn: [ '8.14.0' ],
+21 silly audit   'acorn-typescript': [ '1.4.13' ],
+21 silly audit   archiver: [ '6.0.2' ],
+21 silly audit   'archiver-utils': [ '4.0.1' ],
+21 silly audit   'aria-query': [ '5.3.2' ],
+21 silly audit   async: [ '3.2.6' ],
+21 silly audit   'axobject-query': [ '4.1.0' ],
+21 silly audit   b4a: [ '1.6.7' ],
+21 silly audit   'balanced-match': [ '1.0.2' ],
+21 silly audit   'bare-events': [ '2.5.0' ],
+21 silly audit   'brace-expansion': [ '2.0.3' ],
+21 silly audit   braces: [ '3.0.3' ],
+21 silly audit   'buffer-crc32': [ '0.2.13' ],
+21 silly audit   'chart.js': [ '4.5.0' ],
+21 silly audit   'chartjs-plugin-dragdata': [ '2.3.1' ],
+21 silly audit   chokidar: [ '4.0.1' ],
+21 silly audit   'compress-commons': [ '5.0.3' ],
+21 silly audit   'core-js': [ '3.37.0' ],
+21 silly audit   'core-util-is': [ '1.0.3' ],
+21 silly audit   'country-code-lookup': [ '0.1.3' ],
+21 silly audit   'crc-32': [ '1.2.2' ],
+21 silly audit   'crc32-stream': [ '5.0.1' ],
+21 silly audit   'd3-dispatch': [ '3.0.1' ],
+21 silly audit   'd3-drag': [ '3.0.0' ],
+21 silly audit   'd3-selection': [ '3.0.0' ],
+21 silly audit   dateformat: [ '5.0.3' ],
+21 silly audit   debug: [ '4.4.0' ],
+21 silly audit   deepmerge: [ '4.3.1' ],
+21 silly audit   'detect-libc': [ '1.0.3' ],
+21 silly audit   esbuild: [ '0.25.1' ],
+21 silly audit   'esm-env': [ '1.2.1' ],
+21 silly audit   esrap: [ '1.2.3' ],
+21 silly audit   'fast-fifo': [ '1.3.2' ],
+21 silly audit   'fill-range': [ '7.1.1' ],
+21 silly audit   'fs.realpath': [ '1.0.0' ],
+21 silly audit   fsevents: [ '2.3.3' ],
+21 silly audit   glob: [ '8.1.0' ],
+21 silly audit   'graceful-fs': [ '4.2.11' ],
+21 silly audit   immutable: [ '5.0.3' ],
+21 silly audit   inflight: [ '1.0.6' ],
+21 silly audit   inherits: [ '2.0.4' ],
+21 silly audit   'is-extglob': [ '2.1.1' ],
+21 silly audit   'is-glob': [ '4.0.3' ],
+21 silly audit   'is-number': [ '7.0.0' ],
+21 silly audit   'is-reference': [ '3.0.3' ],
+21 silly audit   isarray: [ '1.0.0' ],
+21 silly audit   kleur: [ '4.1.5' ],
+21 silly audit   lazystream: [ '1.0.1' ],
+21 silly audit   'readable-stream': [ '2.3.8', '3.6.2' ],
+21 silly audit   'safe-buffer': [ '5.1.2', '5.2.1' ],
+21 silly audit   string_decoder: [ '1.1.1', '1.3.0' ],
+21 silly audit   'locate-character': [ '3.0.0' ],
+21 silly audit   lodash: [ '4.17.23' ],
+21 silly audit   'magic-string': [ '0.30.17' ],
+21 silly audit   micromatch: [ '4.0.8' ],
+21 silly audit   minimatch: [ '5.1.6' ],
+21 silly audit   mri: [ '1.2.0' ],
+21 silly audit   ms: [ '2.1.3' ],
+21 silly audit   nanoid: [ '3.3.11' ],
+21 silly audit   nanopop: [ '2.4.2' ],
+21 silly audit   'node-addon-api': [ '7.1.1' ],
+21 silly audit   'normalize-path': [ '3.0.0' ],
+21 silly audit   nouislider: [ '15.8.1' ],
+21 silly audit   once: [ '1.4.0' ],
+21 silly audit   picocolors: [ '1.1.1' ],
+21 silly audit   picomatch: [ '2.3.1', '4.0.2' ],
+21 silly audit   postcss: [ '8.5.3' ],
+21 silly audit   'process-nextick-args': [ '2.0.1' ],
+21 silly audit   'queue-tick': [ '1.0.1' ],
+21 silly audit   'readdir-glob': [ '1.1.3' ],
+21 silly audit   readdirp: [ '4.0.2' ],
+21 silly audit   regexparam: [ '2.0.2' ],
+21 silly audit   rollup: [ '4.37.0' ],
+21 silly audit   sade: [ '1.8.1' ],
+21 silly audit   sass: [ '1.83.0' ],
+21 silly audit   sortablejs: [ '1.15.6' ],
+21 silly audit   'source-map-js': [ '1.2.1' ],
+21 silly audit   streamx: [ '2.21.1' ],
+21 silly audit   svelte: [ '5.14.0' ],
+21 silly audit   'svelte-check': [ '4.1.1' ],
+21 silly audit   fdir: [ '6.4.2', '6.4.4' ],
+21 silly audit   'svelte-spa-router': [ '4.0.1' ],
+21 silly audit   'tar-stream': [ '3.1.7' ],
+21 silly audit   'text-decoder': [ '1.2.3' ],
+21 silly audit   tinyglobby: [ '0.2.13' ],
+21 silly audit   'to-regex-range': [ '5.0.1' ],
+21 silly audit   tslib: [ '2.8.1' ],
+21 silly audit   typescript: [ '5.6.3' ],
+21 silly audit   'util-deprecate': [ '1.0.2' ],
+21 silly audit   vite: [ '6.4.1' ],
+21 silly audit   vitefu: [ '1.0.4' ],
+21 silly audit   wrappy: [ '1.0.2' ],
+21 silly audit   zimmerframe: [ '1.1.2' ],
+21 silly audit   'zip-stream': [ '5.0.2' ]
+21 silly audit }
+22 http fetch POST 200 https://registry.npmjs.org/-/npm/v1/security/advisories/bulk 645ms
+23 silly audit report {
+23 silly audit report   immutable: [
+23 silly audit report     {
+23 silly audit report       id: 1117068,
+23 silly audit report       url: 'https://github.com/advisories/GHSA-wf6x-7x77-mvgw',
+23 silly audit report       title: 'Immutable is vulnerable to Prototype Pollution',
+23 silly audit report       severity: 'high',
+23 silly audit report       vulnerable_versions: '>=5.0.0 <5.1.5',
+23 silly audit report       cwe: [Array],
+23 silly audit report       cvss: [Object]
+23 silly audit report     }
+23 silly audit report   ],
+23 silly audit report   lodash: [
+23 silly audit report     {
+23 silly audit report       id: 1115806,
+23 silly audit report       url: 'https://github.com/advisories/GHSA-r5fr-rjxr-66jc',
+23 silly audit report       title: 'lodash vulnerable to Code Injection via `_.template` imports key names',
+23 silly audit report       severity: 'high',
+23 silly audit report       vulnerable_versions: '>=4.0.0 <=4.17.23',
+23 silly audit report       cwe: [Array],
+23 silly audit report       cvss: [Object]
+23 silly audit report     },
+23 silly audit report     {
+23 silly audit report       id: 1115810,
+23 silly audit report       url: 'https://github.com/advisories/GHSA-f23m-r3pf-42rh',
+23 silly audit report       title: 'lodash vulnerable to Prototype Pollution via array path bypass in `_.unset` and `_.omit`',
+23 silly audit report       severity: 'moderate',
+23 silly audit report       vulnerable_versions: '<=4.17.23',
+23 silly audit report       cwe: [Array],
+23 silly audit report       cvss: [Object]
+23 silly audit report     }
+23 silly audit report   ],
+23 silly audit report   minimatch: [
+23 silly audit report     {
+23 silly audit report       id: 1113461,
+23 silly audit report       url: 'https://github.com/advisories/GHSA-3ppc-4f35-3m26',
+23 silly audit report       title: 'minimatch has a ReDoS via repeated wildcards with non-matching literal in pattern',
+23 silly audit report       severity: 'high',
+23 silly audit report       vulnerable_versions: '>=5.0.0 <5.1.7',
+23 silly audit report       cwe: [Array],
+23 silly audit report       cvss: [Object]
+23 silly audit report     },
+23 silly audit report     {
+23 silly audit report       id: 1113540,
+23 silly audit report       url: 'https://github.com/advisories/GHSA-7r86-cg39-jmmj',
+23 silly audit report       title: 'minimatch has ReDoS: matchOne() combinatorial backtracking via multiple non-adjacent GLOBSTAR segments',
+23 silly audit report       severity: 'high',
+23 silly audit report       vulnerable_versions: '>=5.0.0 <5.1.8',
+23 silly audit report       cwe: [Array],
+23 silly audit report       cvss: [Object]
+23 silly audit report     },
+23 silly audit report     {
+23 silly audit report       id: 1113548,
+23 silly audit report       url: 'https://github.com/advisories/GHSA-23c5-xmqv-rm74',
+23 silly audit report       title: 'minimatch ReDoS: nested *() extglobs generate catastrophically backtracking regular expressions',
+23 silly audit report       severity: 'high',
+23 silly audit report       vulnerable_versions: '>=5.0.0 <5.1.8',
+23 silly audit report       cwe: [Array],
+23 silly audit report       cvss: [Object]
+23 silly audit report     }
+23 silly audit report   ],
+23 silly audit report   picomatch: [
+23 silly audit report     {
+23 silly audit report       id: 1115549,
+23 silly audit report       url: 'https://github.com/advisories/GHSA-3v7f-55p6-f55p',
+23 silly audit report       title: 'Picomatch: Method Injection in POSIX Character Classes causes incorrect Glob Matching',
+23 silly audit report       severity: 'moderate',
+23 silly audit report       vulnerable_versions: '<2.3.2',
+23 silly audit report       cwe: [Array],
+23 silly audit report       cvss: [Object]
+23 silly audit report     },
+23 silly audit report     {
+23 silly audit report       id: 1115551,
+23 silly audit report       url: 'https://github.com/advisories/GHSA-3v7f-55p6-f55p',
+23 silly audit report       title: 'Picomatch: Method Injection in POSIX Character Classes causes incorrect Glob Matching',
+23 silly audit report       severity: 'moderate',
+23 silly audit report       vulnerable_versions: '>=4.0.0 <4.0.4',
+23 silly audit report       cwe: [Array],
+23 silly audit report       cvss: [Object]
+23 silly audit report     },
+23 silly audit report     {
+23 silly audit report       id: 1115552,
+23 silly audit report       url: 'https://github.com/advisories/GHSA-c2c7-rcm5-vvqj',
+23 silly audit report       title: 'Picomatch has a ReDoS vulnerability via extglob quantifiers',
+23 silly audit report       severity: 'high',
+23 silly audit report       vulnerable_versions: '<2.3.2',
+23 silly audit report       cwe: [Array],
+23 silly audit report       cvss: [Object]
+23 silly audit report     },
+23 silly audit report     {
+23 silly audit report       id: 1115554,
+23 silly audit report       url: 'https://github.com/advisories/GHSA-c2c7-rcm5-vvqj',
+23 silly audit report       title: 'Picomatch has a ReDoS vulnerability via extglob quantifiers',
+23 silly audit report       severity: 'high',
+23 silly audit report       vulnerable_versions: '>=4.0.0 <4.0.4',
+23 silly audit report       cwe: [Array],
+23 silly audit report       cvss: [Object]
+23 silly audit report     }
+23 silly audit report   ],
+23 silly audit report   postcss: [
+23 silly audit report     {
+23 silly audit report       id: 1117015,
+23 silly audit report       url: 'https://github.com/advisories/GHSA-qx2v-qp2m-jg93',
+23 silly audit report       title: 'PostCSS has XSS via Unescaped </style> in its CSS Stringify Output',
+23 silly audit report       severity: 'moderate',
+23 silly audit report       vulnerable_versions: '<8.5.10',
+23 silly audit report       cwe: [Array],
+23 silly audit report       cvss: [Object]
+23 silly audit report     }
+23 silly audit report   ],
+23 silly audit report   rollup: [
+23 silly audit report     {
+23 silly audit report       id: 1113515,
+23 silly audit report       url: 'https://github.com/advisories/GHSA-mw96-cpmx-2vgc',
+23 silly audit report       title: 'Rollup 4 has Arbitrary File Write via Path Traversal',
+23 silly audit report       severity: 'high',
+23 silly audit report       vulnerable_versions: '>=4.0.0 <4.59.0',
+23 silly audit report       cwe: [Array],
+23 silly audit report       cvss: [Object]
+23 silly audit report     }
+23 silly audit report   ],
+23 silly audit report   svelte: [
+23 silly audit report     {
+23 silly audit report       id: 1113416,
+23 silly audit report       url: 'https://github.com/advisories/GHSA-crpf-4hrx-3jrp',
+23 silly audit report       title: 'Svelte SSR attribute spreading includes inherited properties from prototype chain',
+23 silly audit report       severity: 'moderate',
+23 silly audit report       vulnerable_versions: '<=5.51.4',
+23 silly audit report       cwe: [Array],
+23 silly audit report       cvss: [Object]
+23 silly audit report     },
+23 silly audit report     {
+23 silly audit report       id: 1113418,
+23 silly audit report       url: 'https://github.com/advisories/GHSA-m56q-vw4c-c2cp',
+23 silly audit report       title: 'Svelte SSR does not validate dynamic element tag names in `<svelte:element>`',
+23 silly audit report       severity: 'moderate',
+23 silly audit report       vulnerable_versions: '<=5.51.4',
+23 silly audit report       cwe: [Array],
+23 silly audit report       cvss: [Object]
+23 silly audit report     },
+23 silly audit report     {
+23 silly audit report       id: 1113419,
+23 silly audit report       url: 'https://github.com/advisories/GHSA-f7gr-6p89-r883',
+23 silly audit report       title: 'Svelte affected by cross-site scripting via spread attributes in Svelte SSR',
+23 silly audit report       severity: 'moderate',
+23 silly audit report       vulnerable_versions: '<=5.51.4',
+23 silly audit report       cwe: [Array],
+23 silly audit report       cvss: [Object]
+23 silly audit report     },
+23 silly audit report     {
+23 silly audit report       id: 1114402,
+23 silly audit report       url: 'https://github.com/advisories/GHSA-phwv-c562-gvmh',
+23 silly audit report       title: 'Svelte vulnerable to XSS during SSR with contenteditable `bind:innerText` and `bind:textContent`',
+23 silly audit report       severity: 'moderate',
+23 silly audit report       vulnerable_versions: '<=5.53.4',
+23 silly audit report       cwe: [Array],
+23 silly audit report       cvss: [Object]
+23 silly audit report     }
+23 silly audit report   ],
+23 silly audit report   vite: [
+23 silly audit report     {
+23 silly audit report       id: 1116229,
+23 silly audit report       url: 'https://github.com/advisories/GHSA-4w7w-66w2-5vf9',
+23 silly audit report       title: 'Vite Vulnerable to Path Traversal in Optimized Deps `.map` Handling',
+23 silly audit report       severity: 'moderate',
+23 silly audit report       vulnerable_versions: '<=6.4.1',
+23 silly audit report       cwe: [Array],
+23 silly audit report       cvss: [Object]
+23 silly audit report     },
+23 silly audit report     {
+23 silly audit report       id: 1116234,
+23 silly audit report       url: 'https://github.com/advisories/GHSA-p9ff-h696-f583',
+23 silly audit report       title: 'Vite Vulnerable to Arbitrary File Read via Vite Dev Server WebSocket',
+23 silly audit report       severity: 'high',
+23 silly audit report       vulnerable_versions: '>=6.0.0 <=6.4.1',
+23 silly audit report       cwe: [Array],
+23 silly audit report       cvss: [Object]
+23 silly audit report     }
+23 silly audit report   ]
+23 silly audit report }
+24 silly packumentCache corgi:https://registry.npmjs.org/immutable cache-miss
+25 silly packumentCache corgi:https://registry.npmjs.org/lodash cache-miss
+26 silly packumentCache corgi:https://registry.npmjs.org/minimatch cache-miss
+27 silly packumentCache corgi:https://registry.npmjs.org/picomatch cache-miss
+28 silly packumentCache corgi:https://registry.npmjs.org/postcss cache-miss
+29 silly packumentCache corgi:https://registry.npmjs.org/rollup cache-miss
+30 silly packumentCache corgi:https://registry.npmjs.org/svelte cache-miss
+31 silly packumentCache corgi:https://registry.npmjs.org/vite cache-miss
+32 http fetch GET 200 https://registry.npmjs.org/picomatch 124ms (cache revalidated)
+33 silly packumentCache corgi:https://registry.npmjs.org/picomatch set size:44414 disposed:false
+34 http fetch GET 200 https://registry.npmjs.org/minimatch 222ms (cache revalidated)
+35 silly packumentCache corgi:https://registry.npmjs.org/minimatch set size:168441 disposed:false
+36 http fetch GET 200 https://registry.npmjs.org/lodash 486ms (cache revalidated)
+37 silly packumentCache corgi:https://registry.npmjs.org/lodash set size:69555 disposed:false
+38 http fetch GET 200 https://registry.npmjs.org/immutable 496ms (cache revalidated)
+39 silly packumentCache corgi:https://registry.npmjs.org/immutable set size:108496 disposed:false
+40 http fetch GET 200 https://registry.npmjs.org/postcss 500ms (cache revalidated)
+41 silly packumentCache corgi:https://registry.npmjs.org/postcss set size:343873 disposed:false
+42 http fetch GET 200 https://registry.npmjs.org/vite 521ms (cache revalidated)
+43 silly packumentCache corgi:https://registry.npmjs.org/vite set size:2240862 disposed:false
+44 http fetch GET 200 https://registry.npmjs.org/svelte 772ms (cache revalidated)
+45 silly packumentCache corgi:https://registry.npmjs.org/svelte set size:1760563 disposed:false
+46 http fetch GET 200 https://registry.npmjs.org/rollup 951ms (cache revalidated)
+47 silly packumentCache corgi:https://registry.npmjs.org/rollup set size:2564296 disposed:false
+48 silly packumentCache corgi:https://registry.npmjs.org/sass cache-miss
+49 http fetch GET 200 https://registry.npmjs.org/sass 349ms (cache revalidated)
+50 silly packumentCache corgi:https://registry.npmjs.org/sass set size:377809 disposed:false
+51 silly packumentCache corgi:https://registry.npmjs.org/archiver-utils cache-miss
+52 http fetch GET 200 https://registry.npmjs.org/archiver-utils 392ms (cache revalidated)
+53 silly packumentCache corgi:https://registry.npmjs.org/archiver-utils set size:14649 disposed:false
+54 silly packumentCache corgi:https://registry.npmjs.org/glob cache-miss
+55 silly packumentCache corgi:https://registry.npmjs.org/readdir-glob cache-miss
+56 http fetch GET 200 https://registry.npmjs.org/readdir-glob 295ms (cache revalidated)
+57 silly packumentCache corgi:https://registry.npmjs.org/readdir-glob set size:12111 disposed:false
+58 http fetch GET 200 https://registry.npmjs.org/glob 311ms (cache revalidated)
+59 silly packumentCache corgi:https://registry.npmjs.org/glob set size:199194 disposed:false
+60 silly packumentCache corgi:https://registry.npmjs.org/micromatch cache-miss
+61 silly packumentCache corgi:https://registry.npmjs.org/fdir cache-miss
+62 http fetch GET 200 https://registry.npmjs.org/micromatch 85ms (cache revalidated)
+63 silly packumentCache corgi:https://registry.npmjs.org/micromatch set size:71776 disposed:false
+64 http fetch GET 200 https://registry.npmjs.org/fdir 370ms (cache revalidated)
+65 silly packumentCache corgi:https://registry.npmjs.org/fdir set size:76905 disposed:false
+66 silly packumentCache corgi:https://registry.npmjs.org/tinyglobby cache-miss
+67 http fetch GET 200 https://registry.npmjs.org/tinyglobby 317ms (cache revalidated)
+68 silly packumentCache corgi:https://registry.npmjs.org/tinyglobby set size:18884 disposed:false
+69 silly packumentCache corgi:https://registry.npmjs.org/@sveltejs%2fvite-plugin-svelte cache-miss
+70 silly packumentCache corgi:https://registry.npmjs.org/@sveltejs%2fvite-plugin-svelte-inspector cache-miss
+71 silly packumentCache corgi:https://registry.npmjs.org/svelte-check cache-miss
+72 http fetch GET 200 https://registry.npmjs.org/svelte-check 371ms (cache revalidated)
+73 silly packumentCache corgi:https://registry.npmjs.org/svelte-check set size:541344 disposed:false
+74 http fetch GET 200 https://registry.npmjs.org/@sveltejs%2fvite-plugin-svelte 626ms (cache revalidated)
+75 silly packumentCache corgi:https://registry.npmjs.org/@sveltejs%2fvite-plugin-svelte set size:216998 disposed:false
+76 http fetch GET 200 https://registry.npmjs.org/@sveltejs%2fvite-plugin-svelte-inspector 660ms (cache revalidated)
+77 silly packumentCache corgi:https://registry.npmjs.org/@sveltejs%2fvite-plugin-svelte-inspector set size:22262 disposed:false
+78 silly packumentCache corgi:https://registry.npmjs.org/vitefu cache-miss
+79 http fetch GET 200 https://registry.npmjs.org/vitefu 291ms (cache revalidated)
+80 silly packumentCache corgi:https://registry.npmjs.org/vitefu set size:22407 disposed:false
+81 verbose cwd /data/data/com.termux/files/home/LiquidBounce-0.37.0/src-theme
+82 verbose os Linux 4.19.157-perf-g2f8c31a03b75
+83 verbose node v25.8.2
+84 verbose npm  v11.12.1
+85 verbose exit 0
+86 info ok

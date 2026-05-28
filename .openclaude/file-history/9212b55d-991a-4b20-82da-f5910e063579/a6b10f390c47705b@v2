@@ -1,0 +1,215 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- =============================================
+         SYSTEM / ANDROID STANDARD COLORS
+         (fixes: white, black, transparent not found)
+    ============================================= -->
+    <color name="white">#FFFFFFFF</color>
+    <color name="black">#FF000000</color>
+    <color name="transparent">#00000000</color>
+
+    <!-- =============================================
+         ZL BACKGROUND COLORS (TOWO Reborn)
+    ============================================= -->
+    <color name="zl_bg_start">#FF060610</color>
+    <color name="zl_bg_mid">#FF0C0C20</color>
+    <color name="zl_bg_end">#FF18183A</color>
+    <color name="zl_bg_surface">#FF101026</color>
+    <color name="zl_bg_card">#C7101026</color>
+    <color name="zl_bg_dialog">#C70A0A1A</color>
+    <color name="zl_bg_overlay">#99000000</color>
+    <color name="zl_bg_ripple">#33FFFFFF</color>
+
+    <!-- =============================================
+         ZL TEXT COLORS (TOWO Reborn)
+    ============================================= -->
+    <color name="zl_text_primary">#FFEDEDF5</color>
+    <color name="zl_text_secondary">#FF9A9AB0</color>
+    <color name="zl_text_tertiary">#FF7A7A98</color>
+    <color name="zl_text_disabled">#40EDEDF5</color>
+    <color name="zl_text_hint">#559A9AB0</color>
+    <color name="zl_text_muted">#FF5C5C78</color>
+    <color name="zl_text_on_accent">#FFFFFFFF</color>
+    <color name="zl_text_inverse">#FF000000</color>
+
+    <!-- =============================================
+         ZL ACCENT / BRAND COLORS
+         (fixes: zl_cyan, zl_purple, zl_green not found)
+    ============================================= -->
+    <color name="zl_cyan">#FF00E5FF</color>
+    <color name="zl_cyan_dark">#FF00B2CC</color>
+    <color name="zl_cyan_light">#FF80F4FF</color>
+
+    <color name="zl_purple">#FFBB86FC</color>
+    <color name="zl_purple_dark">#FF9B59F5</color>
+    <color name="zl_purple_light">#FFD9A8FF</color>
+
+    <color name="zl_green">#FF69F0AE</color>
+    <color name="zl_green_dark">#FF00C853</color>
+    <color name="zl_green_light">#FFB9F6CA</color>
+
+    <color name="zl_blue">#FF448AFF</color>
+    <color name="zl_blue_dark">#FF2962FF</color>
+    <color name="zl_blue_light">#FF82B1FF</color>
+
+    <color name="zl_red">#FFFF5252</color>
+    <color name="zl_red_dark">#FFD50000</color>
+    <color name="zl_red_light">#FFFF8A80</color>
+
+    <color name="zl_orange">#FFFFAB40</color>
+    <color name="zl_orange_dark">#FFFF6D00</color>
+    <color name="zl_orange_light">#FFFFD180</color>
+
+    <color name="zl_yellow">#FFFFEA00</color>
+    <color name="zl_yellow_dark">#FFFFD600</color>
+    <color name="zl_yellow_light">#FFFFFF8D</color>
+
+    <color name="zl_pink">#FFFF4081</color>
+    <color name="zl_pink_dark">#FFC51162</color>
+    <color name="zl_pink_light">#FFFF80AB</color>
+
+    <color name="zl_amber">#FFFFB300</color>
+    <color name="zl_amber_dark">#FFFF8F00</color>
+    <color name="zl_amber_light">#FFFFE57F</color>
+
+    <color name="zl_rose">#FFE91E63</color>
+    <color name="zl_rose_dark">#FFC2185B</color>
+    <color name="zl_rose_light">#FFF48FB1</color>
+
+    <color name="zl_teal">#FF1DE9B6</color>
+    <color name="zl_teal_dark">#FF00BFA5</color>
+    <color name="zl_teal_light">#FFA7FFEB</color>
+
+    <!-- =============================================
+         ZL PRIMARY / ACCENT (Material-style aliases)
+    ============================================= -->
+    <color name="zl_primary">#FFBB86FC</color>
+    <color name="zl_primary_dark">#FF9B59F5</color>
+    <color name="zl_primary_light">#FFD9A8FF</color>
+    <color name="zl_primary_variant">#FF3700B3</color>
+    <color name="zl_secondary">#FF03DAC6</color>
+    <color name="zl_secondary_variant">#FF018786</color>
+    <color name="zl_accent">#FF00E5FF</color>
+    <color name="zl_error">#FFCF6679</color>
+    <color name="zl_on_error">#FF000000</color>
+    <color name="zl_surface">#FF1E1E2E</color>
+    <color name="zl_on_surface">#FFFFFFFF</color>
+    <color name="zl_on_primary">#FF000000</color>
+    <color name="zl_on_secondary">#FF000000</color>
+
+    <!-- =============================================
+         ZL UI ELEMENT COLORS
+    ============================================= -->
+    <color name="zl_divider">#1FFFFFFF</color>
+    <color name="zl_border">#33FFFFFF</color>
+    <color name="zl_border_focused">#FF00E5FF</color>
+    <color name="zl_icon_tint">#FFFFFFFF</color>
+    <color name="zl_icon_tint_inactive">#66FFFFFF</color>
+    <color name="zl_badge_bg">#FFFF5252</color>
+    <color name="zl_badge_text">#FFFFFFFF</color>
+    <color name="zl_shadow">#99000000</color>
+    <color name="zl_scrim">#80000000</color>
+    <color name="zl_highlight">#33FFFFFF</color>
+    <color name="zl_selection">#4400E5FF</color>
+
+    <!-- =============================================
+         ZL DOCK / TASKBAR COLORS
+    ============================================= -->
+    <color name="zl_dock_bg">#CC1A1A2E</color>
+    <color name="zl_dock_indicator">#FF00E5FF</color>
+    <color name="zl_dock_divider">#33FFFFFF</color>
+
+    <!-- =============================================
+         ZL FOLDER COLORS
+    ============================================= -->
+    <color name="zl_folder_bg">#CC252540</color>
+    <color name="zl_folder_title">#FFFFFFFF</color>
+    <color name="zl_folder_border">#33FFFFFF</color>
+
+    <!-- =============================================
+         ZL WIDGET COLORS
+    ============================================= -->
+    <color name="zl_widget_bg">#CC1A1A2E</color>
+    <color name="zl_widget_text">#FFFFFFFF</color>
+    <color name="zl_widget_border">#33FFFFFF</color>
+
+    <!-- =============================================
+         ZL NOTIFICATION / POPUP COLORS
+    ============================================= -->
+    <color name="zl_notification_bg">#FF1E1E2E</color>
+    <color name="zl_popup_bg">#FF252540</color>
+    <color name="zl_tooltip_bg">#FF3A3A5C</color>
+    <color name="zl_tooltip_text">#FFFFFFFF</color>
+
+    <!-- =============================================
+         ZL SEARCH BAR COLORS
+    ============================================= -->
+    <color name="zl_search_bg">#CC252540</color>
+    <color name="zl_search_text">#FFFFFFFF</color>
+    <color name="zl_search_hint">#66FFFFFF</color>
+    <color name="zl_search_cursor">#FF00E5FF</color>
+    <color name="zl_search_icon">#FFFFFFFF</color>
+
+    <!-- =============================================
+         ZL STATUS / STATE COLORS
+    ============================================= -->
+    <color name="zl_success">#FF69F0AE</color>
+    <color name="zl_warning">#FFFFAB40</color>
+    <color name="zl_info">#FF448AFF</color>
+    <color name="zl_danger">#FFFF5252</color>
+
+    <!-- =============================================
+         ZL SHIMMER / LOADING COLORS
+    ============================================= -->
+    <color name="zl_shimmer_base">#FF252540</color>
+    <color name="zl_shimmer_highlight">#FF3A3A5C</color>
+
+    <!-- =============================================
+         LEGACY / ORIGINAL APP COLOR ALIASES
+         (names used by older PojavLauncher / ZalithLauncher code)
+    ============================================= -->
+    <color name="primary_text">#FFFFFFFF</color>
+    <color name="accent_cyan">#FF00E5FF</color>
+    <color name="accent_amber">#FFFFB300</color>
+    <color name="accent_green">#FF69F0AE</color>
+    <color name="accent_purple">#FFBB86FC</color>
+    <color name="accent_rose">#FFE91E63</color>
+
+    <color name="background_app">#FF0D0D0D</color>
+    <color name="background_app_error">#FF1A0D0D</color>
+    <color name="background_menu_top">#FF1A1A2E</color>
+    <color name="background_menu_top_error">#FF2E1A1A</color>
+    <color name="background_menu_element">#FF252540</color>
+    <color name="background_ripple_effect">#33FFFFFF</color>
+    <color name="background_sponsor_advanced">#FF9B59F5</color>
+    <color name="background_sponsor_intermediate">#FF448AFF</color>
+
+    <color name="black_or_white">#FFFFFFFF</color>
+    <color name="icon_color">#FFFFFFFF</color>
+    <color name="menu_bar">#FF1A1A2E</color>
+    <color name="menu_bar_text">#FFFFFFFF</color>
+    <color name="menu_overlay">#99000000</color>
+    <color name="menu_progress">#FF00E5FF</color>
+    <color name="settings_category">#80FFFFFF</color>
+    <color name="text_background_fill">#4400E5FF</color>
+
+    <!-- =============================================
+         LEGACY / COMPAT ALIASES
+         (common names apps might reference)
+    ============================================= -->
+    <color name="colorPrimary">#FFBB86FC</color>
+    <color name="colorPrimaryDark">#FF9B59F5</color>
+    <color name="colorAccent">#FF00E5FF</color>
+    <color name="colorBackground">#FF0D0D0D</color>
+    <color name="colorSurface">#FF1E1E2E</color>
+    <color name="colorError">#FFCF6679</color>
+    <color name="colorOnPrimary">#FF000000</color>
+    <color name="colorOnBackground">#FFFFFFFF</color>
+    <color name="colorOnSurface">#FFFFFFFF</color>
+    <color name="colorOnError">#FF000000</color>
+    <color name="textColorPrimary">#FFFFFFFF</color>
+    <color name="textColorSecondary">#B3FFFFFF</color>
+    <color name="windowBackground">#FF0D0D0D</color>
+
+</resources>

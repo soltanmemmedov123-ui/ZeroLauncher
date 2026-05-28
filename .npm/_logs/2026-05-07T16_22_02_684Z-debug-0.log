@@ -1,0 +1,59 @@
+0 verbose cli /data/data/com.termux/files/usr/bin/node /data/data/com.termux/files/usr/bin/npm
+1 info using npm@11.12.1
+2 info using node@v25.8.2
+3 silly config load:file:/data/data/com.termux/files/usr/lib/node_modules/npm/npmrc
+4 silly config load:file:/data/data/com.termux/files/home/.npmrc
+5 silly config load:file:/data/data/com.termux/files/usr/etc/npmrc
+6 verbose title npm i @openai/codex
+7 verbose argv "i" "--global" "@openai/codex"
+8 verbose logfile logs-max:10 dir:/data/data/com.termux/files/home/.npm/_logs/2026-05-07T16_22_02_684Z-
+9 verbose logfile /data/data/com.termux/files/home/.npm/_logs/2026-05-07T16_22_02_684Z-debug-0.log
+10 silly packumentCache heap:1056178176 maxSize:264044544 maxEntrySize:132022272
+11 silly logfile done cleaning log files
+12 silly idealTree buildDeps
+13 silly fetch manifest @openai/codex@*
+14 silly packumentCache full:https://registry.npmjs.org/@openai%2fcodex cache-miss
+15 http fetch GET 200 https://registry.npmjs.org/@openai%2fcodex 1229ms (cache miss)
+16 silly packumentCache full:https://registry.npmjs.org/@openai%2fcodex set size:undefined disposed:false
+17 silly placeDep ROOT @openai/codex@0.128.0 OK for:  want: *
+18 silly fetch manifest @openai/codex-linux-x64@npm:@openai/codex@0.128.0-linux-x64
+19 silly packumentCache full:https://registry.npmjs.org/@openai%2fcodex cache-miss
+20 silly fetch manifest @openai/codex-win32-x64@npm:@openai/codex@0.128.0-win32-x64
+21 silly packumentCache full:https://registry.npmjs.org/@openai%2fcodex cache-miss
+22 silly fetch manifest @openai/codex-darwin-x64@npm:@openai/codex@0.128.0-darwin-x64
+23 silly packumentCache full:https://registry.npmjs.org/@openai%2fcodex cache-miss
+24 silly fetch manifest @openai/codex-linux-arm64@npm:@openai/codex@0.128.0-linux-arm64
+25 silly packumentCache full:https://registry.npmjs.org/@openai%2fcodex cache-miss
+26 silly fetch manifest @openai/codex-win32-arm64@npm:@openai/codex@0.128.0-win32-arm64
+27 silly packumentCache full:https://registry.npmjs.org/@openai%2fcodex cache-miss
+28 silly fetch manifest @openai/codex-darwin-arm64@npm:@openai/codex@0.128.0-darwin-arm64
+29 silly packumentCache full:https://registry.npmjs.org/@openai%2fcodex cache-miss
+30 http cache https://registry.npmjs.org/@openai%2fcodex 100ms (cache hit)
+31 silly packumentCache full:https://registry.npmjs.org/@openai%2fcodex set size:7022109 disposed:false
+32 http cache https://registry.npmjs.org/@openai%2fcodex 308ms (cache hit)
+33 silly packumentCache full:https://registry.npmjs.org/@openai%2fcodex set size:7022109 disposed:false
+34 http cache https://registry.npmjs.org/@openai%2fcodex 494ms (cache hit)
+35 silly packumentCache full:https://registry.npmjs.org/@openai%2fcodex set size:7022109 disposed:false
+36 http cache https://registry.npmjs.org/@openai%2fcodex 671ms (cache hit)
+37 silly packumentCache full:https://registry.npmjs.org/@openai%2fcodex set size:7022109 disposed:false
+38 http cache https://registry.npmjs.org/@openai%2fcodex 856ms (cache hit)
+39 silly packumentCache full:https://registry.npmjs.org/@openai%2fcodex set size:7022109 disposed:false
+40 http cache https://registry.npmjs.org/@openai%2fcodex 1045ms (cache hit)
+41 silly packumentCache full:https://registry.npmjs.org/@openai%2fcodex set size:7022109 disposed:false
+42 silly placeDep node_modules/@openai/codex @openai/codex-darwin-arm64@0.128.0-darwin-arm64 OK for: @openai/codex@0.128.0 want: npm:@openai/codex@0.128.0-darwin-arm64
+43 silly placeDep node_modules/@openai/codex @openai/codex-darwin-x64@0.128.0-darwin-x64 OK for: @openai/codex@0.128.0 want: npm:@openai/codex@0.128.0-darwin-x64
+44 silly placeDep node_modules/@openai/codex @openai/codex-linux-arm64@0.128.0-linux-arm64 OK for: @openai/codex@0.128.0 want: npm:@openai/codex@0.128.0-linux-arm64
+45 silly placeDep node_modules/@openai/codex @openai/codex-linux-x64@0.128.0-linux-x64 OK for: @openai/codex@0.128.0 want: npm:@openai/codex@0.128.0-linux-x64
+46 silly placeDep node_modules/@openai/codex @openai/codex-win32-arm64@0.128.0-win32-arm64 OK for: @openai/codex@0.128.0 want: npm:@openai/codex@0.128.0-win32-arm64
+47 silly placeDep node_modules/@openai/codex @openai/codex-win32-x64@0.128.0-win32-x64 OK for: @openai/codex@0.128.0 want: npm:@openai/codex@0.128.0-win32-x64
+48 silly reify moves {}
+49 http cache @openai/codex@https://registry.npmjs.org/@openai/codex/-/codex-0.128.0.tgz 0ms (cache hit)
+50 silly tarball no local data for @openai/codex@https://registry.npmjs.org/@openai/codex/-/codex-0.128.0.tgz. Extracting by manifest.
+51 http fetch GET 200 https://registry.npmjs.org/@openai/codex/-/codex-0.128.0.tgz 486ms (cache miss)
+52 silly ADD node_modules/@openai/codex
+53 verbose cwd /data/data/com.termux/files/home
+54 verbose os Linux 4.19.157-perf-g2f8c31a03b75
+55 verbose node v25.8.2
+56 verbose npm  v11.12.1
+57 verbose exit 0
+58 info ok

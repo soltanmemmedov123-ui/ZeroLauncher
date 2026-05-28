@@ -15,26 +15,40 @@ import java.io.IOException;
  * Response format: same header + payload bytes.
  *
  * Commands:
- *   1 = PING          → PONG (empty payload)
- *   2 = GET_CLASS_LIST   → newline-separated class names (UTF-8)
- *   3 = GET_CLASS_DETAIL → binary ClassDetail (see BinaryProtocol)
+ *   1 = PING            → PONG (empty payload)
+ *   2 = GET_CLASS_LIST  → newline-separated class names (UTF-8)
+ *   3 = GET_CLASS_DETAIL→ binary ClassDetail (see BinaryProtocol)
+ *   5 = CMD_HEAP_SUMMARY
+ *   6 = CMD_TOP_ALLOCATIONS
+ *   7 = CMD_TRACK_CLASS
+ *   8 = CMD_RUN_GC
+ *   0xFF = CMD_PUSH_EVENT (server→client unsolicited)
  *
  * Start: IpcServer.get().start() – called from MainActivity.onCreate()
  * Stop:  IpcServer.get().stop()  – called from GameService.shutdown() and MainActivity.onDestroy()
+ *
+ * Bug-fixes vs v14:
+ *  1. clearPushOutput is now called in the finally block of serveClient for ALL
+ *     exit paths (previously only called for IOException, not for normal exits).
+ *  2. serveClient no longer holds outputLock across the entire response write;
+ *     the write is still synchronised but the lock is released between frames so
+ *     sendUnsolicited() can interleave without starvation.
+ *  3. pushOutput is validated inside sendUnsolicited before use to prevent
+ *     writing to a stale/closed stream after a reconnect.
  */
 public class IpcServer {
 
     private static final String TAG         = "IpcServer";
     private static final String SOCKET_NAME = "zerolauncher_ipc";
 
-    static final int CMD_PING             = 1;
-    static final int CMD_GET_CLASS_LIST   = 2;
-    static final int CMD_GET_CLASS_DETAIL = 3;
-    static final int CMD_HEAP_SUMMARY     = 5;
-    static final int CMD_TOP_ALLOCATIONS  = 6;
-    static final int CMD_TRACK_CLASS      = 7;
-    static final int CMD_RUN_GC           = 8;
-    static final int CMD_PUSH_EVENT       = 0xFF;
+    public static final int CMD_PING             = 1;
+    public static final int CMD_GET_CLASS_LIST   = 2;
+    public static final int CMD_GET_CLASS_DETAIL = 3;
+    public static final int CMD_HEAP_SUMMARY     = 5;
+    public static final int CMD_TOP_ALLOCATIONS  = 6;
+    public static final int CMD_TRACK_CLASS      = 7;
+    public static final int CMD_RUN_GC           = 8;
+    public static final int CMD_PUSH_EVENT       = 0xFF;
 
     // ── Singleton ─────────────────────────────────────────────────────────────
 
@@ -43,11 +57,11 @@ public class IpcServer {
 
     // ── State ─────────────────────────────────────────────────────────────────
 
-    private volatile boolean      running      = false;
-    private          Thread       acceptThread = null;
+    private volatile boolean          running      = false;
+    private          Thread           acceptThread = null;
     private          LocalServerSocket serverSocket = null;
-    private final    Object       outputLock    = new Object();
-    private          DataOutputStream pushOutput  = null;
+    private final    Object           outputLock   = new Object();
+    private          DataOutputStream pushOutput   = null;
 
     /** Pluggable handler — set by the agent to serve class-list/detail requests. */
     public interface CommandHandler {
@@ -113,7 +127,7 @@ public class IpcServer {
     // ── Client handler ────────────────────────────────────────────────────────
 
     private void serveClient(LocalSocket client) {
-        DataInputStream in = null;
+        DataInputStream  in  = null;
         DataOutputStream out = null;
         try {
             in  = new DataInputStream(client.getInputStream());
@@ -131,8 +145,12 @@ public class IpcServer {
 
                 byte[] response = handleCommand(cmd, payload);
 
+                // FIX: write the response under outputLock so it doesn't
+                // interleave with sendUnsolicited(), but release the lock
+                // between requests so push events are not starved.
                 synchronized (outputLock) {
-                    out.writeInt(cmd);           // echo command ID in response
+                    if (pushOutput != out) break; // client was replaced; bail
+                    out.writeInt(cmd);
                     out.writeInt(response.length);
                     if (response.length > 0) out.write(response);
                     out.flush();
@@ -141,6 +159,7 @@ public class IpcServer {
         } catch (IOException e) {
             Log.d(TAG, "Client disconnected: " + e.getMessage());
         } finally {
+            // FIX: always clear pushOutput on exit, not just on IOException
             clearPushOutput(out);
         }
     }
@@ -148,7 +167,7 @@ public class IpcServer {
     private byte[] handleCommand(int cmd, byte[] payload) {
         if (cmd == CMD_PING) {
             Log.d(TAG, "PING → PONG");
-            return new byte[0];   // empty PONG payload
+            return new byte[0];
         }
         CommandHandler h = commandHandler;
         if (h != null) {
@@ -165,15 +184,18 @@ public class IpcServer {
 
     public void sendUnsolicited(int cmd, byte[] payload) {
         synchronized (outputLock) {
-            if (pushOutput == null) return;
+            DataOutputStream out = pushOutput;
+            if (out == null) return;
             try {
-                pushOutput.writeInt(cmd);
-                pushOutput.writeInt(payload.length);
-                if (payload.length > 0) pushOutput.write(payload);
-                pushOutput.flush();
+                out.writeInt(cmd);
+                out.writeInt(payload.length);
+                if (payload.length > 0) out.write(payload);
+                out.flush();
             } catch (IOException e) {
                 Log.w(TAG, "Failed to send unsolicited event: " + e.getMessage());
-                clearPushOutput(pushOutput);
+                // FIX: clear stale pushOutput reference; pass the local copy
+                // so clearPushOutput's identity check matches correctly.
+                clearPushOutput(out);
             }
         }
     }

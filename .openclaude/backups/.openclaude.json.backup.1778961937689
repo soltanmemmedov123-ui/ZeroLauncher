@@ -1,0 +1,105 @@
+{
+  "numStartups": 4,
+  "tipsHistory": {
+    "new-user-warmup": 4,
+    "plan-mode-for-complex-tasks": 1,
+    "terminal-setup": 1,
+    "memory-command": 2,
+    "theme-command": 2,
+    "status-line": 2,
+    "atomic-setup-local": 3,
+    "prompt-queue": 3,
+    "enter-to-steer-in-relatime": 3,
+    "todo-list": 3,
+    "install-github-app": 3,
+    "install-slack-app": 3,
+    "drag-and-drop-images": 3,
+    "double-esc-code-restore": 3,
+    "continue": 3,
+    "shift-tab": 3,
+    "image-paste": 3,
+    "desktop-app": 3,
+    "web-app": 3,
+    "frontend-design-plugin": 3
+  },
+  "promptQueueUseCount": 2,
+  "btwUseCount": 1,
+  "providerProfiles": [
+    {
+      "id": "provider_4eb2c846879e",
+      "name": "Gitlawb Opengateway",
+      "provider": "gitlawb-opengateway",
+      "baseUrl": "https://opengateway.gitlawb.com/v1/xiaomi-mimo",
+      "model": "mimo-v2.5-pro"
+    }
+  ],
+  "firstStartTime": "2026-05-05T18:21:37.260Z",
+  "opusProMigrationComplete": true,
+  "migrationVersion": 11,
+  "userID": "7575b8d3211dcb076e648afa214de32cff29c3a5eb2c86da7a6c7082f29b08b2",
+  "changelogLastFetched": 1778957918494,
+  "clientDataCache": null,
+  "additionalModelOptionsCache": [
+    {
+      "value": "qwen3.5:397b-cloud",
+      "label": "qwen3.5:397b-cloud",
+      "description": "Detected from Ollama"
+    }
+  ],
+  "additionalModelOptionsCacheScope": "openai:http://localhost:11434/v1:3f874a50b699e655",
+  "officialMarketplaceAutoInstallAttempted": true,
+  "officialMarketplaceAutoInstalled": true,
+  "projects": {
+    "/data/data/com.termux/files/home": {
+      "allowedTools": [],
+      "mcpContextUris": [],
+      "mcpServers": {},
+      "enabledMcpjsonServers": [],
+      "disabledMcpjsonServers": [],
+      "hasTrustDialogAccepted": false,
+      "projectOnboardingSeenCount": 0,
+      "hasClaudeMdExternalIncludesApproved": false,
+      "hasClaudeMdExternalIncludesWarningShown": false,
+      "exampleFiles": [],
+      "hasCompletedProjectOnboarding": true,
+      "lastCost": 0,
+      "lastAPIDuration": 0,
+      "lastAPIDurationWithoutRetries": 0,
+      "lastToolDuration": 0,
+      "lastDuration": 388380,
+      "lastLinesAdded": 0,
+      "lastLinesRemoved": 0,
+      "lastTotalInputTokens": 0,
+      "lastTotalOutputTokens": 0,
+      "lastTotalCacheCreationInputTokens": 0,
+      "lastTotalCacheReadInputTokens": 0,
+      "lastTotalWebSearchRequests": 0,
+      "lastFpsAverage": 9.82,
+      "lastFpsLow1Pct": 133.78,
+      "lastModelUsage": {},
+      "lastSessionId": "e0c8c0ac-319c-4e0e-91fa-7c192cc1cfcd",
+      "lastSessionMetrics": {
+        "frame_duration_ms_count": 3754,
+        "frame_duration_ms_min": 0.17333299999882001,
+        "frame_duration_ms_max": 37.3369789999997,
+        "frame_duration_ms_avg": 2.3107267418756217,
+        "frame_duration_ms_p50": 1.278828499984229,
+        "frame_duration_ms_p95": 6.2643854999856545,
+        "frame_duration_ms_p99": 7.354557980013449
+      }
+    }
+  },
+  "activeProviderProfileId": "provider_4eb2c846879e",
+  "openaiAdditionalModelOptionsCache": [],
+  "hasCompletedOnboarding": true,
+  "lastOnboardingVersion": "99.0.0",
+  "sponsoredTipsHistory": {
+    "lastShownAt": 3,
+    "totalShown": 1
+  },
+  "githubRepoPaths": {
+    "soltanmemmedov123-ui/lol": [
+      "/data/data/com.termux/files/home"
+    ]
+  }
+}

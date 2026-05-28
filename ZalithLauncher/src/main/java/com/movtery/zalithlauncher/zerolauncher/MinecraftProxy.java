@@ -225,23 +225,16 @@ public class MinecraftProxy {
             // Record the handshake as a captured packet too
             recordHandshakePacket(hs);
 
-            // ── Spawn two relay threads ───────────────────────────────────────
-            Object[] doneSignal = new Object[]{false};  // simple flag to detect first done
+            // ── Spawn two relay threads ──────────────────────────────────────
+            // FIX: use relayRaw() which actually forwards bytes to the other side.
+            // The old relay() called writePacket() which was a no-op stub.
+            Object[] doneSignal = new Object[]{false};
 
-            Thread c2s = new Thread(() ->
-                relay(cIn, rs.getOutputStream(),
-                      CapturedPacket.DIR_CLIENT_TO_SERVER, doneSignal), "proxy-c2s");
-            Thread s2c = new Thread(() -> {
-                try {
-                    relay(rs.getInputStream(), cOut,
-                          CapturedPacket.DIR_SERVER_TO_CLIENT, doneSignal);
-                } catch (IOException e) {
-                    relay(null, cOut, CapturedPacket.DIR_SERVER_TO_CLIENT, doneSignal);
-                }
-            }, "proxy-s2c");
+            Thread c2s = makeRelayThread(cIn,                 rs.getOutputStream(),
+                                         CapturedPacket.DIR_CLIENT_TO_SERVER, doneSignal, "proxy-c2s");
+            Thread s2c = makeRelayThread(rs.getInputStream(), cOut,
+                                         CapturedPacket.DIR_SERVER_TO_CLIENT, doneSignal, "proxy-s2c");
 
-            c2s.setDaemon(true);
-            s2c.setDaemon(true);
             c2s.start();
             s2c.start();
 

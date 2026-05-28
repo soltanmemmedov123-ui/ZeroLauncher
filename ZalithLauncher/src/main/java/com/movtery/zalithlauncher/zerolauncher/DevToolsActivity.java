@@ -104,6 +104,8 @@ public class DevToolsActivity extends AppCompatActivity {
         activeTab = initialTab;
 
         if (savedInstanceState == null) {
+            // FIX: commit the initial add/hide transaction first, then optionally
+            // show the requested tab in a second transaction.
             getSupportFragmentManager().beginTransaction()
                 .add(R.id.dev_tools_fragment_container,
                      new ClassExplorerFragment(), TAG_CLASS_EXPLORER)
@@ -111,13 +113,15 @@ public class DevToolsActivity extends AppCompatActivity {
                      new InjectionConsoleFragment(), TAG_INJECT_CONSOLE)
                 .add(R.id.dev_tools_fragment_container,
                      new NetworkMonitorFragment(), TAG_NETWORK_MONITOR)
-            .add(R.id.dev_tools_fragment_container,
+                .add(R.id.dev_tools_fragment_container,
                      new MemoryProfilerFragment(), TAG_MEMORY)
-            .add(R.id.dev_tools_fragment_container,                          // ← NEW
+                .add(R.id.dev_tools_fragment_container,
                      new CrashHistoryFragment(), TAG_CRASHES)
-            .hide(getFragment(TAG_INJECT_CONSOLE))
-            .hide(getFragment(TAG_NETWORK_MONITOR))
-            .hide(getFragment(TAG_MEMORY))
+                .hide(getFragment(TAG_INJECT_CONSOLE))
+                .hide(getFragment(TAG_NETWORK_MONITOR))
+                .hide(getFragment(TAG_MEMORY))
+                .hide(getFragment(TAG_CRASHES))           // FIX: also hide Crashes initially
+                .commit();
 
             // Show the requested initial tab
             if (activeTab != TAB_CLASS_EXPLORER) {
@@ -190,18 +194,18 @@ public class DevToolsActivity extends AppCompatActivity {
     }
 
     private void restoreTabVisibility(int active) {
-        int totalTabs = 5;
-        getSupportFragmentManager().beginTransaction()
-            .runOnCommit(() -> {
-                for (int t = 0; t < totalTabs; t++) {
-                    Fragment f = getFragment(tagForTab(t));
-                    if (f == null) continue;
-                    getSupportFragmentManager().beginTransaction()
-                        .apply(f, t == active)
-                        .commitAllowingStateLoss();
-                }
-            })
-            .commitAllowingStateLoss();
+        // FIX: build a single transaction that shows/hides each fragment directly.
+        // The old implementation called FragmentTransaction.apply() (a private helper
+        // on this Activity) via method-chaining on the transaction object, which
+        // caused a compile error and would have thrown IllegalStateException at runtime.
+        androidx.fragment.app.FragmentTransaction tx =
+            getSupportFragmentManager().beginTransaction();
+        for (int t = 0; t < 5; t++) {
+            Fragment f = getFragment(tagForTab(t));
+            if (f == null) continue;
+            if (t == active) tx.show(f); else tx.hide(f);
+        }
+        tx.commitAllowingStateLoss();
     }
 
     private Fragment getFragment(String tag) {

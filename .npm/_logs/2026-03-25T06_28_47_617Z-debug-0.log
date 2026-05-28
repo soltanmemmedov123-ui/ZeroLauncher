@@ -1,0 +1,72 @@
+0 verbose cli /data/data/com.termux/files/usr/bin/node /data/data/com.termux/files/usr/bin/npm
+1 info using npm@11.11.0
+2 info using node@v25.8.1
+3 silly config load:file:/data/data/com.termux/files/usr/lib/node_modules/npm/npmrc
+4 silly config load:file:/data/data/com.termux/files/home/.npmrc
+5 silly config load:file:/data/data/com.termux/files/usr/etc/npmrc
+6 verbose title npm install npm@11.12.0
+7 verbose argv "install" "--global" "npm@11.12.0"
+8 verbose logfile logs-max:10 dir:/data/data/com.termux/files/home/.npm/_logs/2026-03-25T06_28_47_617Z-
+9 verbose logfile /data/data/com.termux/files/home/.npm/_logs/2026-03-25T06_28_47_617Z-debug-0.log
+10 silly logfile done cleaning log files
+11 http fetch GET 200 https://registry.npmjs.org/npm 1170ms (cache miss)
+12 silly packumentCache heap:1056178176 maxSize:264044544 maxEntrySize:132022272
+13 silly idealTree buildDeps
+14 silly fetch manifest npm@11.12.0
+15 silly packumentCache full:https://registry.npmjs.org/npm cache-miss
+16 http fetch GET 200 https://registry.npmjs.org/npm 1873ms (cache miss)
+17 silly packumentCache full:https://registry.npmjs.org/npm set size:undefined disposed:false
+18 silly placeDep ROOT npm@11.12.0 OK for:  want: 11.12.0
+19 silly reify mark retired [
+19 silly reify   '/data/data/com.termux/files/usr/lib/node_modules/npm',
+19 silly reify   '/data/data/com.termux/files/usr/bin/npm',
+19 silly reify   '/data/data/com.termux/files/usr/bin/npx'
+19 silly reify ]
+20 silly reify moves {
+20 silly reify   '/data/data/com.termux/files/usr/lib/node_modules/npm': '/data/data/com.termux/files/usr/lib/node_modules/.npm-Ad3JtrjG',
+20 silly reify   '/data/data/com.termux/files/usr/bin/npm': '/data/data/com.termux/files/usr/bin/.npm-9oXEyzxI',
+20 silly reify   '/data/data/com.termux/files/usr/bin/npx': '/data/data/com.termux/files/usr/bin/.npx-vlNjOz4J'
+20 silly reify }
+21 http cache npm@https://registry.npmjs.org/npm/-/npm-11.12.0.tgz 1ms (cache hit)
+22 silly tarball no local data for npm@https://registry.npmjs.org/npm/-/npm-11.12.0.tgz. Extracting by manifest.
+23 http fetch GET 200 https://registry.npmjs.org/npm/-/npm-11.12.0.tgz 1793ms (cache miss)
+24 silly CHANGE node_modules/npm
+25 silly CHANGE node_modules/npm/node_modules/@sigstore/tuf
+26 silly CHANGE node_modules/npm/node_modules/@sigstore/sign
+27 silly CHANGE node_modules/npm/node_modules/@sigstore/core
+28 silly CHANGE node_modules/npm/node_modules/@npmcli/run-script
+29 silly CHANGE node_modules/npm/node_modules/@npmcli/installed-package-contents
+30 silly CHANGE node_modules/npm/node_modules/@npmcli/config
+31 silly CHANGE node_modules/npm/node_modules/@npmcli/arborist
+32 silly CHANGE node_modules/npm/node_modules/@gar/promise-retry
+33 silly REMOVE node_modules/npm/node_modules/@gar/promise-retry/node_modules/retry
+34 silly CHANGE node_modules/npm/node_modules/write-file-atomic
+35 silly CHANGE node_modules/npm/node_modules/which
+36 silly REMOVE node_modules/npm/node_modules/unique-slug
+37 silly REMOVE node_modules/npm/node_modules/unique-filename
+38 silly CHANGE node_modules/npm/node_modules/tar
+39 silly CHANGE node_modules/npm/node_modules/qrcode-terminal
+40 silly CHANGE node_modules/npm/node_modules/semver
+41 silly REMOVE node_modules/npm/node_modules/retry
+42 silly REMOVE node_modules/npm/node_modules/promise-retry
+43 silly CHANGE node_modules/npm/node_modules/pacote
+44 silly CHANGE node_modules/npm/node_modules/nopt
+45 silly CHANGE node_modules/npm/node_modules/node-gyp
+46 silly CHANGE node_modules/npm/node_modules/libnpmexec
+47 silly CHANGE node_modules/npm/node_modules/minimatch
+48 silly CHANGE node_modules/npm/node_modules/make-fetch-happen
+49 silly CHANGE node_modules/npm/node_modules/lru-cache
+50 silly CHANGE node_modules/npm/node_modules/libnpmdiff
+51 silly CHANGE node_modules/npm/node_modules/libnpmpack
+52 silly CHANGE node_modules/npm/node_modules/libnpmfund
+53 silly REMOVE node_modules/npm/node_modules/imurmurhash
+54 silly REMOVE node_modules/npm/node_modules/err-code
+55 silly CHANGE node_modules/npm/node_modules/cssesc
+56 silly CHANGE node_modules/npm/node_modules/cacache
+57 silly CHANGE node_modules/npm/node_modules/brace-expansion
+58 verbose cwd /data/data/com.termux/files/home/miningbot
+59 verbose os Linux 4.19.157-perf-g2f8c31a03b75
+60 verbose node v25.8.1
+61 verbose npm  v11.11.0
+62 verbose exit 0
+63 info ok
