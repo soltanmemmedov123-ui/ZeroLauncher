@@ -447,7 +447,7 @@ public class NetworkMonitorFragment extends Fragment {
         if (empty && MinecraftProxy.getInstance() != null) {
             tvEmptyHint.setText(currentFilter.isEmpty()
                 ? "Waiting for game connection…"
-                : "No packets match "" + currentFilter + """);
+                : "No packets match \"" + currentFilter + "\"");
         }
     }
 
