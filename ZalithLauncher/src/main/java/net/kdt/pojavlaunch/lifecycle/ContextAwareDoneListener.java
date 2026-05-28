@@ -137,8 +137,8 @@ public class ContextAwareDoneListener implements AsyncMinecraftDownloader.DoneLi
                             context,
                             report,
                             mVersion,
-                            () -> { executeTask(); },   // onContinue
-                            () -> {}               // onAbort — stay in launcher
+                            () -> { executeTask(); return kotlin.Unit.INSTANCE; },   // onContinue
+                            () -> kotlin.Unit.INSTANCE               // onAbort — stay in launcher
                         ).show();
                     } else {
                         // No UI context available; proceed anyway rather than hanging
