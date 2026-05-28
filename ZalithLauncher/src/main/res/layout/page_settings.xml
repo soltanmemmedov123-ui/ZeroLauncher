@@ -434,6 +434,37 @@
                         android:id="@+id/toggle_dev_tools"
                         android:layout_width="36dp" android:layout_height="20dp" android:checked="false" />
                 </LinearLayout>
+
+                <!-- Open Developer Tools button — always visible, tap to launch directly -->
+                <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+                    android:orientation="horizontal" android:gravity="center_vertical"
+                    android:paddingTop="10dp">
+                    <View android:layout_width="5dp" android:layout_height="5dp"
+                        android:background="@drawable/dot_cyan_glow" android:layout_marginEnd="7dp" />
+                    <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content"
+                        android:layout_weight="1" android:orientation="vertical">
+                        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                            android:text="Open Developer Tools"
+                            android:textColor="@color/zl_text_primary" android:textSize="11sp" />
+                        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                            android:text="Network monitor, memory profiler, injection console"
+                            android:textColor="@color/zl_text_muted" android:textSize="9sp"
+                            android:layout_marginTop="1dp" />
+                    </LinearLayout>
+                    <TextView
+                        android:id="@+id/btn_open_dev_tools"
+                        android:layout_width="wrap_content" android:layout_height="wrap_content"
+                        android:text="OPEN"
+                        android:textColor="@color/zl_cyan"
+                        android:textSize="9sp"
+                        android:textStyle="bold"
+                        android:letterSpacing="0.08"
+                        android:background="@drawable/bg_btn_cyan"
+                        android:paddingHorizontal="10dp"
+                        android:paddingVertical="5dp"
+                        android:clickable="true"
+                        android:focusable="true" />
+                </LinearLayout>
             </LinearLayout>
 
         </LinearLayout>

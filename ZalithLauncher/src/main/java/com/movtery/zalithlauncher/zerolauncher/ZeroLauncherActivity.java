@@ -305,14 +305,23 @@ public class ZeroLauncherActivity extends AppCompatActivity {
         restoreToggle(toggleVirtualMouse,   "virtual_mouse",  true);
         restoreToggle(toggleCursorAutoHide, "cursor_autohide",true);
 
-        // Developer tools toggle — also immediately updates the nav button visibility
+        // Developer tools toggle — defaults to true so the nav button is visible from first launch
         toggleDevTools = findViewById(R.id.toggle_dev_tools);
         if (toggleDevTools != null) {
-            boolean saved = prefs.getBoolean(KEY_DEV_TOOLS, false);
+            boolean saved = prefs.getBoolean(KEY_DEV_TOOLS, true);
             toggleDevTools.setChecked(saved);
             toggleDevTools.setOnCheckedChangeListener((t, checked) -> {
                 prefs.edit().putBoolean(KEY_DEV_TOOLS, checked).apply();
                 updateDevToolsButtonVisibility();
+            });
+        }
+
+        // Direct "Open Developer Tools" button in settings page — no toggle gating
+        View btnOpenDevTools = findViewById(R.id.btn_open_dev_tools);
+        if (btnOpenDevTools != null) {
+            btnOpenDevTools.setOnClickListener(v -> {
+                Intent intent = new Intent(this, DevToolsActivity.class);
+                startActivity(intent);
             });
         }
 
@@ -728,7 +737,7 @@ public class ZeroLauncherActivity extends AppCompatActivity {
     /** Reads the enable_dev_tools pref and shows/hides the wrench nav button immediately. */
     private void updateDevToolsButtonVisibility() {
         if (devToolsNavButton == null) return;
-        boolean enabled = prefs.getBoolean(KEY_DEV_TOOLS, false);
+        boolean enabled = prefs.getBoolean(KEY_DEV_TOOLS, true);
         devToolsNavButton.setVisibility(enabled ? View.VISIBLE : View.GONE);
     }
 

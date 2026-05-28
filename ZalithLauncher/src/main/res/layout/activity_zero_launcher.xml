@@ -244,7 +244,7 @@
                         android:contentDescription="About" />
                 </FrameLayout>
 
-                <!-- Dev-tools nav button — hidden until enable_dev_tools pref is true -->
+                <!-- Dev-tools nav button — always visible -->
                 <FrameLayout
                     android:id="@+id/nav_dev_tools"
                     android:layout_width="38dp"
@@ -253,7 +253,7 @@
                     android:background="@drawable/bg_nav_icon"
                     android:clickable="true"
                     android:focusable="true"
-                    android:visibility="gone">
+                    android:visibility="visible">
                     <ImageView
                         android:id="@+id/nav_icon_dev_tools"
                         android:layout_width="17dp"
