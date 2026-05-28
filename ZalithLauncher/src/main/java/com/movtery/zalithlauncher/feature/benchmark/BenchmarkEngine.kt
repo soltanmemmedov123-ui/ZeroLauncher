@@ -362,7 +362,7 @@ object BenchmarkEngine {
         )
 
         // ── Storage warning ───────────────────────────────────────────────
-        if (storageScore < 200) {
+        if (storage < 200) {
             list += BenchmarkRecommendation(
                 category    = RecommendationCategory.STORAGE,
                 title       = "Slow Storage Detected",

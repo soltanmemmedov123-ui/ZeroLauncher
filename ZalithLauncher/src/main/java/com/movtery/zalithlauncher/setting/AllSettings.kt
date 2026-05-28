@@ -224,7 +224,6 @@ class AllSettings {
 
         // Benchmark
         @JvmStatic
-        @JvmStatic
         val benchmarkAutoApply = BooleanSettingUnit("benchmarkAutoApply", false)
 
         @JvmStatic

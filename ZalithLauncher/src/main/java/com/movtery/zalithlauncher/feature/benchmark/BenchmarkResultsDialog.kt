@@ -45,7 +45,7 @@ class BenchmarkResultsDialog(
             .forEach { rec ->
                 runCatching {
                     com.movtery.zalithlauncher.setting.Settings.Manager
-                        .put(rec.settingKey!!, rec.settingValue).save()
+                        .put(rec.settingKey!!, rec.settingValue!!).save()
                     Logging.i("Benchmark", "Auto-applied: ${rec.settingKey}=${rec.settingValue}")
                 }.onFailure { e ->
                     Logging.e("Benchmark", "Auto-apply failed for ${rec.settingKey}", e)
@@ -228,7 +228,7 @@ class BenchmarkResultsDialog(
 
     private fun applyRecommendation(rec: BenchmarkRecommendation) {
         runCatching {
-            Settings.Manager.put(rec.settingKey!!, rec.settingValue).save()
+            Settings.Manager.put(rec.settingKey!!, rec.settingValue!!).save()
             Toast.makeText(
                 context,
                 "Applied: ${rec.title}",
