@@ -397,7 +397,7 @@
                 android:fontFamily="monospace"
                 android:background="@color/zl_bg_card"
                 android:padding="8dp"
-                android:minWidth="match_parent" />
+                android:minWidth="0dp" />
 
         </HorizontalScrollView>
 

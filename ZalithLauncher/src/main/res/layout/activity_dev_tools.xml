@@ -7,6 +7,7 @@
     Everything else is unchanged.
 -->
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
@@ -34,7 +35,7 @@
                 android:layout_gravity="center"
                 android:src="@drawable/ic_arrow_right"
                 android:rotation="180"
-                android:imageTintList="@color/zl_cyan"
+                app:tint="@color/zl_cyan"
                 android:contentDescription="Back" />
         </FrameLayout>
 
